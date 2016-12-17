@@ -8,8 +8,12 @@
             <link rel="stylesheet" href="css/site.css">
         </head>
         <body>
+            <!-- Start of first page -->
+
             <div data-role="page" id="loginPage">
                 <div data-role="header" class = "chromeHeaderLogin">
+<!--                   <a href="#" data-role="button"><img src="images/icons/check_green_icon.png"></a>-->
+
                     <h1>Rail පාර</h1> </div>
                 <div data-role="main" class="ui-content" id="content">
                     
@@ -19,12 +23,14 @@
                         
                         <div class="ui-block-b" style="text-align: center;">   
                              <img src="images/RailPaara_logo_500_500.png" style="height: 30%;padding-bottom: 10px;"/>
-                             <input type="text" name="user" id="usrnm" placeholder="Username">
+                             <input type="text" name="user" id="usrname" placeholder="Username">
                               <input type="password" name="password" id="pwrd" placeholder="Password">
-                            <input type="submit" data-inline="true" value="Log in">
+<!--                            <input type="submit" data-inline="true" value="Log in"  src="images/buttons/rectangle-buttons/signin_button.png" style="    height: 50;">-->
+                            <input type="image" src="images/buttons/rectangle-buttons/signin_button.png" alt="Submit" data-role="submit" style="    height: 50;">
 
-                            <p>Don't have an Account?<a href="#">Sign Up</a></p>
+                            <p>Don't have an Account?<a href="#SignUpPage" data-transition="fade">Sign Up</a></p>
                             <p>Forgot your password?<a href="#">Recover Password</a></p>
+                            
 
                         </div>
                                                
@@ -35,7 +41,38 @@
                 <div data-role="footer" class="footer-login">
                     <h1> © Rail පාර | 2016 </h1> </div>
             </div> 
+                     <!-- Start of second page -->
 
+              <div data-role="page" id="SignUpPage">
+                                 <div data-role="header" class = "chromeHeaderLogin">
+                                     <a href="#loginPage" data-role="button" data-icon="ui-icon-myapp-back" data-iconpos="notext"></a>
+
+                    <h1>Rail පාර</h1> </div>
+                              <div data-role="main" class="ui-content" id="content">
+                    
+                    <div class="ui-grid-b" id="regForm">
+
+                                <div class="ui-block-a" style="text-align: left;"></div>
+
+                            <div class="ui-block-b" style="text-align: center;">   
+                                 <img src="images/RailPaara_logo_500_500.png" style="height: 30%;padding-bottom: 10px;"/>
+                                 <input type="email" name="email" id="email" placeholder="Email">
+                                 <input type="text" name="username" id="username" placeholder="Username">
+
+                                <input type="password" name="password" id="pwrd" placeholder="Password">
+                                   <input type="password" name="confirmPassword" id="confirmPwd" placeholder="Re-enter Password">
+
+                                <input type="image" src="images/buttons/rectangle-buttons/signup_button.png" alt="Submit" data-role="submit" style="height: 50;">
+
+                        </div>
+                                               
+
+                    <div class="ui-block-c" style="text-align: right;"> </div>                
+                    </div>
+                </div>              
+                <div data-role="footer" class="footer-login">
+                    <h1> © Rail පාර | 2016 </h1> </div>
+            </div>
         </body>
 
     </html>
