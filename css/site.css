@@ -1,0 +1,32 @@
+/*#region ChromeElements*/
+/*#region Header*/
+.chromeHeaderLogin{
+    height: 50px;
+    background: #000000;
+    color: #ffffff;
+    align-self:center;
+        
+}
+
+/*#endregion Header*/
+
+/*#region Footer*/
+
+
+.footer-login{
+    height: 50px;
+    background: #000000;
+    color: #ffffff;
+    align-self:center;
+    bottom: 0;
+    position: absolute;
+    margin: 0;
+    width: 100%;
+
+}
+/*#endregion Footer*/
+
+
+/*#endregion ChromeElements*/
+
+
