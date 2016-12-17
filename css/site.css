@@ -2,8 +2,13 @@
 /*#region Header*/
 .chromeHeaderLogin{
     height: 50px;
+<<<<<<< HEAD
     background: #212121 !important;
     color: #ffffff !important;
+=======
+    background: #000000;
+    color: #ffffff;
+>>>>>>> 6d26a71836b66f22ce5bc3f87ac6514bfa67a6bd
     align-self:center;
         
 }
