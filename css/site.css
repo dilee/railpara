@@ -2,13 +2,10 @@
 /*#region Header*/
 .chromeHeaderLogin{
     height: 50px;
-<<<<<<< HEAD
     background: #212121 !important;
     color: #ffffff !important;
-=======
     background: #000000;
     color: #ffffff;
->>>>>>> 6d26a71836b66f22ce5bc3f87ac6514bfa67a6bd
     align-self:center;
         
 }
@@ -43,6 +40,14 @@
 .logo{
      margin-left: 25%;
 
+}
+
+.ui-icon-myapp-back{
+	background-image: url("images/icons/settings_icon.png");
+    background-size: 18px 18px;
+}
+body{
+    background-color: #fafafa;
 }
 /*#endregion content*/
 
