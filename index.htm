@@ -1,22 +1,41 @@
-<html>
+    <html>
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    </head>
-    <body>
-        <div data-role="page">
-            <div data-role="header">
-                <h1>Sample Header</h1> </div>
-            <div data-role="main" class="ui-content">
-                <p>This is an experiment</p>
-            </div>              
-            <div data-role="footer">
-                <h1>Sample Footer</h1> </div>
-        </div> 
-        
-    </body>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+            <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+            <link rel="stylesheet" href="css/site.css">
+        </head>
+        <body>
+            <div data-role="page" id="loginPage">
+                <div data-role="header" class = "chromeHeaderLogin">
+                    <h1>Rail පාර</h1> </div>
+                <div data-role="main" class="ui-content" id="content">
+                    
+                    <div class="ui-grid-b" id="loginform">
+                        
+                            <div class="ui-block-a" style="text-align: left;"></div>
+                        
+                        <div class="ui-block-b" style="text-align: center;">   
+                             <img src="images/RailPaara_logo_500_500.png" style="height: 30%;padding-bottom: 10px;"/>
+                             <input type="text" name="user" id="usrnm" placeholder="Username">
+                              <input type="password" name="password" id="pwrd" placeholder="Password">
+                            <input type="submit" data-inline="true" value="Log in">
 
-</html>
+                            <p>Don't have an Account?<a href="#">Sign Up</a></p>
+                            <p>Forgot your password?<a href="#">Recover Password</a></p>
+
+                        </div>
+                                               
+
+                    <div class="ui-block-c" style="text-align: right;"> </div>                
+                    </div>
+                </div>              
+                <div data-role="footer" class="footer-login">
+                    <h1> © Rail පාර | 2016 </h1> </div>
+            </div> 
+
+        </body>
+
+    </html>
