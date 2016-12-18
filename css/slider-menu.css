@@ -1,0 +1,116 @@
+/*-------------------------- Common Elements /*--------------------------*/
+/*#region ChromeElements*/
+/*#region Header*/
+.header {
+    height: 45px;
+    background: #212121 !important;
+    color: #ffffff !important;
+    align-self:center;
+}
+
+.headerlogo {
+    height: 80%;
+    padding: 3pt;
+    display:block;
+    margin:auto;
+}
+/*#endregion Header*/
+
+/*#region Footer*/
+.footer {
+    height: 45px;
+    background: #212121 !important;
+    color: #ffffff !important;
+    align-self:center;
+    bottom: 0;
+    position: absolute;
+    margin: 0;
+    width: 100%;
+}
+/*#endregion Footer*/
+/*#endregion ChromeElements*/
+
+body {
+    background-color: #456456 !important;
+    font-family: 'avenir-roman' !important;
+}
+
+#logo {
+    height: 30%;
+    display:block;
+    margin:auto;
+}
+
+.ui-footer h1 {
+    font-family: 'avenir-roman' !important;
+    font-weight: 100;
+    font-size: 11pt !important;
+    color: #bcbcbc;
+}
+
+.ui-icon-customback {
+    background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
+    background-repeat: no-repeat !important;
+    overflow: auto !important;
+    margin-top: 1% !important;
+}
+
+/*-------------------------- iPhone /*--------------------------*/
+
+/* iPhone 6 - Portrait */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+
+    /*#region content*/
+    .form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #logo {
+        height: 30%;
+        display:block;
+        margin:auto;
+    }
+
+    .ui-icon-customback {
+        background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
+        background-repeat: no-repeat !important;
+    }
+    /*#endregion content*/
+}
+
+/* iPhone 6 - Landscape */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+
+}
+
+/*-------------------------- iPad /*--------------------------*/
+
+/* iPad - Landscape */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)  {
+
+    #logo {
+        height: 40%;
+        display:block;
+        margin:auto;
+    }
+
+}
+
+/* iPad - Portrait */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+}
