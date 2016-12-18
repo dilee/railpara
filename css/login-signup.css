@@ -77,6 +77,14 @@ and (orientation : portrait) {
     /*#endregion content*/
 }
 
+/* iPhone 6 - Landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) {
+    
+}
+
 /*-------------------------- iPad /*--------------------------*/
 
 /* iPad - Landscape */
@@ -91,6 +99,14 @@ and (-webkit-min-device-pixel-ratio: 1)  {
         display:block;
         margin:auto;
     }
+    
+}
+
+/* iPad - Portrait */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
     
 }
 
