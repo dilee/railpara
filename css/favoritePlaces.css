@@ -36,6 +36,12 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
+.favList{
+    padding-left: 3%;
+    padding-right: 3%;
+    overflow: scroll;
+}
+
 .ui-footer h1 {
     font-family: 'avenir-roman' !important;
     font-weight: 100;
