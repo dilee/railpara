@@ -48,6 +48,13 @@ body {
     color: #bcbcbc;
 }
 
+.ui-icon-customback {
+    background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
+    background-repeat: no-repeat !important;
+    overflow: auto !important;
+    margin-top: 1% !important;
+}
+
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
@@ -60,11 +67,6 @@ and (orientation : portrait) {
     .form {
         width: 100%;
         margin: 0 auto;
-    }
-
-    .ui-icon-customback {
-        background: url("../images/buttons/icon-buttons/back_button_25_25.png");
-        background-repeat: no-repeat;
     }
 
     #logo {
