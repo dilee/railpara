@@ -77,9 +77,6 @@ body {
 }
 
 /* Menu Styles */
-.menupanel {
-
-}
 
 .ui-listview > li.ui-last-child, .ui-listview > li.ui-last-child > a.ui-btn {
     border-bottom-width: 0px !important;
