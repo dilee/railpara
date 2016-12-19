@@ -5,15 +5,16 @@
     height: 45px;
     background: #212121 !important;
     color: #ffffff !important;
-    align-self:center;
+    align-self: center;
 }
 
 .headerlogo {
     height: 80%;
     padding: 3pt;
-    display:block;
-    margin:auto;
+    display: block;
+    margin: auto;
 }
+
 /*#endregion Header*/
 
 /*#region Footer*/
@@ -21,12 +22,13 @@
     height: 45px;
     background: #212121 !important;
     color: #ffffff !important;
-    align-self:center;
+    align-self: center;
     bottom: 0;
     position: absolute;
     margin: 0;
     width: 100%;
 }
+
 /*#endregion Footer*/
 /*#endregion ChromeElements*/
 
@@ -37,8 +39,8 @@ body {
 
 #logo {
     height: 30%;
-    display:block;
-    margin:auto;
+    display: block;
+    margin: auto;
 }
 
 .ui-footer h1 {
@@ -55,13 +57,108 @@ body {
     margin-top: 1% !important;
 }
 
+/* Menu Button Styles */
+.ui-icon-custommenu, ui-btn {
+    background: url("../images/buttons/icon-buttons/menu_button_25_25.png") !important;
+    background-repeat: no-repeat !important;
+    size: 25px 25px;
+    overflow: auto !important;
+    margin-top: 1% !important;
+    float: right !important;
+    border-style: none !important;
+}
+
+.ui-btn-icon-notext.ui-corner-all {
+    border-radius: 0%;
+}
+
+.menubutton {
+    width: 100%;
+}
+
+/* Menu Styles */
+.menupanel {
+
+}
+
+.ui-listview > li.ui-last-child, .ui-listview > li.ui-last-child > a.ui-btn {
+    border-bottom-width: 0px !important;
+}
+
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit,
+html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+    background-color: #212121 !important;
+}
+
+.ui-listview .ui-li-has-thumb>img:first-child, .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child, .ui-listview
+.ui-li-has-thumb .ui-li-thumb {
+    max-width: 75%;
+}
+
+.ui-listview>.ui-li-static, .ui-listview>.ui-li-divider, .ui-listview>li>a.ui-btn {
+    border-style: none;
+}
+
+.ui-listview>.ui-li-has-thumb>.ui-btn, .ui-listview>.ui-li-static.ui-li-has-thumb {
+    padding: 5%;
+}
+
+.ui-listview .ui-li-has-thumb>img:first-child, .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child, .ui-listview
+.ui-li-has-thumb .ui-li-thumb {
+    left: 12%;
+    top: 20%;
+    color: #bcbcbc !important;
+}
+
+.ui-page-theme-a .ui-btn:active, html .ui-bar-a .ui-btn:active, html .ui-body-a .ui-btn:active, html body
+.ui-group-theme-a .ui-btn:active, html head+body .ui-btn.ui-btn-a:active{
+    text-shadow: none !important;
+    color: #bcbcbc !important;
+}
+
+.ui-page-theme-a .ui-btn:hover, html .ui-bar-a .ui-btn:hover, html .ui-body-a .ui-btn:hover, html body
+.ui-group-theme-a .ui-btn:hover, html head+body .ui-btn.ui-btn-a:hover {
+    text-shadow: none !important;
+    color: #bcbcbc !important;
+}
+
+.ui-listview>li h1, .ui-listview>li h2, .ui-listview>li h3, .ui-listview>li h4, .ui-listview>li h5, .ui-listview>li h6 {
+    color: #bcbcbc !important;
+    margin-left: 30%;
+}
+
+#menulist li:nth-child(odd):not(.ui-li-divider), li:nth-child(odd):not(.ui-li-divider) a {
+    background: #212121 !important;
+    text-shadow: none;
+}
+
+#menulist li:nth-child(even):not(.ui-li-divider), li:nth-child(even):not(.ui-li-divider) a {
+    background: #212121 !important;
+    text-shadow: none;
+}
+
+#menulist li:nth-child(odd):not(.ui-li-divider) a:hover {
+    background: #212121 !important;
+    text-shadow: none;
+}
+
+#menulist li {
+    margin:0 auto;
+    margin-left:auto;
+    margin-right:auto;
+    align:center;
+    text-align:center;"
+}
+
+/* End of Menu Button Styles */
+
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) {
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (orientation: portrait) {
 
     /*#region content*/
     .form {
@@ -71,22 +168,23 @@ and (orientation : portrait) {
 
     #logo {
         height: 30%;
-        display:block;
-        margin:auto;
+        display: block;
+        margin: auto;
     }
 
     .ui-icon-customback {
         background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
         background-repeat: no-repeat !important;
     }
+
     /*#endregion content*/
 }
 
 /* iPhone 6 - Landscape */
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : landscape) {
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (orientation: landscape) {
 
 }
 
@@ -94,23 +192,31 @@ and (orientation : landscape) {
 
 /* iPad - Landscape */
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape)
-and (-webkit-min-device-pixel-ratio: 1)  {
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
 
     #logo {
         height: 40%;
-        display:block;
-        margin:auto;
+        display: block;
+        margin: auto;
+    }
+
+    #menubutton {
+        visibility: hidden;
     }
 
 }
 
 /* iPad - Portrait */
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+
+    .ui-listview>.ui-li-has-thumb>.ui-btn, .ui-listview>.ui-li-static.ui-li-has-thumb {
+        min-height: 6em;
+    }
 
 }

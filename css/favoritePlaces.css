@@ -36,12 +36,67 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
+h2{
+    font-family: 'avenir-roman' !important;
+    font-size: 15pt;
+}
 .favList{
     padding-left: 3%;
     padding-right: 3%;
-    overflow: scroll;
+    /*overflow: scroll;*/
+    height: 100%;
+    top: 10px !important;
 }
 
+.place-description{
+    width: 95%;
+    white-space: normal !important;
+    text-align: justify;
+    font-family: 'avenir-roman' !important;
+    display: inline-block;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    /* Adds a hyphen where the word breaks */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+.deleteBtn{
+    width: 2%;
+    right: 0px;
+    vertical-align: middle;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    transform: translate(-50%, -50%);
+}
+
+#favPlacesContent{
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    height: 500px;
+
+}
+.place-image{
+    padding: 1%;
+}
+.list-view {
+    height: 100%;
+    top: 10px !important;
+    overflow: auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+.ui-listview li {
+    -webkit-box-shadow: 10px 10px 5px 0px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    10px 10px 5px 0px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         10px 10px 5px 0px #ccc;
+    /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);*/
+}
 .ui-footer h1 {
     font-family: 'avenir-roman' !important;
     font-weight: 100;
@@ -73,6 +128,44 @@ and (orientation : portrait) {
         background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
         background-repeat: no-repeat !important;
     }
+    .place-description{
+        /*width: 100%;*/
+        white-space: nowrap !important;
+        text-align: justify;
+        font-family: 'avenir-roman' !important;
+        display: inline-block;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        max-lines: 3 !important;
+
+    }
+    .deleteBtn{
+        width: 5%;
+        right: 0px;
+        vertical-align: middle;
+
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+    }
+    .favList{
+        padding-left: 3%;
+        padding-right: 3%;
+        /*overflow: scroll;*/
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #favPlacesContent{
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        height: 500px !important;
+
+    }
     /*#endregion content*/
 }
 
@@ -90,6 +183,55 @@ and (-webkit-min-device-pixel-ratio: 1)  {
         display:block;
         margin:auto;
     }
-    
+    .place-description{
+        /*width: 100%;*/
+        white-space: nowrap !important;
+        text-align: justify;
+        font-family: 'avenir-roman' !important;
+        display: inline-block;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        max-lines: 3 !important;
+
+    }
+    .favList{
+        padding-left: 3%;
+        padding-right: 3%;
+        /*overflow: scroll;*/
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .deleteBtn{
+        width: 2%;
+        right: 0px;
+        vertical-align: middle;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 98%;
+        transform: translate(-50%, -50%);
+    }
+    #favPlacesContent{
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        height: 500px !important;
+
+    }
+
+    /* iPad - Portrait */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait) {
+
+        #favPlacesContent{
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            height: 2000px !important;
+
+        }
+    }
 }
 
