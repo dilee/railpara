@@ -3,7 +3,7 @@
 /*#region Header*/
 .header {
     height: 45px;
-    background: #212121 !important;
+    background: #b71c1c !important;
     color: #ffffff !important;
     align-self:center;
 }
@@ -19,7 +19,7 @@
 /*#region Footer*/
 .footer {
     height: 45px;
-    background: #212121 !important;
+    background: #b71c1c !important;
     color: #ffffff !important;
     align-self:center;
     bottom: 0;
@@ -40,7 +40,19 @@ body {
     display:block;
     margin:auto;
 }
-
+.ui-grid-b>.ui-block-a{
+    width: 20% !important;
+}
+.ui-grid-b>.ui-block-b{
+    width: 60% !important;
+}
+.ui-grid-b>.ui-block-c{
+    width: 20% !important;
+}
+select{
+    data-corners : false !important;
+    data-shadow: false !important;
+}
 .ui-footer h1 {
     font-family: 'avenir-roman' !important;
     font-weight: 100;
@@ -53,6 +65,10 @@ body {
     background-repeat: no-repeat !important;
     overflow: auto !important;
     margin-top: 4pt  !important;
+}
+
+#seatsDiv{
+    width: 45% !important;
 }
 /*-------------------------- iPhone /*--------------------------*/
 
