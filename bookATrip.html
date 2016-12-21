@@ -114,7 +114,16 @@
         </form>
             </div>
             <div class="ui-block-c" style="text-align: right;"></div>
-            <div class="ui-grid-b res"
+
+        </div>
+        <div class="ui-grid-b ui-responsive">
+            <div class="ui-block-a" style="text-align: left;"></div>
+            <div class="ui-block-b" style="text-align: center;"></div>
+            <div class="ui-block-c" style="text-align: right;">
+                <!--<input type="button" value="Next" id="btnNext" onclick="#bookingDetailsPage"></input>-->
+                <a href="#bookingDetailsPage">Next</a>
+            </div>
+
         </div>
     </div>
 <div data-role="footer" class="footer">
@@ -123,6 +132,57 @@
 </div>
 
 <!-- End of first page -->
+<!-- Start of Second page -->
+<div data-role="page" id="bookingDetailsPage">
+    <div data-role="header" class="header">
+        <img src="images/logos/header/booktrip_header_logo.png" class="headerlogo"/>
+    </div>
+    <div data-role="main" class="ui-content" id="bookingDetailsContent">
+    <div class="ui-grid-b ui-responsive">
+        <div class="ui-block-a" style="text-align: left;"></div>
+        <div class="ui-block-b" style="text-align: left;" id="bookingDetailsBlock">
+
+            <h1>Booking Details</h1>
+            <div><h3>Departure Station</h3></div>
+            <div class="details">Maradana, Colombo 10</div>
+            <div><h3>Departure Time and Date</h3></div>
+            <div class="details">Test1</div>
+            <div><h3>Number of seats</h3></div>
+            <div class="details">03</div>
+            <div><h3>Cabin Type</h3></div>
+            <div class="details">Test2</div>
+            <div id="isWindowSeat"><h2>Window Seat Requested</h2></div>
+
+            <hr>
+
+            <h1>Return Trip Details</h1>
+            <div><h3>Departure Station</h3></div>
+            <div class="details">Maradana, Colombo 10</div>
+            <div><h3>Departure Time and Date</h3></div>
+            <div class="details">Test1</div>
+            <div><h3>Number of seats</h3></div>
+            <div class="details">03</div>
+            <div><h3>Cabin Type</h3></div>
+            <div class="details">Test2</div>
+        </div>
+        <div class="ui-block-c" style="text-align: right;"></div>
+    </div>
+        <div style="display: inline-block; width: 100%; padding-top: 5%">
+            <button type="submit" data-theme="c" id="editBtn">Edit Details</button>
+            <button type="submit" data-theme="c" id="nextBtn">Next</button>
+        </div>
+        <!--<fieldset class="ui-grid-b ui-responsive">-->
+
+            <!--<div class="ui-block-a"><button type="submit" data-theme="c">Edit Details</button></div>-->
+            <!--<div class="ui-block-b"></div>-->
+            <!--<div class="ui-block-c"><button type="submit" data-theme="c">Next</button></div>-->
+
+        <!--</fieldset>-->
+    </div>
+            <div data-role="footer" class="footer">
+                <h1>© Railපාර 2016</h1></div>
+</div>
+<!-- End of Second page -->
 
 </body>
 <!--<script>-->
