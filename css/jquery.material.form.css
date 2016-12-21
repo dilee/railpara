@@ -14,6 +14,7 @@
 
 [data-icon]:before {
   font-family: "material" !important;
+  font-family: "material" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
