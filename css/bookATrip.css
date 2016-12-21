@@ -3,7 +3,7 @@
 /*#region Header*/
 .header {
     height: 45px;
-    background: #212121 !important;
+    background: #b71c1c !important;
     color: #ffffff !important;
     align-self:center;
 }
@@ -19,7 +19,7 @@
 /*#region Footer*/
 .footer {
     height: 45px;
-    background: #212121 !important;
+    background: #b71c1c !important;
     color: #ffffff !important;
     align-self:center;
     bottom: 0;
@@ -33,6 +33,7 @@
 body {
     background-color: #456456 !important;
     font-family: 'avenir-roman' !important;
+
 }
 
 #logo {
@@ -40,7 +41,19 @@ body {
     display:block;
     margin:auto;
 }
-
+.ui-grid-b>.ui-block-a{
+    width: 20% !important;
+}
+.ui-grid-b>.ui-block-b{
+    width: 60% !important;
+}
+.ui-grid-b>.ui-block-c{
+    width: 20% !important;
+}
+select{
+    data-corners : false !important;
+    data-shadow: false !important;
+}
 .ui-footer h1 {
     font-family: 'avenir-roman' !important;
     font-weight: 100;
@@ -53,6 +66,36 @@ body {
     background-repeat: no-repeat !important;
     overflow: auto !important;
     margin-top: 4pt  !important;
+}
+
+#seatsDiv{
+    width: 45% !important;
+}
+.details{
+    padding-left: 10%;
+    font-size: large;
+    color: #333;
+
+}
+#editBtn{
+    float: left;
+    width: 22%;
+    background-color: #333;
+    color: #ffffff;
+}
+
+#nextBtn{
+    float: right;
+    width: 22%;
+    background-color: #333;
+    color: #ffffff;
+}
+#bookingDetailsBlock{
+    background-image:url("../images/icons/train_black_tr.png") ;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+
 }
 /*-------------------------- iPhone /*--------------------------*/
 
@@ -78,6 +121,34 @@ and (orientation : portrait) {
         background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
         background-repeat: no-repeat !important;
     }
+
+    .ui-grid-b>.ui-block-a{
+        width: 5% !important;
+    }
+    .ui-grid-b>.ui-block-b{
+        width: 90% !important;
+    }
+    .ui-grid-b>.ui-block-c{
+        width: 5% !important;
+    }
+    #editBtn{
+        float: left;
+        width: 36%;
+        background-color: #333;
+        color: #ffffff;
+
+    }
+    #nextBtn{
+        float: right;
+        width: 36%;
+        background-color: #333;
+        color: #ffffff;
+
+    }
+
+    #bookingDetailsBlock{
+        background-size: 65%;
+    }
     /*#endregion content*/
 }
 
@@ -87,6 +158,9 @@ and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : landscape) {
 
+    #bookingDetailsBlock{
+        background-size: 65%;
+    }
 }
 
 /*-------------------------- iPad /*--------------------------*/

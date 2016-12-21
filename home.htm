@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/slider-menu.css"> <!-- Slider Menu Stylesheet -->
     <link rel="stylesheet" href="css/font-face.css">
 </head>
 
@@ -13,6 +13,7 @@
 
     <!-- Start of home page -->
     <div data-role="page" id="homepage">
+        <!--Header-->
         <div data-role="header" class="header" data-position="fixed">
             <a href="#loginPage" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback"
                data-iconpos="notext"></a>
@@ -25,13 +26,29 @@
         <!-- Slide Menu Panel -->
         <div data-role="panel" id="menu" data-position="right" data-display="overlay" data-position-fixed="true"
              class="menupanel">
+
+            <!--Profile Details Block-->
+            <div class="profiledetails">
+                <!--Profile Image Button-->
+                <div class="profilebtn">
+                    <a data-role="none" href="#"><img src="images/icons/profile_dp.png" class="profileimg"/></a>
+                </div>
+                <!--Profile Name-->
+                <div class="profilename">
+                    <a data-role="none" href="#"><p>Test</p></a>
+                </div>
+            </div>
+
+            <!--Profile Details Block-->
+            <div class="newsletter">
+                <!--Newsletter Image Button-->
+                <div class="">
+                    <a data-role="none" href="#"><img src="images/buttons/icon-buttons/newsletter_button.png" class="newsletterimg"/></a>
+                </div>
+            </div>
+
+            <!--Menu Items List-->
             <ul id="menulist" data-role="listview" data-icon="false">
-
-                <li data-icon="false">
-                    <a href="#"><img src="images/buttons/icon-buttons/newsletter_button.png"
-                                     style="max-height:50px; left:70%; bottom:0%"></a>
-
-                </li>
                 <li><a href="#"><img src="images/buttons/rectangle-buttons/menu_home_button.png"></a></li>
                 <li><a href="#"><img src="images/buttons/rectangle-buttons/menu_favorites_button.png"></a></li>
                 <li><a href="#"><img src="images/buttons/rectangle-buttons/menu_achievements_button.png"></a></li>
@@ -39,15 +56,18 @@
                 <li><a href="#"><img src="images/buttons/rectangle-buttons/menu_howto_button.png"></a></li>
                 <li><a href="#"><img src="images/buttons/rectangle-buttons/menu_logout_button.png"></a></li>
                 <li><a href="#"><h2>About Us</h2></a></li>
-
             </ul>
         </div>
 
         <div data-role="main" class="ui-content" id="content">
 
         </div>
+
+        <!--Footer-->
         <div data-role="footer" class="footer">
-            <h1>©Railපාර 2016</h1></div>
+            <h1>©Railපාර 2016</h1>
+        </div>
+
     </div>
     <!-- End of home page -->
 
