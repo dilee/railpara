@@ -147,6 +147,35 @@ html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
     text-align:center;"
 }
 
+.profiledetails {
+    display: inline-block !important;
+    width: 100%;
+    bottom: 10%;
+    padding-left: 4%;
+    padding-bottom: 5%;
+}
+
+.profiledetails a:link, a:visited {
+    text-decoration: none !important;
+    font-family: 'avenir-light' !important;
+    color: #e0e0e0 !important;
+    text-shadow: none !important;
+}
+
+.profileimg {
+    width: 28%;
+    float:left;
+    margin-bottom: 2%;
+    margin-left: 4%;
+}
+
+.profilename {
+    vertical-align: middle !important;
+    margin-left: 4%;
+    margin-top: 3%;
+    float: left;
+}
+
 /* End of Menu Button Styles */
 
 /*-------------------------- iPhone /*--------------------------*/
