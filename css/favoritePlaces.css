@@ -103,7 +103,25 @@ h2{
     font-size: 11pt !important;
     color: #bcbcbc;
 }
+  #favlistEmailDiv{
+        margin-right:10pt !important;
+        margin-left:10pt !important;
+    }
+#btnEmailFavListDiv{
+      margin-right:10pt !important;
+        margin-left:10pt !important;
+}
 
+.emailBtn{
+    width: 10%;
+    right: 1px;
+    vertical-align: middle;
+    margin: -21px;
+    position: absolute;
+    top: 90%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
@@ -155,7 +173,7 @@ and (orientation : portrait) {
         padding-left: 3%;
         padding-right: 3%;
         /*overflow: scroll;*/
-    overflow: auto;
+         overflow: auto;
         -webkit-overflow-scrolling: touch;
     }
 
@@ -165,8 +183,26 @@ and (orientation : portrait) {
         height: 500px !important;
 
     }
-    /*#endregion content*/
+    #favlistEmailDiv{
+        margin-right:10pt !important;
+        margin-left:10pt !important;
+    }
+    #btnEmailFavListDiv{
+      margin-right:10pt !important;
+        margin-left:10pt !important;
 }
+  .emailBtn{
+    width: 17%;
+    right: 1px;
+    vertical-align: middle;
+    margin: -21px;
+    position: absolute;
+    top: 91%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+    /*#endregion content*/
+
 
 /*-------------------------- iPad /*--------------------------*/
 
@@ -231,6 +267,14 @@ and (-webkit-min-device-pixel-ratio: 1)  {
             height: 2000px !important;
 
         }
+          #favlistEmailDiv{
+        margin-right:10pt !important;
+        margin-left:10pt !important;
+    }
+    #btnEmailFavListDiv{
+      margin-right:10pt !important;
+        margin-left:10pt !important;
+}
     }
 }
 
