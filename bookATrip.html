@@ -16,6 +16,8 @@
 <!-- Start of first page -->
 <div data-role="page" id="tripDetails">
     <div data-role="header" class="header">
+        <a href="#loginPage" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback"
+               data-iconpos="notext"></a>
         <img src="images/logos/header/booktrip_header_logo.png" class="headerlogo"/>
     </div>
     <div data-role="main" class="ui-content" id="bookingContent">
@@ -35,7 +37,8 @@
                     <div id="seatsDiv">
                         Seats
                         <input type="number" id="noOfSeats" data-corners="false" min="1">
-                    </div></div>
+                    </div>
+                    </div>
                 <div class="ui-block-b" style="text-align: center; width: 50% !important;">
                     <div id="bookingDateDiv" style="margin-right: 40pt;">
                         Date
@@ -60,13 +63,13 @@
                     <option value="3">The 3rd Option</option>
                 </select>
             </div>
-            <div>
+            <div id="windowSeatDiv"> 
                 <label>
                     <input type="checkbox" name="windowSeat" id="cbRWindowSeat" checked="checked"> Request a window seat if available
 
                 </label>
             </div>
-            <div>
+            <div id="returnTripCBDiv">
                 <label id="ReturnTripDiv">
                     <input type="checkbox" name="windowSeat" id="cbReturnTrip"> <h3>Return Trip</h3>
                 </label>
@@ -135,6 +138,8 @@
 <!-- Start of Second page -->
 <div data-role="page" id="bookingDetailsPage">
     <div data-role="header" class="header">
+        <a href="#tripDetails" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback"
+               data-iconpos="notext"></a>
         <img src="images/logos/header/booktrip_header_logo.png" class="headerlogo"/>
     </div>
     <div data-role="main" class="ui-content" id="bookingDetailsContent">
@@ -171,12 +176,6 @@
             <button type="submit" data-theme="c" id="editBtn">Edit Details</button>
             <button type="submit" data-theme="c" id="nextBtn">Next</button>
         </div>
-        <!--<fieldset class="ui-grid-b ui-responsive">-->
-            <!--<div class="ui-block-a"><button type="submit" data-theme="c">Edit Details</button></div>-->
-            <!--<div class="ui-block-b"></div>-->
-            <!--<div class="ui-block-c"><button type="submit" data-theme="c">Next</button></div>-->
-
-        <!--</fieldset>-->
     </div>
             <div data-role="footer" class="footer">
                 <h1>© Railපාර 2016</h1></div>
