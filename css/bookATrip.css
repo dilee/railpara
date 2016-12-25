@@ -1,0 +1,223 @@
+/*-------------------------- Common Elements /*--------------------------*/
+/*#region ChromeElements*/
+/*#region Header*/
+.header {
+    height: 45px;
+    background: #b71c1c !important;
+    color: #ffffff !important;
+    align-self:center;
+}
+
+.headerlogo {
+    height: 80%;
+    padding: 4pt;
+    display:block;
+    margin:auto;
+}
+/*#endregion Header*/
+
+/*#region Footer*/
+.footer {
+    height: 45px;
+    background: #b71c1c !important;
+    color: #ffffff !important;
+    align-self:center;
+    bottom: 0;
+    position: absolute;
+    margin: 0;
+    width: 100%;
+}
+/*#endregion Footer*/
+/*#endregion ChromeElements*/
+
+body {
+    background-color: #f6f6f6 !important;
+    font-family: 'avenir-roman' !important;
+
+}
+
+#logo {
+    height: 30%;
+    display:block;
+    margin:auto;
+}
+.ui-grid-b>.ui-block-a{
+    width: 20% !important;
+}
+.ui-grid-b>.ui-block-b{
+    width: 60% !important;
+}
+.ui-grid-b>.ui-block-c{
+    width: 20% !important;
+}
+select{
+    data-corners : false !important;
+    data-shadow: false !important;
+}
+.ui-footer h1 {
+    font-family: 'avenir-roman' !important;
+    font-weight: 100;
+    font-size: 11pt !important;
+    color: #bcbcbc;
+}
+
+.ui-icon-customback {
+    background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
+    background-repeat: no-repeat !important;
+    overflow: auto !important;
+    margin-top: 4pt  !important;
+}
+
+#seatsDiv{
+    width: 45% !important;
+}
+.details{
+    padding-left: 10%;
+    font-size: large;
+    color: #333;
+
+}
+#editBtn{
+    float: left;
+    width: 22%;
+    background-color: #333;
+    color: #ffffff;
+}
+
+#nextBtn{
+    float: right;
+    width: 22%;
+    background-color: #333;
+    color: #ffffff;
+}
+#bookingDetailsBlock{
+    background-image:url("../images/icons/train_black_tr.png") ;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+
+}
+#ReturnTripDiv{
+    border: none !important;
+}
+
+.ui-btn-icon-notext.ui-btn-corner-all>.ui-btn-icon-notext.ui-corner-all{
+    border-radius: 1em !important;
+    border: none !important;
+}
+
+.ui-page-theme-b .ui-btn, html .ui-bar-b .ui-btn, html .ui-body-b .ui-btn, html body .ui-group-theme-b .ui-btn, html head+body .ui-btn.ui-btn-b, .ui-page-theme-b .ui-btn:visited, html .ui-bar-b .ui-btn:visited, html .ui-body-b .ui-btn:visited, html body .ui-group-theme-b .ui-btn:visited, html head+body .ui-btn.ui-btn-b:visited {
+    border-color: #b71c1c !important;
+    color: #fff;
+    text-shadow: 0 1px 0 #111;
+}
+/*-------------------------- iPhone /*--------------------------*/
+
+/* iPhone 6 - Portrait */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+
+    /*#region content*/
+    .form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #logo {
+        height: 30%;
+        display:block;
+        margin:auto;
+    }
+
+    .ui-icon-customback {
+        background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .ui-grid-b>.ui-block-a{
+        width: 5% !important;
+    }
+    .ui-grid-b>.ui-block-b{
+        width: 90% !important;
+    }
+    .ui-grid-b>.ui-block-c{
+        width: 5% !important;
+    }
+    #editBtn{
+        float: left;
+        width: 36%;
+        background-color: #333;
+        color: #ffffff;
+
+    }
+    #nextBtn{
+        float: right;
+        width: 36%;
+        background-color: #333;
+        color: #ffffff;
+
+    }
+
+    #bookingDetailsBlock{
+        background-size: 65%;
+    }
+    #seatsDiv{
+    width: 213pt !important;
+}
+    #bookingDateDiv{
+        width: 213pt !important;
+        text-align: left;
+}
+#bookingTimeDiv{
+        width: 213pt !important;
+        text-align: left;
+}
+#bookingForm{
+        margin-left: 20pt;
+}
+#windowSeatDiv{
+    padding-top: 10px;
+}
+#returnTripCBDiv{
+    margin-top: 0;
+}
+    /*#endregion content*/
+}
+
+/* iPhone 6 - Landscape */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+
+    #bookingDetailsBlock{
+        background-size: 65%;
+    }
+}
+
+/*-------------------------- iPad /*--------------------------*/
+
+/* iPad - Landscape */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)  {
+
+    #logo {
+        height: 40%;
+        display:block;
+        margin:auto;
+    }
+
+}
+
+/* iPad - Portrait */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+}

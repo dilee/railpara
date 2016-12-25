@@ -1,0 +1,287 @@
+
+/*-------------------------- Common Elements /*--------------------------*/
+/*#region ChromeElements*/
+/*#region Header*/
+.header {
+    height: 45px;
+    background: #3e2723 !important;
+    color: #ffffff !important;
+    align-self:center;
+}
+
+.headerlogo {
+    height: 80%;
+    padding: 4pt;
+    display:block;
+    margin:auto;
+}
+/*#endregion Header*/
+
+/*#region Footer*/
+
+.footer {
+    height: 45px;
+    background: #3e2723 !important;
+    color: #ffffff !important;
+    align-self:center;
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+}
+/*#endregion Footer*/
+/*#endregion ChromeElements*/
+
+body {
+    background-color: #f6f6f6 !important;
+    font-family: 'avenir-roman' !important;
+}
+
+.ui-footer h1 {
+    font-family: 'avenir-roman' !important;
+    font-weight: 100;
+    font-size: 11pt !important;
+    color: #bcbcbc;
+}
+
+.ui-content {
+    padding: 0 0 0 0 !important;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.buttonSet{
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    bottom: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+
+.button{
+    padding-left: 5px;
+    padding-right: 5px;
+    alignment: center;
+}
+
+.btnImg {
+    width: 80px;
+}
+
+
+#placeDesc {
+    position: fixed;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 30%;
+    height: 165px;
+    text-align: justify;
+}
+
+
+/*--------------Slider CSS------------------------------------*/
+
+.jssor1-Class {
+    position: relative;
+    margin: 0 auto;
+    top: 0px;
+    left: 0px;
+    width: 1300px;
+    height: 500px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.slider-Class {
+    cursor: default;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 1300px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.jssorb05 {
+    position: absolute;
+}
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+    position: absolute;
+    /* size of bullet element */
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons/circles.png') no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+.jssorb05 div { background-position: -7px -7px; }
+.jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+.jssorb05 .av { background-position: -67px -7px; }
+.jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+/* jssor slider arrow navigator skin 22 css */
+
+.jssora22l, .jssora22r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 40px;
+    height: 58px;
+    cursor: pointer;
+    background: url('../images/icons/navigator.png') center center no-repeat;
+    overflow: hidden;
+}
+.jssora22l { background-position: -10px -31px; }
+.jssora22r { background-position: -70px -31px; }
+.jssora22l:hover { background-position: -130px -31px; }
+.jssora22r:hover { background-position: -190px -31px; }
+.jssora22l.jssora22ldn { background-position: -250px -31px; }
+.jssora22r.jssora22rdn { background-position: -310px -31px; }
+.jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
+.jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
+
+/*-------------------------- iPhone /*--------------------------*/
+
+/* iPhone 6 - Portrait */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+
+    /*#region content*/
+    .form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #logo {
+        height: 30%;
+        display:block;
+        margin:auto;
+    }
+
+    .ui-icon-customback {
+        background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .jssor1-Class {
+        position: relative;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        width: 1300px;
+        height: 800px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    .slider-Class {
+        cursor: default;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 1300px;
+        height: 800px;
+        overflow: hidden;
+    }
+
+
+
+    /*#endregion content*/
+}
+
+/* iPhone 6 - Landscape */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+
+    /*#region content*/
+    .form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #logo {
+        height: 30%;
+        display:block;
+        margin:auto;
+    }
+
+    .ui-icon-customback {
+        background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .jssor1-Class {
+        position: relative;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        width: 1300px;
+        height: 350px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    .slider-Class {
+        cursor: default;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 1300px;
+        height: 350px;
+        overflow: hidden;
+    }
+
+    .
+
+
+
+
+    /*#endregion content*/
+}
+
+
+/*-------------------------- iPad /*--------------------------*/
+
+/* iPad - Landscape */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)  {
+
+    #logo {
+        height: 40%;
+        display:block;
+        margin:auto;
+    }
+
+    .jssor1-Class {
+        position: relative;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        width: 1300px;
+        height: 350px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    .slider-Class {
+        cursor: default;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 1300px;
+        height: 350px;
+        overflow: hidden;
+    }
+
+
+}
+
