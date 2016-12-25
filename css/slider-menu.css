@@ -78,84 +78,12 @@ body {
     border-radius: 0%;
 }
 
-/* Menu Styles */
-
-.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit,
-html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
-    background-color: #212121 !important;
-}
-
-.ui-listview > li.ui-last-child, .ui-listview > li.ui-last-child > a.ui-btn {
-    border-bottom-width: 0px !important;
-}
-
-.ui-listview .ui-li-has-thumb>img:first-child, .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child, .ui-listview
-.ui-li-has-thumb .ui-li-thumb {
-    max-width: 75%;
-}
-
-.ui-listview>.ui-li-static, .ui-listview>.ui-li-divider, .ui-listview>li>a.ui-btn {
-    border-style: none;
-}
-
-.ui-listview>.ui-li-has-thumb>.ui-btn, .ui-listview>.ui-li-static.ui-li-has-thumb {
-    padding: 5%;
-}
-
-.ui-listview .ui-li-has-thumb>img:first-child, .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child, .ui-listview
-.ui-li-has-thumb .ui-li-thumb {
-    left: 12%;
-    top: 20%;
-    color: #bcbcbc !important;
-}
-
-.ui-listview>li h1, .ui-listview>li h2, .ui-listview>li h3, .ui-listview>li h4, .ui-listview>li h5, .ui-listview>li h6 {
-    color: #bcbcbc !important;
-    margin-left: 30%;
-}
-
-.ui-page-theme-a .ui-btn:active, html .ui-bar-a .ui-btn:active, html .ui-body-a .ui-btn:active, html body
-.ui-group-theme-a .ui-btn:active, html head+body .ui-btn.ui-btn-a:active{
-    text-shadow: none !important;
-    color: #bcbcbc !important;
-}
-
-.ui-page-theme-a .ui-btn:hover, html .ui-bar-a .ui-btn:hover, html .ui-body-a .ui-btn:hover, html body
-.ui-group-theme-a .ui-btn:hover, html head+body .ui-btn.ui-btn-a:hover {
-    text-shadow: none !important;
-    color: #bcbcbc !important;
-}
-
-#menulist li:nth-child(odd):not(.ui-li-divider), li:nth-child(odd):not(.ui-li-divider) a {
-    background: #212121 !important;
-    text-shadow: none;
-}
-
-#menulist li:nth-child(even):not(.ui-li-divider), li:nth-child(even):not(.ui-li-divider) a {
-    background: #212121 !important;
-    text-shadow: none;
-}
-
-#menulist li:nth-child(odd):not(.ui-li-divider) a:hover {
-    background: #212121 !important;
-    text-shadow: none;
-}
-
-#menulist li {
-    margin:0 auto;
-    margin-left:auto;
-    margin-right:auto;
-    align:center;
-    text-align:center;
-}
-
+/* Menu Panel Styles */
 .menuheaderblock {
     display: inline-block !important;
     width: 100%;
     bottom: 10%;
     padding-left: 4%;
-    padding-bottom: 5%;
-    margin-bottom: 2%;
     margin-top: 2%;
 }
 
@@ -165,19 +93,42 @@ html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
     color: #e0e0e0 !important;
     text-shadow: none !important;
 }
+
+.ui-panel-inner {
+    background-color: #212121 !important;
+}
+
+.menubutton {
+    width: 95%;
+    margin-bottom: 16%;
+    margin-left: 3%;
+}
+
+#aboutus {
+    margin-left: 32% !important;
+}
+
+#aboutus a:link, a:visited {
+    text-decoration: none !important;
+    font-family: 'avenir-light' !important;
+    color: #a0a0a0 !important;
+    text-shadow: none !important;
+}
+
 /*#endregion Menu Styles*/
 
 /*Profile Image and Newsletter Styles*/
 .profileimg {
-    float:left;
+    float: left;
     margin-bottom: 2%;
     margin-left: 2%;
-    width:28%;
+    width: 28%;
     border-width: 4px !important;
-    border:1em solid #424242;
+    border: 1em solid #424242;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
+    z-index: 1000;
 }
 
 .profilename {
@@ -185,14 +136,14 @@ html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
     margin-top: 8%;
     float: left;
     border-radius: 1em;
-    border-width:3px;
+    border-width: 3px;
     text-align: center;
     background-color: #424242;
     line-height: 1%;
     color: white;
     position: relative;
     width: 30%;
-    z-index: -1;
+    z-index: 1;
 }
 
 .newsletterimg {
@@ -227,6 +178,7 @@ and (orientation: portrait) {
         margin-left: 1% !important;
         margin-top: 1.5% !important;
     }
+
     /*#endregion content*/
 }
 
@@ -276,7 +228,7 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
 
-    .ui-listview>.ui-li-has-thumb>.ui-btn, .ui-listview>.ui-li-static.ui-li-has-thumb {
+    .ui-listview > .ui-li-has-thumb > .ui-btn, .ui-listview > .ui-li-static.ui-li-has-thumb {
         min-height: 6em;
     }
 
