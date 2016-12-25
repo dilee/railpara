@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/slider-menu.css"> <!-- Slider Menu Stylesheet -->
         <link rel="stylesheet" href="css/favoritePlaces.css">
         <link rel="stylesheet" href="css/font-face.css">
     </head>
@@ -13,8 +14,49 @@
     <body>
      <div data-role="page" id="favPlaces">
             <div data-role="header" class="header">
+                <a id="backbutton" href="#loginPage" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback"
+                   data-iconpos="notext"></a>
                 <img src="images/logos/header/favplaces_header_logo.png" class="headerlogo"/>
+                <a id="menubutton" href="#menu" class="ui-nodisc-icon" data-theme="none" data-role="button"
+                   data-icon="custommenu"
+                   data-iconpos="notext"></a>
             </div>
+
+         <!-- Slide Menu Panel -->
+         <div data-role="panel" id="menu" data-position="right" data-display="overlay" data-position-fixed="true"
+              class="menupanel">
+
+             <!--Menu Header Block-->
+             <div class="menuheaderblock">
+                 <!--Profile Image Button-->
+                 <div>
+                     <a data-role="none" href="#"><img src="images/icons/profile_dp.png" class="profileimg"/></a>
+                 </div>
+                 <!--Profile Name-->
+                 <div class="profilename">
+                     <a data-role="none" href="#"><p>Test</p></a>
+                 </div>
+                 <!--Newsletter Block-->
+                 <div>
+                     <!--Newsletter Image Button-->
+                     <a data-role="none" href="#"><img src="images/buttons/icon-buttons/newsletter_button.png" class="newsletterimg"/></a>
+                 </div>
+             </div>
+
+             <!--Menu Items List-->
+             <div id="menubuttonlist">
+                 <div data-role="main" class="ui-content" id="content">
+                     <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_home_button.png"></a>
+                     <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_favorites_button.png"></a>
+                     <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_achievements_button.png"></a>
+                     <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_mytrips_button.png"></a>
+                     <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_howto_button.png"></a>
+                     <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_logout_button.png"></a>
+                     <div id="aboutus"><a href="#">About Us</a></div>
+                 </div>
+             </div>
+         </div>
+
             <div data-role="main" class="ui-content" id="favPlacesContent">
                 <ul data-role="listview" class="favList">
                     <li data-icon="false">
@@ -59,16 +101,42 @@
                         <a href="#"><img src="images/places/dutch_museum/dutchmuseum_thumbnail_01.png" class="place-image">
                             <h2>Dutch Museum</h2>
                             <p class="place-description">Pettah. It's the oldest, most interesting and perhaps most underrated (at least by Southern Colombars) part of the city. Whatever the more sheltered denizens of Colombo-South may think this teaming, multi-ethnic-warren remains the beating heart of the capital. Almost all the food we buy, a good proportion of the white goods/electronics we use and virtually all the piping, wiring, nuts, bolts and nails that hold together our homes, as well as every sock, hanky and hair clip you've ever bought passes through Pettah's complex wholesale/retail ecosystem at some point. </p>
-                            <img src="images/buttons/icon-buttons/delete_button.png" class="deleteBtn" data-role="button">
+                            <a href="#deleteFavListPopUp" data-rel="popup" data-position-to="window"><img src="images/buttons/icon-buttons/delete_button.png"class="deleteBtn" data-role="button"></a>
+                           
+                            <div data-role="popup" id="deleteFavListPopUp" data-theme="b" class="ui-content" 
+                            data-overlay-theme="b" data-dismissible="false" >
 
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">close</a>               
+                     <h3 style="text-align: center;">Are you sure?</h2></h3>
+                    <p style="text-align: center;">This place will be removed from your favorite list</p>
+                    
+                    <div id="btnEmailFavListDiv">
+                <a href="#" class="sure-do" data-role="button" data-theme="b" data-rel="back" style="float: left;">Yes</a>
+                <a href="#" data-role="button" data-theme="c" data-rel="back" style="float:right;">No</a>
+            </div>
+        </div>
                         </a>
                     </li>
 
                 </ul>
+                 <a href="#emailFavListPopUp" data-rel="popup" data-position-to="window" id="btnEmail" ><img src="images/buttons/icon-buttons/email_button_unselected.png" class="emailBtn" data-role="button"></a>
+                   <div data-role="popup" id="emailFavListPopUp" data-theme="b" class="ui-content" data-overlay-theme="b" data-dismissible="false" >
+                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">close</a>               
+                     <h3 style="text-align: center;">Email your favorite List</h3>
+                <p style="text-align: center;">Recieve a detailed List of your favourite places via Email</p>
+                <div id="favlistEmailDiv">
+                <input type="email" id="favlistEmail" placeholder="Email address">
+                </div>
+                <div id="btnEmailFavListDiv">
+                 <button id="btnEmailFavList">Send</button>
+                </div>
+        </div>
+                
             </div>
             <div data-role="footer" class="footer">
                 <h1>©Railපාර 2016</h1> </div>
      </div>
+       
 
     </body>
 
