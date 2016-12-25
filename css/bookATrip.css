@@ -31,7 +31,7 @@
 /*#endregion ChromeElements*/
 
 body {
-    background-color: #456456 !important;
+    background-color: #f6f6f6 !important;
     font-family: 'avenir-roman' !important;
 
 }
@@ -95,6 +95,10 @@ select{
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
+
+}
+#ReturnTripDiv{
+    border: none !important;
 
 }
 /*-------------------------- iPhone /*--------------------------*/
