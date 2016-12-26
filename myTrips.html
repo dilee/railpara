@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/myTrips.css">
+    <link rel="stylesheet" href="css/font-face.css">
+</head>
+
+<body>
+    <div data-role="page" id="myTrips">
+        <div data-role="header" class="header">
+        </div>
+        <div data-role="main" class="ui-content ui-responsive" id="myTripsContent">
+            <div class="container" id="tabbedContainer">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#tab_Upcoming" data-toggle="tab">Upcoming</a></li>
+                    <li><a href="#tab_Past" data-toggle="tab">Past</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_Upcoming">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
+                                <div class="col-md-2">
+                                    <img src="images/icons/train_black.png" class="trip-image">
+                                </div>
+                                <div class="col-md-9">
+                                    <p class="list-group-item-text">Destination</p>
+                                    <h2 class="list-group-item-heading">Destination Name</h2>
+                                    <p class="list-group-item-text">Date and Time</p>
+                                    <h2 class="list-group-item-heading">Destination Name</h2>
+
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab_Past">
+                        <h4>Pane B</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div data-role="footer " class="footer ">
+            <h1>©Railපාර 2016</h1>
+        </div>
+    </div>
+</body>
+
+</html>
