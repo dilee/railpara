@@ -2,19 +2,75 @@
 /*#region ChromeElements*/
 /*#region Header*/
 .header {
-    height: 45px;
+    width: 100% !important;
+    height: 45px !important;
     background: #212121 !important;
     color: #ffffff !important;
-    align-self: center;
+    align-self: center !important;
+    position: fixed !important;
 }
 
-.headerlogo {
-    height: 80%;
-    padding: 3pt;
+#headerblock {
+    display: inline-block !important;
+    width: 100%;
+    height: 45px;
+}
+
+/*#region Back Button*/
+#backbuttonblock {
+    margin-top: 10%;
+}
+
+#backbuttonblock img {
     display: block;
+    height: 70%;
+}
+/*#endregion Back Button*/
+
+/*#region Logo*/
+#logoblock {
+    margin-top: 1%;
+}
+
+#logoblock img {
+    margin-top: 10%;
+    display: block;
+    margin: auto;
+    height: 80%;
+}
+/*#endregion Logo*/
+
+/*#region Menu Button*/
+#menubuttonblock {
+    margin-top: 10%;
+}
+
+#menubuttonblock img {
+    height: 70%;
     margin: auto;
 }
 
+.menulistbuttonblock {
+    margin-bottom: 11%;
+    margin-top: 11%;
+    margin-left: 5%;
+}
+
+.menulistbutton {
+    width: 95%;
+}
+
+.menu-icon {
+    transform: rotate(0deg);
+    transition: transform 0.2s linear;
+}
+
+.menu-icon.open {
+    transform: rotate(90deg);
+    transition: transform 0.2s linear;
+}
+
+/*#endregion Menu Button*/
 /*#endregion Header*/
 
 /*#region Footer*/
@@ -51,40 +107,13 @@ body {
     color: #bcbcbc;
 }
 
-/*Back Button*/
-.ui-icon-customback {
-    background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
-    background-repeat: no-repeat !important;
-    overflow: auto !important;
-}
-
-.ui-btn, label.ui-btn {
-    border-style: none !important;
-    margin-left: 1% !important;
-    margin-top: 0.5% !important;
-}
-
-/* Menu Button Styles */
-.ui-icon-custommenu, ui-btn {
-    background: url("../images/buttons/icon-buttons/menu_button_25_25.png") !important;
-    background-repeat: no-repeat !important;
-    size: 25px 25px;
-    overflow: auto !important;
-    float: right !important;
-    border-style: none !important;
-}
-
-.ui-btn-icon-notext.ui-corner-all {
-    border-radius: 0%;
-}
-
 /* Menu Panel Styles */
 .menuheaderblock {
     display: inline-block !important;
     width: 100%;
     bottom: 10%;
     padding-left: 4%;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 .menuheaderblock a:link, a:visited {
@@ -96,12 +125,6 @@ body {
 
 .ui-panel-inner {
     background-color: #212121 !important;
-}
-
-.menubutton {
-    width: 95%;
-    margin-bottom: 16%;
-    margin-left: 3%;
 }
 
 #aboutus {
