@@ -99,7 +99,17 @@ select{
 }
 #ReturnTripDiv{
     border: none !important;
+}
 
+.ui-btn-icon-notext.ui-btn-corner-all>.ui-btn-icon-notext.ui-corner-all{
+    border-radius: 1em !important;
+    border: none !important;
+}
+
+.ui-page-theme-b .ui-btn, html .ui-bar-b .ui-btn, html .ui-body-b .ui-btn, html body .ui-group-theme-b .ui-btn, html head+body .ui-btn.ui-btn-b, .ui-page-theme-b .ui-btn:visited, html .ui-bar-b .ui-btn:visited, html .ui-body-b .ui-btn:visited, html body .ui-group-theme-b .ui-btn:visited, html head+body .ui-btn.ui-btn-b:visited {
+    border-color: #b71c1c !important;
+    color: #fff;
+    text-shadow: 0 1px 0 #111;
 }
 /*-------------------------- iPhone /*--------------------------*/
 
@@ -153,6 +163,26 @@ and (orientation : portrait) {
     #bookingDetailsBlock{
         background-size: 65%;
     }
+    #seatsDiv{
+    width: 213pt !important;
+}
+    #bookingDateDiv{
+        width: 213pt !important;
+        text-align: left;
+}
+#bookingTimeDiv{
+        width: 213pt !important;
+        text-align: left;
+}
+#bookingForm{
+        margin-left: 20pt;
+}
+#windowSeatDiv{
+    padding-top: 10px;
+}
+#returnTripCBDiv{
+    margin-top: 0;
+}
     /*#endregion content*/
 }
 
