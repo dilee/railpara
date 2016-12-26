@@ -37,7 +37,7 @@
     color: #ffffff !important;
     align-self: center;
     bottom: 0;
-    position: absolute;
+    position: fixed;
     margin: 0;
     width: 100%;
 }
@@ -55,7 +55,30 @@ body {
     background-color: #f6f6f6 !important;
     font-family: 'avenir-roman' !important;
 }
-
+.trip-image{
+width: 25%;
+}
+#trip_description{
+    float: right;
+}
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+    background-color: #2e7d32  !important;
+      color:#ffffff!important;
+    
+}
+.green .active a,
+.green .active a:hover {
+   background-color: #2e7d32  !important;
+}
+.ui-link .active{
+    color:#ffffff!important;
+}
+.ui-link{
+    color: #2e7d32  !important;
+}
+.list-group-item-text{
+color: black;
+}
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
