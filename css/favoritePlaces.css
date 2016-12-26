@@ -127,6 +127,8 @@
                 transform: translate(-50%, -50%);
             }
 
+            /*#region PopUp*/
+            
             .modal-content {
                 background-color: #333 !important;
                 color: #f6f6f6 !important;
@@ -168,8 +170,8 @@
 
             .close-thik:after {
                 content: '✖';
-                /* UTF-8 symbol */
             }
+            /*#endregion Popup*/
             /*-------------------------- iPhone /*--------------------------*/
             /* iPhone 6 - Portrait */
 
