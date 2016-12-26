@@ -139,7 +139,12 @@ body {
 /*#endregion Menu Styles*/
 
 /*Profile Image and Newsletter Styles*/
-.profileimg {
+.profileimageblock {
+    position: relative;
+    z-index: 3;
+}
+
+.profileimageblock img {
     float: left;
     margin-bottom: 2%;
     margin-left: 2%;
@@ -149,10 +154,9 @@ body {
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
-    z-index: 1000;
 }
 
-.profilename {
+.profilenameblock {
     margin-left: -8%;
     margin-top: 8%;
     float: left;
@@ -164,7 +168,7 @@ body {
     color: white;
     position: relative;
     width: 30%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .newsletterimg {
