@@ -1,4 +1,4 @@
-$(document).on("pagecreate", "#homepage", function () {
+$(document).on("pagecreate", "div[data-role=page]", function () {
     var icon = document.getElementById('menubutton');
     var open = false;
     $("#menubuttonblock").on("tap", function () {
