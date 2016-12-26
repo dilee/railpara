@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -12,125 +13,126 @@
 
     <title>Book A Trip</title>
 </head>
+
 <body>
-<!-- Start of first page -->
-<div data-role="page" id="tripDetails">
-    <div data-role="header" class="header">
-        <a href="#loginPage" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback"
-               data-iconpos="notext"></a>
-        <img src="images/logos/header/booktrip_header_logo.png" class="headerlogo"/>
-    </div>
-    <div data-role="main" class="ui-content" id="bookingContent">
-        <h1>Trip Details</h1>
-        <div class="ui-grid-b ui-responsive" id="bookingForm">
-            <div class="ui-block-a" style="text-align: left;"></div>
-            <div class="ui-block-b" style="text-align: center;">
-        <form method="post" id="tripForm" class="material">
-            <select name="select-menu-depStation" id="ddlDepStation">
+    <!-- Start of first page -->
+    <div data-role="page" id="tripDetails">
+        <div data-role="header" class="header">
+            <a href="#loginPage" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback" data-iconpos="notext"></a>
+            <img src="images/logos/header/booktrip_header_logo.png" class="headerlogo" />
+        </div>
+        <div data-role="main" class="ui-content" id="bookingContent">
+            <h1>Trip Details</h1>
+            <div class="ui-grid-b ui-responsive" id="bookingForm">
+                <div class="ui-block-a" style="text-align: left;"></div>
+<div class="ui-block-b" style="text-align: center;">
+<form method="post" id="tripForm" class="material">
+    <select name="select-menu-depStation" id="ddlDepStation">
                 <option value="0">Departure Station</option>
                 <option value="1">The 1st Option</option>
                 <option value="2">The 2nd Option</option>
                 <option value="3">The 3rd Option</option>
-            </select>
-            <div class="ui-grid-b ui-responsive" id="bookingDetails">
-                <div class="ui-block-a" style="text-align: left; width: 30%">
-                    <div id="seatsDiv">
-                        Seats
-                        <input type="number" id="noOfSeats" data-corners="false" min="1">
-                    </div>
-                    </div>
-                <div class="ui-block-b" style="text-align: center; width: 50% !important;">
-                    <div id="bookingDateDiv" style="margin-right: 40pt;">
-                        Date
-                        <input type="date" id="bookingDate" data-corners="false">
-                    </div>
+      </select>
+    <div class="ui-grid-b ui-responsive" id="bookingDetails">
+        <div class="ui-block-a" style="text-align: left; width: 30%">
+<div id="seatsDiv">
+    Seats
+    <input type="number" id="noOfSeats" data-corners="false" min="1">
+</div>
+</div>
+<div class="ui-block-b" style="text-align: center; width: 50% !important;">
+<div id="bookingDateDiv" style="margin-right: 40pt;"> Date
+<input type="date" id="bookingDate" data-corners="false">
+</div>
 
-                </div>
-                    <div class="ui-block-c" style="text-align: right; width:30% !important;">
-                        <div id="bookingTimeDiv">
-                         Time
-                        <input type="time" id="bookingTime" data-corners="false">
-                        </div>
-                    </div>
+</div>
+<div class="ui-block-c" style="text-align: right; width:30% !important;">
+<div id="bookingTimeDiv">
+    Time
+    <input type="time" id="bookingTime" data-corners="false">
+</div>
+</div>
 
-                </div>
+</div>
 
-            <div>
-                <select name="Rseat-type" id="ddlRSeatType" data-corners="false">
+<div>
+    <select name="Rseat-type" id="ddlRSeatType" data-corners="false">
                     <option value="0">Cabin Type</option>
                     <option value="1">The 1st Option</option>
                     <option value="2">The 2nd Option</option>
                     <option value="3">The 3rd Option</option>
                 </select>
-            </div>
-            <div id="windowSeatDiv"> 
-                <label>
+</div>
+<div id="windowSeatDiv">
+    <label>
                     <input type="checkbox" name="windowSeat" id="cbRWindowSeat" checked="checked"> Request a window seat if available
 
                 </label>
-            </div>
-            <div id="returnTripCBDiv">
-                <label id="ReturnTripDiv">
+</div>
+<div id="returnTripCBDiv">
+    <label id="ReturnTripDiv">
                     <input type="checkbox" name="windowSeat" id="cbReturnTrip"> <h3>Return Trip</h3>
                 </label>
-            </div>
-                <div id="returnFrm" hidden="hidden">
-                    <form>
-                    <select name="select-menu-RdepStation" id="ddlRDepStation">
+</div>
+<div id="returnFrm" hidden="hidden">
+    <form>
+        <select name="select-menu-RdepStation" id="ddlRDepStation">
                         <option value="0">Departure Station</option>
                         <option value="1">The 1st Option</option>
                         <option value="2">The 2nd Option</option>
                         <option value="3">The 3rd Option</option>
                     </select>
-                    <div class="ui-grid-b ui-responsive" id="RbookingDetails">
-                        <div class="ui-block-a" style="text-align: left; width: 30%">
-                            <div id="RseatsDiv">
-                                Seats
-                                <input type="number" id="RnoOfSeats" data-corners="false" min="1">
-                            </div></div>
-                        <div class="ui-block-b" style="text-align: center; width: 50% !important;">
-                            <div id="RbookingDateDiv">
-                                Date
-                                <input type="date" id="RbookingDate" data-corners="false">
-                            </div>
+        <div class="ui-grid-b ui-responsive" id="RbookingDetails">
+            <div class="ui-block-a" style="text-align: left; width: 30%">
+<div id="RseatsDiv">
+    Seats
+    <input type="number" id="RnoOfSeats" data-corners="false" min="1">
+</div>
+</div>
+<div class="ui-block-b" style="text-align: center; width: 50% !important;">
+<div id="RbookingDateDiv">
+    Date
+    <input type="date" id="RbookingDate" data-corners="false">
+</div>
 
-                        </div>
-                        <div class="ui-block-c" style="text-align: right; width:30% !important;">
-                            <div id="RbookingTimeDiv">
-                                Time
-                                <input type="time" id="RbookingTime" data-corners="false">
-                            </div>
-                        </div>
+</div>
+<div class="ui-block-c" style="text-align: right; width:30% !important;">
+<div id="RbookingTimeDiv">
+    Time
+    <input type="time" id="RbookingTime" data-corners="false">
+</div>
+</div>
 
-                    </div>
+</div>
 
-                    <div>
-                        <select name="seat-type" id="ddlSeatType" data-corners="false">
+<div>
+    <select name="seat-type" id="ddlSeatType" data-corners="false">
                             <option value="0">Cabin Type</option>
                             <option value="1">The 1st Option</option>
                             <option value="2">The 2nd Option</option>
                             <option value="3">The 3rd Option</option>
                         </select>
-                    </div>
-                    </form>
-                </div>
-        </form>
-            </div>
-            <div class="ui-block-c" style="text-align: right;"></div>
+</div>
+</form>
+</div>
+</form>
+</div>
+<div class="ui-block-c" style="text-align: right;"></div>
 
-        </div>
-        <div class="ui-grid-b ui-responsive">
-            <div class="ui-block-a" style="text-align: left;"></div>
-            <div class="ui-block-b" style="text-align: center;"></div>
-            <div class="ui-block-c" style="text-align: right;">
-                <!--<input type="button" value="Next" id="btnNext" onclick="#bookingDetailsPage"></input>-->
-                <a href="#bookingDetailsPage">Next</a>
-            </div>
+</div>
+<div class="ui-grid-b ui-responsive">
+    <div class="ui-block-a" style="text-align: left;"></div>
+<div class="ui-block-b" style="text-align: center;"></div>
+<div class="ui-block-c" style="text-align: right;">
+<!--<input type="button" value="Next" id="btnNext" onclick="#bookingDetailsPage"></input>-->
+<a href="#bookingDetailsPage">Next</a>
+</div>
 
-        </div>
-    </div>
+</div>
+</div>
 <div data-role="footer" class="footer">
-    <h1>© Railපාර 2016</h1></div>
+    <h1>© Railපාර 2016</h1>
+</div>
 
 </div>
 
@@ -138,58 +140,77 @@
 <!-- Start of Second page -->
 <div data-role="page" id="bookingDetailsPage">
     <div data-role="header" class="header">
-        <a href="#tripDetails" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback"
-               data-iconpos="notext"></a>
-        <img src="images/logos/header/booktrip_header_logo.png" class="headerlogo"/>
+        <a href="#tripDetails" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback" data-iconpos="notext"></a>
+        <img src="images/logos/header/booktrip_header_logo.png" class="headerlogo" />
     </div>
     <div data-role="main" class="ui-content" id="bookingDetailsContent">
-    <div class="ui-grid-b ui-responsive">
-        <div class="ui-block-a" style="text-align: left;"></div>
-        <div class="ui-block-b" style="text-align: left;" id="bookingDetailsBlock">
+        <div class="ui-grid-b ui-responsive">
+            <div class="ui-block-a" style="text-align: left;"></div>
+<div class="ui-block-b" style="text-align: left;" id="bookingDetailsBlock">
 
-            <h1>Booking Details</h1>
-            <div><h3>Departure Station</h3></div>
-            <div class="details">Maradana, Colombo 10</div>
-            <div><h3>Departure Time and Date</h3></div>
-            <div class="details">Test1</div>
-            <div><h3>Number of seats</h3></div>
-            <div class="details">03</div>
-            <div><h3>Cabin Type</h3></div>
-            <div class="details">Test2</div>
-            <div id="isWindowSeat"><h2>Window Seat Requested</h2></div>
+<h1>Booking Details</h1>
+<div>
+    <h3>Departure Station</h3>
+</div>
+<div class="details">Maradana, Colombo 10</div>
+<div>
+    <h3>Departure Time and Date</h3>
+</div>
+<div class="details">Test1</div>
+<div>
+    <h3>Number of seats</h3>
+</div>
+<div class="details">03</div>
+<div>
+    <h3>Cabin Type</h3>
+</div>
+<div class="details">Test2</div>
+<div id="isWindowSeat">
+    <h2>Window Seat Requested</h2>
+</div>
 
-            <hr>
+<hr>
 
-            <h1>Return Trip Details</h1>
-            <div><h3>Departure Station</h3></div>
-            <div class="details">Maradana, Colombo 10</div>
-            <div><h3>Departure Time and Date</h3></div>
-            <div class="details">Test1</div>
-            <div><h3>Number of seats</h3></div>
-            <div class="details">03</div>
-            <div><h3>Cabin Type</h3></div>
-            <div class="details">Test2</div>
-        </div>
-        <div class="ui-block-c" style="text-align: right;"></div>
-    </div>
-        <div style="display: inline-block; width: 100%; padding-top: 5%">
-            <button type="submit" data-theme="c" id="editBtn">Edit Details</button>
-            <button type="submit" data-theme="c" id="nextBtn">Next</button>
-        </div>
-    </div>
-            <div data-role="footer" class="footer">
-                <h1>© Railපාර 2016</h1></div>
+<h1>Return Trip Details</h1>
+<div>
+    <h3>Departure Station</h3>
+</div>
+<div class="details">Maradana, Colombo 10</div>
+<div>
+    <h3>Departure Time and Date</h3>
+</div>
+<div class="details">Test1</div>
+<div>
+    <h3>Number of seats</h3>
+</div>
+<div class="details">03</div>
+<div>
+    <h3>Cabin Type</h3>
+</div>
+<div class="details">Test2</div>
+</div>
+<div class="ui-block-c" style="text-align: right;"></div>
+</div>
+<div style="display: inline-block; width: 100%; padding-top: 5%">
+<button type="submit" data-theme="c" id="editBtn">Edit Details</button>
+<button type="submit" data-theme="c" id="nextBtn">Next</button>
+</div>
+</div>
+<div data-role="footer" class="footer">
+    <h1>© Railපාර 2016</h1>
+</div>
 </div>
 <!-- End of Second page -->
 
 </body>
 <!--<script>-->
-    <!--$(function(){-->
+<!--$(function(){-->
 
-        <!--$('form.material').materialForm();-->
+<!--$('form.material').materialForm();-->
 
 
-    <!--});-->
+<!--});-->
 
 <!--</script>-->
+
 </html>
