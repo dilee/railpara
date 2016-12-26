@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/myTrips.css">
+    <link rel="stylesheet" href="css/font-face.css">
+</head>
+
+<body>
+    <div data-role="page" id="myTrips" class="ui-responsive-panel">
+         <!--Header-->
+        <div data-role="header" class="header" data-position="fixed">
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+                <div id="menubuttonblock">
+                    <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
+                </div>
+            </div>
+            <div id="logoblock">
+                <img src="images/logos/header/mytrips_header_logo.png"/>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+                <div id="backbuttonblock">
+                    <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
+                </div>
+            </div>
+        </div>
+     
+        <!-- Slide Menu Panel -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+             class="menupanel">
+            <!--Menu Header Block-->
+            <div class="menuheaderblock">
+                <!--Profile Image Button-->
+                <div class="profileimageblock">
+                    <a data-role="none" href="#"><img src="images/icons/profile_dp.png"/></a>
+                </div>
+                <!--Profile Name-->
+                <div class="profilenameblock">
+                    <a data-role="none" href="#"><p>Test</p></a>
+                </div>
+                <!--Newsletter Block-->
+                <div>
+                    <!--Newsletter Image Button-->
+                    <a data-role="none" href="#"><img src="images/buttons/icon-buttons/newsletter_button.png" class="newsletterimg"/></a>
+                </div>
+            </div>
+
+            <!--Menu Items List-->
+            <div id="menubuttonlist">
+                <div data-role="main">
+                    <div class="menulistbuttonblock">
+                        <a href="www.google.com"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_home_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <a href="#"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_favorites_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <a href="#"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_achievements_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <a href="#"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_mytrips_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <a href="#"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_howto_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <a href="#"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_logout_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <div id="aboutus"><a href="http://dilee.me/railhunt/#team">About Us</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div data-role="main" class="ui-content" id="myTripsContent">
+            <div class="container" id="tabbedContainer">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#tab_Upcoming" data-toggle="tab">Upcoming</a></li>
+                    <li><a href="#tab_Past" data-toggle="tab">Past</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_Upcoming">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
+                                <div class="col-md-2">
+                                    <img src="images/icons/train_black.png" class="trip-image">
+                                </div>
+                                <div class="col-md-9">
+                                    <p class="list-group-item-text">Destination</p>
+                                    <h2 class="list-group-item-heading">Destination Name</h2>
+                                    <p class="list-group-item-text">Date and Time</p>
+                                    <h2 class="list-group-item-heading">Date and Time</h2>
+
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab_Past">
+                        <h4>Pane B</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div data-role="footer "data-position="fixed" class="footer ">
+            <h1>©Railපාර 2016</h1>
+        </div>
+    </div>
+</body>
+
+</html>
