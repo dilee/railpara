@@ -5,15 +5,16 @@
     height: 45px;
     background: #ffb300 !important;
     color: #ffffff !important;
-    align-self:center; 
+    align-self: center;
 }
 
 .headerlogo {
     height: 80%;
     padding: 4pt;
-    display:block;
-    margin:auto;
+    display: block;
+    margin: auto;
 }
+
 /*#endregion Header*/
 
 /*#region Footer*/
@@ -22,12 +23,13 @@
     height: 45px;
     background: #ffb300 !important;
     color: #ffffff !important;
-    align-self:center;
+    align-self: center;
     bottom: 0;
     position: absolute;
     margin: 0;
     width: 100%;
 }
+
 /*#endregion Footer*/
 /*#endregion ChromeElements*/
 
@@ -36,11 +38,12 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
-h2{
+h2 {
     font-family: 'avenir-roman' !important;
     font-size: 15pt;
 }
-.favList{
+
+.favList {
     padding-left: 3%;
     padding-right: 3%;
     /*overflow: scroll;*/
@@ -48,7 +51,7 @@ h2{
     top: 10px !important;
 }
 
-.place-description{
+.place-description {
     width: 95%;
     white-space: normal !important;
     text-align: justify;
@@ -63,7 +66,8 @@ h2{
     -moz-hyphens: auto;
     hyphens: auto;
 }
-.deleteBtn{
+
+.deleteBtn {
     width: 2%;
     right: 0px;
     vertical-align: middle;
@@ -75,28 +79,31 @@ h2{
     transform: translate(-50%, -50%);
 }
 
-#favPlacesContent{
+#favPlacesContent {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     height: 500px;
 
 }
-.place-image{
+
+.place-image {
     padding: 1%;
 }
+
 .list-view {
     height: 100%;
     top: 10px !important;
     overflow: auto;
-    -webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling: touch;
 }
 
 .ui-listview li {
-    -webkit-box-shadow: 10px 10px 5px 0px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    10px 10px 5px 0px #ccc;  /* Firefox 3.5 - 3.6 */
-    box-shadow:         10px 10px 5px 0px #ccc;
+    -webkit-box-shadow: 10px 10px 5px 0px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 10px 10px 5px 0px #ccc; /* Firefox 3.5 - 3.6 */
+    box-shadow: 10px 10px 5px 0px #ccc;
     /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);*/
 }
+
 .ui-footer h1 {
     font-family: 'avenir-roman' !important;
     font-weight: 100;
@@ -104,13 +111,34 @@ h2{
     color: #bcbcbc;
 }
 
+#favlistEmailDiv {
+    margin-right: 10pt !important;
+    margin-left: 10pt !important;
+}
+
+#btnEmailFavListDiv {
+    margin-right: 10pt !important;
+    margin-left: 10pt !important;
+}
+
+.emailBtn {
+    width: 10%;
+    right: 1px;
+    vertical-align: middle;
+    margin: -21px;
+    position: absolute;
+    top: 90%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px)
-and (orientation : portrait) {
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (orientation: portrait) {
 
     /*#region content*/
     .form {
@@ -120,15 +148,16 @@ and (orientation : portrait) {
 
     #logo {
         height: 30%;
-        display:block;
-        margin:auto;
+        display: block;
+        margin: auto;
     }
-    
+
     .ui-icon-customback {
         background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
         background-repeat: no-repeat !important;
     }
-    .place-description{
+
+    .place-description {
         /*width: 100%;*/
         white-space: nowrap !important;
         text-align: justify;
@@ -141,7 +170,8 @@ and (orientation : portrait) {
         max-lines: 3 !important;
 
     }
-    .deleteBtn{
+
+    .deleteBtn {
         width: 5%;
         right: 0px;
         vertical-align: middle;
@@ -151,85 +181,120 @@ and (orientation : portrait) {
         left: 95%;
         transform: translate(-50%, -50%);
     }
-    .favList{
-        padding-left: 3%;
-        padding-right: 3%;
-        /*overflow: scroll;*/
-    overflow: auto;
-        -webkit-overflow-scrolling: touch;
-    }
 
-    #favPlacesContent{
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-        height: 500px !important;
-
-    }
-    /*#endregion content*/
-}
-
-/*-------------------------- iPad /*--------------------------*/
-
-/* iPad - Landscape */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape)
-and (-webkit-min-device-pixel-ratio: 1)  {
-    
-    #logo {
-        height: 40%;
-        display:block;
-        margin:auto;
-    }
-    .place-description{
-        /*width: 100%;*/
-        white-space: nowrap !important;
-        text-align: justify;
-        font-family: 'avenir-roman' !important;
-        display: inline-block;
-        overflow: hidden;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        text-overflow: ellipsis;
-        max-lines: 3 !important;
-
-    }
-    .favList{
+    .favList {
         padding-left: 3%;
         padding-right: 3%;
         /*overflow: scroll;*/
         overflow: auto;
         -webkit-overflow-scrolling: touch;
     }
-    .deleteBtn{
-        width: 2%;
-        right: 0px;
-        vertical-align: middle;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 98%;
-        transform: translate(-50%, -50%);
-    }
-    #favPlacesContent{
+
+    #favPlacesContent {
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
         height: 500px !important;
 
     }
 
-    /* iPad - Portrait */
-    @media only screen
-    and (min-device-width : 768px)
-    and (max-device-width : 1024px)
-    and (orientation : portrait) {
+    #favlistEmailDiv {
+        margin-right: 10pt !important;
+        margin-left: 10pt !important;
+    }
 
-        #favPlacesContent{
+    #btnEmailFavListDiv {
+        margin-right: 10pt !important;
+        margin-left: 10pt !important;
+    }
+
+    .emailBtn {
+        width: 17%;
+        right: 1px;
+        vertical-align: middle;
+        margin: -21px;
+        position: absolute;
+        top: 91%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+    }
+
+    /*#endregion content*/
+    /*-------------------------- iPad /*--------------------------*/
+    /* iPad - Landscape */
+    @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 1) {
+
+        #logo {
+            height: 40%;
+            display: block;
+            margin: auto;
+        }
+
+        .place-description {
+            /*width: 100%;*/
+            white-space: nowrap !important;
+            text-align: justify;
+            font-family: 'avenir-roman' !important;
+            display: inline-block;
+            overflow: hidden;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+            max-lines: 3 !important;
+
+        }
+
+        .favList {
+            padding-left: 3%;
+            padding-right: 3%;
+            /*overflow: scroll;*/
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .deleteBtn {
+            width: 2%;
+            right: 0px;
+            vertical-align: middle;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 98%;
+            transform: translate(-50%, -50%);
+        }
+
+        #favPlacesContent {
             overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
-            height: 2000px !important;
+            height: 500px !important;
 
+        }
+
+        /* iPad - Portrait */
+        @media only screen
+        and (min-device-width: 768px)
+        and (max-device-width: 1024px)
+        and (orientation: portrait) {
+
+            #favPlacesContent {
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
+                height: 2000px !important;
+
+            }
+
+            #favlistEmailDiv {
+                margin-right: 10pt !important;
+                margin-left: 10pt !important;
+            }
+
+            #btnEmailFavListDiv {
+                margin-right: 10pt !important;
+                margin-left: 10pt !important;
+            }
         }
     }
 }
