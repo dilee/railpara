@@ -1,42 +1,49 @@
-
 /*-------------------------- Common Elements /*--------------------------*/
 /*#region ChromeElements*/
 /*#region Header*/
 .header {
-    height: 45px;
+    width: 100% !important;
+    height: 45px !important;
     background: #3e2723 !important;
     color: #ffffff !important;
-    align-self:center;
+    align-self: center !important;
+    position: fixed !important;
 }
 
-.headerlogo {
-    height: 80%;
-    padding: 4pt;
-    display:block;
-    margin:auto;
+#headerblock {
+    display: inline-block !important;
+    width: 100%;
+    height: 45px;
 }
+
+/*#region Logo*/
+#logoblock {
+    margin-top: 1%;
+}
+
+#logoblock img {
+    margin-top: 10%;
+    display: block;
+    margin: auto;
+    height: 80%;
+}
+
+/*#endregion Logo*/
 /*#endregion Header*/
 
 /*#region Footer*/
-
 .footer {
     height: 45px;
     background: #3e2723 !important;
     color: #ffffff !important;
-    align-self:center;
+    align-self: center;
     bottom: 0;
     position: fixed;
     margin: 0;
     width: 100%;
 }
-/*#endregion Footer*/
-/*#endregion ChromeElements*/
 
-body {
-    background-color: #f6f6f6 !important;
-    font-family: 'avenir-roman' !important;
-}
-
+/*Footer Text*/
 .ui-footer h1 {
     font-family: 'avenir-roman' !important;
     font-weight: 100;
@@ -44,42 +51,75 @@ body {
     color: #bcbcbc;
 }
 
+/*#endregion Footer*/
+
+body {
+    background-color: #f6f6f6 !important;
+    font-family: 'avenir-roman' !important;
+}
+
 .ui-content {
     padding: 0 0 0 0 !important;
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-.buttonSet{
-    display: inline-block;
-    width: 100%;
+.main-content {
+    max-height: calc(100% - 140px);
     position: fixed;
-    bottom: 50px;
-    padding-right: 10px;
-    padding-left: 10px;
-
+    top: 40px;
+    width: 100%;
+    overflow-y: auto;
+    height: 100%;
 }
 
-.button{
-    padding-left: 5px;
-    padding-right: 5px;
-    alignment: center;
+.main-content h2 {
+    font-family: 'avenir-roman' !important;
+    font-size: 16pt !important;
+    padding-left: 10px;
+}
+
+.main-content .details {
+    max-height: calc(100% - 350px);
+    overflow-y: auto;
+    text-align: justify;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/** Button set **/
+.buttonSet {
+    height: 110px;
+    background: #fff;
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    -webkit-box-shadow: 0px -12px 5px 0px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px -12px 5px 0px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px -12px 5px 0px rgba(255, 255, 255, 0.8);
+}
+
+.buttonSet > ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.buttonSet > ul > li {
+    width: 33%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buttonSet > ul > li > i {
+    font-size: 26px;
 }
 
 .btnImg {
     width: 80px;
 }
-
-
-#placeDesc {
-    position: fixed;
-    width: 100%;
-    overflow-y: auto;
-    max-height: 30%;
-    height: 165px;
-    text-align: justify;
-}
-
 
 /*--------------Slider CSS------------------------------------*/
 
@@ -107,6 +147,7 @@ body {
 .jssorb05 {
     position: absolute;
 }
+
 .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
     position: absolute;
     /* size of bullet element */
@@ -116,10 +157,22 @@ body {
     overflow: hidden;
     cursor: pointer;
 }
-.jssorb05 div { background-position: -7px -7px; }
-.jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
-.jssorb05 .av { background-position: -67px -7px; }
-.jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+.jssorb05 div {
+    background-position: -7px -7px;
+}
+
+.jssorb05 div:hover, .jssorb05 .av:hover {
+    background-position: -37px -7px;
+}
+
+.jssorb05 .av {
+    background-position: -67px -7px;
+}
+
+.jssorb05 .dn, .jssorb05 .dn:hover {
+    background-position: -97px -7px;
+}
 
 /* jssor slider arrow navigator skin 22 css */
 
@@ -133,39 +186,50 @@ body {
     background: url('../images/icons/navigator.png') center center no-repeat;
     overflow: hidden;
 }
-.jssora22l { background-position: -10px -31px; }
-.jssora22r { background-position: -70px -31px; }
-.jssora22l:hover { background-position: -130px -31px; }
-.jssora22r:hover { background-position: -190px -31px; }
-.jssora22l.jssora22ldn { background-position: -250px -31px; }
-.jssora22r.jssora22rdn { background-position: -310px -31px; }
-.jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
-.jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
+
+.jssora22l {
+    background-position: -10px -31px;
+}
+
+.jssora22r {
+    background-position: -70px -31px;
+}
+
+.jssora22l:hover {
+    background-position: -130px -31px;
+}
+
+.jssora22r:hover {
+    background-position: -190px -31px;
+}
+
+.jssora22l.jssora22ldn {
+    background-position: -250px -31px;
+}
+
+.jssora22r.jssora22rdn {
+    background-position: -310px -31px;
+}
+
+.jssora22l.jssora22lds {
+    background-position: -10px -31px;
+    opacity: .3;
+    pointer-events: none;
+}
+
+.jssora22r.jssora22rds {
+    background-position: -70px -31px;
+    opacity: .3;
+    pointer-events: none;
+}
 
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) {
-
-    /*#region content*/
-    .form {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    #logo {
-        height: 30%;
-        display:block;
-        margin:auto;
-    }
-
-    .ui-icon-customback {
-        background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
-        background-repeat: no-repeat !important;
-    }
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (orientation: portrait) {
 
     .jssor1-Class {
         position: relative;
@@ -188,32 +252,19 @@ and (orientation : portrait) {
         overflow: hidden;
     }
 
-
-
-    /*#endregion content*/
 }
 
 /* iPhone 6 - Landscape */
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : landscape) {
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (orientation: landscape) {
 
-    /*#region content*/
-    .form {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    #logo {
-        height: 30%;
-        display:block;
-        margin:auto;
-    }
-
-    .ui-icon-customback {
-        background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
-        background-repeat: no-repeat !important;
+    .main-content .details {
+        max-height: 100%;
+        overflow-y: scroll;
+    !important;
+        text-align: justify;
     }
 
     .jssor1-Class {
@@ -222,7 +273,7 @@ and (orientation : landscape) {
         top: 0px;
         left: 0px;
         width: 1300px;
-        height: 350px;
+        height: 275px;
         overflow: hidden;
         visibility: hidden;
     }
@@ -233,32 +284,38 @@ and (orientation : landscape) {
         top: 0px;
         left: 0px;
         width: 1300px;
-        height: 350px;
+        height: 275px;
         overflow: hidden;
     }
 
-    .
-
-
-
-
-    /*#endregion content*/
 }
-
 
 /*-------------------------- iPad /*--------------------------*/
 
 /* iPad - Landscape */
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape)
-and (-webkit-min-device-pixel-ratio: 1)  {
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
 
-    #logo {
-        height: 40%;
-        display:block;
-        margin:auto;
+    #logoblock {
+        margin-right: 18em;
+        margin-top: 2%;
+    }
+
+    .ui-controlgroup-horizontal .ui-controlgroup-controls {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 22em !important;
+    }
+
+    .main-content {
+        max-height: calc(100% - 80px);
+        position: fixed;
+        top: 0px;
+        width: 750px;
+        height: 100%;
     }
 
     .jssor1-Class {
@@ -266,8 +323,8 @@ and (-webkit-min-device-pixel-ratio: 1)  {
         margin: 0 auto;
         top: 0px;
         left: 0px;
-        width: 1300px;
-        height: 350px;
+        width: 750px;
+        height: 250px;
         overflow: hidden;
         visibility: hidden;
     }
@@ -277,11 +334,21 @@ and (-webkit-min-device-pixel-ratio: 1)  {
         position: relative;
         top: 0px;
         left: 0px;
-        width: 1300px;
-        height: 350px;
+        width: 750px;
+        height: 250px;
         overflow: hidden;
     }
 
-
+    .buttonSet {
+        height: 60px;
+    !important;
+    }
 }
 
+/* iPad - Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+
+}
