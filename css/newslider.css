@@ -57,7 +57,7 @@ body {
 }
 
 /** Main content **/
-.main-content {
+.ui-content {
     max-height: calc(100% - 140px);
     position: fixed;
     top: 40px;
@@ -65,10 +65,11 @@ body {
     overflow-y: hidden;
     height: 100%;
 }
-.main-content .details {
+.ui-content .details {
     max-height: calc(100% - 210px);
     overflow-y: auto;
 }
+
 .main-slider .owl-carousel .owl-item img {
     height: 200px;
 }
