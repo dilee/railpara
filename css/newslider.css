@@ -199,30 +199,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
         margin-right: 22em !important;
     }
 
-    .owl-carousel .owl-slide .sliderImg {
-        width: 100%;
-        height: 300px;
-    }
-
-    .main-content {
-        max-height: calc(100% - 80px);
-        position: fixed;
-        top: 0px;
-        width: 780px;
-        height: 100%;
-    }
-
-    .button-set {
-        height: 70px;
-    }
-
-    .main-content .details {
-        max-height: calc(100% - 400px);
-        overflow-y: auto;
-        text-align: justify;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
 }
 
 /* iPad - Portrait */
