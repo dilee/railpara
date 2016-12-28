@@ -79,20 +79,10 @@ and (orientation: landscape) {
 /* iPad - Landscape */
 @media only screen
 and (min-device-width: 768px)
-and (max-device-width: 1024px)
+and (max-device-width: 1600px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 1) {
 
-    #logoblock {
-        margin-right: 18em;
-        margin-top: 0.5%;
-    }
-
-    .ui-controlgroup-horizontal .ui-controlgroup-controls {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 22em !important;
-    }
 }
 
 /* iPad - Portrait */

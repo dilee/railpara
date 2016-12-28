@@ -40,8 +40,9 @@ $(document).on("pagecreate", "div[data-role=page]", function () {
         if (window.innerWidth < 768) {
             $("#menu").panel("close");
             open = false;
+            icon.className = 'menu-icon';
         }
-        icon.className = 'menu-icon';
+
     });
 
 });
