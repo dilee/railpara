@@ -56,6 +56,12 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
+.ui-content {
+    padding: 0 0 0 0 !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 /** Main content **/
 .main-content {
     max-height: calc(100% - 140px);
@@ -65,34 +71,75 @@ body {
     overflow-y: auto;
     height: 100%;
 }
+.main-content h2 {
+    font-family: 'avenir-roman' !important;
+    font-size: 16pt !important;
+    padding-left: 10px;
+}
 .main-content .details {
-    max-height: calc(100% - 210px);
+    max-height: calc(100% - 300px);
     overflow-y: auto;
     text-align: justify;
     padding-right: 10px;
     padding-left: 10px;
+    background-color: #f6f6f6
+}
+.owl-carousel {
+    position: relative;
+    height: 50%;
+}
+.owl-carousel .owl-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.owl-carousel .owl-slide .sliderImg {
+    width: 100%;
+    height: 15em;
+}
+.owl-carousel .owl-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: none;
+}
+.owl-carousel .owl-controls .owl-buttons div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: inline-block;
+    zoom: 1;
+    margin: 0;
+    width: 50px;
+    height: 30px;
+    line-height: 25px;
+    text-align: center;
+    font-size: .9em;
+    border-radius: 3px;
+    color: #FFF;
+    background: #000;
+    opacity: .6;
+    text-transform: capitalize;
+}
+.owl-carousel .owl-controls .owl-buttons .owl-prev {
+    left: 5px;
+}
+.owl-carousel .owl-controls .owl-buttons .owl-next {
+    right: 5px;
 }
 
-.main-slider .owl-carousel .owl-item img {
-    height: 200px;
-}
-.owl-theme .owl-nav.disabled+.owl-dots {
-    position: relative;
-    z-index: 99;
-    margin-top: -16px;
-    top: -10px;
-}
 /** Button-set **/
 .button-set {
     height: 110px;
-    background: #fff;
+    background: #f6f6f6;
     position: fixed;
     bottom: 40px;
     width: 100%;
     display: flex;
-    -webkit-box-shadow: 0px -12px 5px 0px rgba(255,255,255,0.8);
-    -moz-box-shadow: 0px -12px 5px 0px rgba(255,255,255,0.8);
-    box-shadow: 0px -12px 5px 0px rgba(255,255,255,0.8);
+    -webkit-box-shadow: 0px -12px 5px 0px rgba(246,246,246,0.8);
+    -moz-box-shadow: 0px -12px 5px 0px rgba(246,246,246,0.8);
+    box-shadow: 0px -12px 5px 0px rgba(246,246,246,0.8);
 }
 .button-set > ul {
     display: flex;
@@ -150,6 +197,31 @@ and (-webkit-min-device-pixel-ratio: 1) {
         display: inline-block;
         vertical-align: middle;
         margin-right: 22em !important;
+    }
+
+    .owl-carousel .owl-slide .sliderImg {
+        width: 100%;
+        height: 300px;
+    }
+
+    .main-content {
+        max-height: calc(100% - 80px);
+        position: fixed;
+        top: 0px;
+        width: 780px;
+        height: 100%;
+    }
+
+    .button-set {
+        height: 70px;
+    }
+
+    .main-content .details {
+        max-height: calc(100% - 400px);
+        overflow-y: auto;
+        text-align: justify;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 }
 
