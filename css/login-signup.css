@@ -2,10 +2,12 @@
 /*#region ChromeElements*/
 /*#region Header*/
 .header {
+    width: 100% !important;
     height: 45px;
     background: #212121 !important;
     color: #ffffff !important;
-    align-self:center; 
+    align-self:center;
+    position: fixed !important;
 }
 
 .headerlogo {
@@ -23,7 +25,7 @@
     color: #ffffff !important;
     align-self:center;
     bottom: 0;
-    position: absolute;
+    position: fixed;
     margin: 0;
     width: 100%;
 }
@@ -36,9 +38,12 @@ body {
 }
 
 #logo {
-    height: 30%;
+    height: 15em;
     display:block;
-    margin:auto;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-top: 3em;
 }
 
 .ui-footer h1 {
@@ -69,12 +74,6 @@ and (orientation : portrait) {
         margin: 0 auto;
     }
 
-    #logo {
-        height: 30%;
-        display:block;
-        margin:auto;
-    }
-    
     .ui-icon-customback {
         background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
         background-repeat: no-repeat !important;
@@ -95,16 +94,18 @@ and (orientation : landscape) {
 /* iPad - Landscape */
 @media only screen 
 and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+and (max-device-width : 1600px)
 and (orientation : landscape)
 and (-webkit-min-device-pixel-ratio: 1)  {
-    
+
     #logo {
-        height: 40%;
-        display:block;
-        margin:auto;
+        height: 21em;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 2em;
+        margin-top: 3em;
     }
-    
+
 }
 
 /* iPad - Portrait */

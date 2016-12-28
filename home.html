@@ -1,4 +1,6 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
@@ -8,14 +10,15 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
-    <link rel="stylesheet" href="css/templatepage.css">
-    <link rel="stylesheet" href="css/slider-menu-bs.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
     <link rel="stylesheet" href="css/font-face.css">
 </head>
+
 <body>
 
-    <div data-role="page" id="templatepage" class="ui-responsive-panel">
-
+    <!-- Start of home page -->
+    <div data-role="page" id="homepage" class="ui-responsive-panel">
         <!--Header-->
         <div data-role="header" class="header" data-position="fixed">
             <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
@@ -44,7 +47,7 @@
                 </div>
                 <!--Profile Name-->
                 <div class="profilenameblock">
-                    <a data-role="none" href="#"><p id="name">Test</p></a>
+                    <a data-role="none" href="#"><p>Test</p></a>
                 </div>
                 <!--Newsletter Block-->
                 <div>
@@ -82,7 +85,9 @@
         </div>
 
         <div data-role="main" class="ui-content" id="content">
-             <!--Content goes here-->
+            <div role="main" class="ui-content" id="map-canvas">
+                <!-- map loads here... -->
+            </div>
         </div>
 
         <!--Footer-->
@@ -91,6 +96,9 @@
         </div>
 
     </div>
+    <!-- End of home page -->
 
 </body>
+
 </html>
+

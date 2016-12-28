@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
@@ -8,14 +9,19 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
-    <link rel="stylesheet" href="css/personaldetails.css">
-    <link rel="stylesheet" href="css/slider-menu-bs.css">
+    <script src="js/slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="css/placefactsnew.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
     <link rel="stylesheet" href="css/font-face.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"/>
+
+
 </head>
 <body>
 
-<div data-role="page" id="templatepage" class="ui-responsive-panel">
+<div data-role="page" id="placeFacts" class="ui-responsive-panel">
 
     <!--Header-->
     <div data-role="header" class="header" data-position="fixed">
@@ -25,7 +31,7 @@
             </div>
         </div>
         <div id="logoblock">
-            <img src="images/logos/header/personaldetails_header_logo.png"/>
+            <img src="images/logos/header/placefacts_header_logo.png"/>
         </div>
         <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
             <div id="backbuttonblock">
@@ -91,38 +97,61 @@
 
     <div data-role="main" class="ui-content" id="content">
 
-        <section class="form-section">
-
-            <div class="grav-wrapper">
-                <div class="pro-pic">
-                    <img src="http://placehold.it/150x150" alt="Nadee">
-                </div>
-                <span class="camera-icon"><i class="fa fa-camera" aria-hidden="true"></i></span>
-            </div>
-            <div class="personal-details">
-                <h1>Melissa Diaz<span class="edit-icon-wrapper"><i class="fa fa-pencil-square-o"
-                                                                   aria-hidden="true"></i></span></h1>
-                <p>melissa@example.com</p>
-            </div>
-            <div class="form-wrapper">
-                <div>
-                    <input type="password" placeholder="old password">
-                </div>
-                <div>
-                    <input type="password" placeholder="new password">
-                </div>
-                <div>
-                    <input type="password" placeholder="repeat new password">
-                </div>
-                <div>
-                    <input type="email" placeholder="email">
-                </div>
-                <div class="save-btn-wrapper">
-                    <input type="image" data-role="button" src="images/buttons/rectangle-buttons/save_button.png"
-                           alt="Submit" data-role="submit" style="height: 80px; width: 172px;">
+        <section class="main-content">
+            <div class="main-slider">
+                <div class="owl-carousel owl-theme">
+                    <div class="owl-slide">
+                        <img class="sliderImg" src="images/places/gangaramaya/gangaramaya_slider_01.png">
+                    </div>
+                    <div class="owl-slide">
+                        <img class="sliderImg" src="images/places/gangaramaya/gangaramaya_slider_02.png">
+                    </div>
+                    <div class="owl-slide">
+                        <img class="sliderImg" src="images/places/gangaramaya/gangaramaya_slider_03.png">
+                    </div>
                 </div>
             </div>
+            <h2>Gangaramaya Temple</h2>
+            <article class="details">
+                <p>
+                    The Gangaramaya Buddhist temple is a beautiful and vibrant temple with a history that dates back
+                    over
+                    2,000 years. This temple was said to have been built in the 19th century by a trader and ship owner
+                    named Don Bastion, who had played a leading role in reviving Buddhism.
+                    Located beside a Holy Bo Tree on the waters of Beira Lake, the temple is only accessible by crossing
+                    a
+                    wooden bridge. According to historical records, the Lord Buddha is reputed to have preached under
+                    this
+                    Bo tree which is considered as a sapling of the Sri Maha Bodhi and is over 100 years old.
+                </p>
+                <p>
+                    This Temple is famous for its imposing buildings, and is complete with a chetiya, bo tree, image
+                    house,
+                    Simamalaka, relic chamber containing the relics of the Buddha and Arahat Seevali, museum, library,
+                    pirivena, and residential, education and alms halls.
+                </p>
+                <p>
+                    The Nawam Perahera, conducted by the Gangarama temple is a major tourist attraction. The perehara
+                    was
+                    initially started in 1979 and has been held uninterrupted in the month of February since then. This
+                    beautiful festival of arts has over 1,000 performers and over 100 elephants brought from different
+                    parts
+                    of the island is the highlight of the pageant.
+                </p>
+            </article>
         </section>
+        <div class="buttonSet">
+            <ul>
+                <li><i><a data-role="none" href="home.html"><img src="images/icons/trophy_icon.png" class="btnImg"
+                                                                 aria-hidden="true"/></a></i></li>
+                <li><i><a data-role="none" href="home.html"><img src="images/buttons/icon-buttons/book_icon.png"
+                                                                 class="btnImg" aria-hidden="true"/></a></i></li>
+                <li><i><a data-role="none" href="home.html"><img
+                        src="images/buttons/icon-buttons/like_button_unselected.png" class="btnImg"
+                        aria-hidden="true"/></a></i></li>
+            </ul>
+        </div>
+
 
     </div>
 
@@ -132,6 +161,5 @@
     </div>
 
 </div>
-
 </body>
 </html>

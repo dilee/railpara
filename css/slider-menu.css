@@ -1,27 +1,27 @@
 /*#region Back Button*/
 #backbuttonblock {
-    margin-top: 10%;
+    margin-top: 0.4em;
 }
 
 #backbuttonblock img {
     display: block;
-    height: 70%;
+    height: 2.2em;
 }
 /*#endregion Back Button*/
 
 /*#region Menu Button*/
 #menubuttonblock {
-    margin-top: 10%;
+    margin-top: 0.2em;
+    margin-left: 0.05em;
 }
 
 #menubuttonblock img {
-    height: 70%;
-    margin: auto;
+    height: 2.5em;
 }
 
 .menulistbuttonblock {
-    margin-top: 11%;
-    margin-left: 5%;
+    margin-top: 2.2em;
+    margin-left: 0.7em;
 }
 
 .menulistbutton {
@@ -40,7 +40,7 @@
 
 #menu {
     background: #212121;
-    z-index: 1000;
+    z-index: 2000;
 }
 /*#endregion Menu Button*/
 
@@ -48,10 +48,8 @@
 /* Menu Panel Styles */
 .menuheaderblock {
     display: inline-block !important;
-    width: 100%;
-    bottom: 10%;
-    padding-left: 4%;
-    margin-top: 1%;
+    margin-top: 1em;
+    margin-left: 0.4em;
 }
 
 .menuheaderblock a:link, a:visited {
@@ -86,37 +84,37 @@
 
 .profileimageblock img {
     float: left;
-    margin-bottom: 2%;
-    margin-left: 2%;
-    width: 28%;
-    border-width: 4px !important;
+    width: 5.5em;
+    border-width: 0.3em !important;
     border: 1em solid #424242;
-    border-radius: 500px;
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
+    border-radius: 5em;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
 }
 
 .profilenameblock {
-    margin-left: -8%;
-    margin-top: 8%;
+    margin-left: -1em;
+    margin-top: 1.6em;
     float: left;
     border-radius: 1em;
-    border-width: 3px;
     text-align: center;
     background-color: #424242;
-    line-height: 1%;
     color: white;
-    position: relative;
-    width: 30%;
+    width: 4.4em;
     z-index: 2;
+}
+
+.profilenameblock p {
+    margin: 0.4em 0 0.4em;
 }
 
 .newsletterimg {
     float: right;
     width: 20%;
-    margin-top: 3%;
-    margin-right: 7%;
+    margin-top: 1.2em;
+    margin-right: 0.3em;
 }
+
 
 /*-------------------------- iPhone /*--------------------------*/
 
@@ -154,15 +152,14 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
 
     .menulistbuttonblock {
-        margin-bottom: 17%;
-        margin-top: 11%;
-        margin-left: 5%;
+        margin-top: 3em;
+        margin-left: 0.7em;
     }
 
     .ui-controlgroup-horizontal .ui-controlgroup-controls {
         display: inline-block;
         vertical-align: middle;
-        margin-right: 22em !important;
+        margin-right: 19.5em !important;
     }
 
 }
