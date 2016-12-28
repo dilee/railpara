@@ -24,39 +24,13 @@
         </div>
 
         <!-- Slide Menu Panel -->
-        <div data-role="panel" id="menu" data-position="right" data-display="overlay" data-position-fixed="true" class="menupanel">
-
-            <!--Menu Header Block-->
-            <div class="menuheaderblock">
-                <!--Profile Image Button-->
-                <div>
-                    <a data-role="none" href="#"><img src="images/icons/profile_dp.png" class="profileimg" /></a>
-                </div>
-                <!--Profile Name-->
-                <div class="profilename">
-                    <a data-role="none" href="#">
-                        <p>Test</p>
-                    </a>
-                </div>
-                <!--Newsletter Block-->
-                <div>
-                    <!--Newsletter Image Button-->
-                    <a data-role="none" href="#"><img src="images/buttons/icon-buttons/newsletter_button.png" class="newsletterimg" /></a>
-                </div>
-            </div>
-
-            <!--Menu Items List-->
-            <div id="menubuttonlist">
-                <div data-role="main" class="ui-content" id="content">
-                    <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_home_button.png"></a>
-                    <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_favorites_button.png"></a>
-                    <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_achievements_button.png"></a>
-                    <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_mytrips_button.png"></a>
-                    <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_howto_button.png"></a>
-                    <a href="#"><img class="menubutton" src="images/buttons/rectangle-buttons/menu_logout_button.png"></a>
-                    <div id="aboutus"><a href="#">About Us</a></div>
-                </div>
-            </div>
+        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+             class="menupanel">    <!--Loading slider menu-->
+            <script>
+                $(function(){
+                    $("#menu").load("menu.html");
+                });
+            </script>
         </div>
 
         <div data-role="main" class="ui-content" id="favPlacesContent">

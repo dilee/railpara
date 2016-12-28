@@ -41,6 +41,7 @@
 #menu {
     background: #212121;
     z-index: 2000;
+    padding: 0.7em;
 }
 /*#endregion Menu Button*/
 
