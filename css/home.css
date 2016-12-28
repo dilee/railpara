@@ -37,7 +37,7 @@
     color: #ffffff !important;
     align-self: center;
     bottom: 0;
-    position: absolute;
+    position: fixed;
     margin: 0;
     width: 100%;
 }
