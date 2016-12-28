@@ -1,0 +1,154 @@
+/*-------------------------- Common Elements /*--------------------------*/
+/*#region ChromeElements*/
+/*#region Header*/
+.header {
+    width: 100% !important;
+    height: 45px !important;
+    background: #3e2723 !important;
+    color: #ffffff !important;
+    align-self: center !important;
+    position: fixed !important;
+}
+
+#headerblock {
+    display: inline-block !important;
+    width: 100%;
+    height: 45px;
+}
+
+/*#region Logo*/
+#logoblock {
+    margin-top: 1%;
+}
+
+#logoblock img {
+    margin-top: 10%;
+    display: block;
+    margin: auto;
+    height: 2.4em;
+}
+/*#endregion Logo*/
+/*#endregion Header*/
+
+/*#region Footer*/
+.footer {
+    height: 45px;
+    background: #3e2723 !important;
+    color: #ffffff !important;
+    align-self: center;
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+}
+
+/*Footer Text*/
+.ui-footer h1 {
+    font-family: 'avenir-roman' !important;
+    font-weight: 100;
+    font-size: 11pt !important;
+    color: #bcbcbc;
+}
+/*#endregion Footer*/
+
+body {
+    background-color: #f6f6f6 !important;
+    font-family: 'avenir-roman' !important;
+}
+
+/** Main content **/
+.main-content {
+    max-height: calc(100% - 140px);
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    overflow-y: hidden;
+    height: 100%;
+}
+.main-content .details {
+    max-height: calc(100% - 210px);
+    overflow-y: auto;
+}
+.main-slider .owl-carousel .owl-item img {
+    height: 200px;
+}
+.owl-theme .owl-nav.disabled+.owl-dots {
+    position: relative;
+    z-index: 99;
+    margin-top: -16px;
+    top: -10px;
+}
+/** Social links **/
+.social-links {
+    height: 60px;
+    background: #fff;
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    -webkit-box-shadow: 0px -12px 5px 0px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px -12px 5px 0px rgba(255,255,255,0.8);
+    box-shadow: 0px -12px 5px 0px rgba(255,255,255,0.8);
+}
+.social-links > ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+.social-links > ul > li {
+    width: 33%;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.social-links > ul > li > i {
+    font-size: 26px;
+}
+
+/*-------------------------- iPhone /*--------------------------*/
+
+/* iPhone 6 - Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (orientation: portrait) {
+
+}
+
+/* iPhone 6 - Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (orientation: landscape) {
+
+}
+
+/*-------------------------- iPad /*--------------------------*/
+
+/* iPad - Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    #logoblock {
+        margin-right: 18em;
+        margin-top: 0.5%;
+    }
+
+    .ui-controlgroup-horizontal .ui-controlgroup-controls {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 22em !important;
+    }
+}
+
+/* iPad - Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+
+}
