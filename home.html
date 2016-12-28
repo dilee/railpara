@@ -42,11 +42,14 @@
             <script>$(function(){$("#menu").load("menu.html");});</script>
         </div>
 
+        <!--Map content-->
         <div data-role="main" class="ui-content" id="content">
-            <div role="main" class="ui-content" id="map-canvas">
-                <!-- map loads here... -->
-            </div>
+            <div id="map"></div>
         </div>
+        <script src="js/map.js"></script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU3AMoPc-GDFXZvZyN78-QM6-YJ11h91M&callback=initMap">
+        </script>
 
         <!--Footer-->
         <div data-role="footer" data-position="fixed" class="footer">
@@ -55,7 +58,6 @@
 
     </div>
     <!-- End of home page -->
-
 </body>
 
 </html>

@@ -55,6 +55,15 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
+/*#region Map*/
+#map {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: inherit !important;
+}
+/*#endregion Map*/
+
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
