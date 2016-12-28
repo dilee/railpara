@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <!-- Slider Menu Stylesheet -->
+    <link rel="stylesheet" href="css/favoriteplaces.css">
+    <link rel="stylesheet" href="css/font-face.css">
+</head>
+<body>
+        <div data-role="page" id="favPlaces" class="ui-responsive-panel">
+        <div data-role="header" class="header" data-position="fixed">
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+                <div id="menubuttonblock">
+                    <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
+                </div>
+            </div>
+            <div id="logoblock">
+                <img src="images/logos/header/mytrips_header_logo.png"/>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+                <div id="backbuttonblock">
+                    <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
+                </div>
+            </div>
+        </div>
+          <!-- Slide Menu Panel -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+             class="menupanel">
+            <!--Menu Header Block-->
+            <div class="menuheaderblock">
+                <!--Profile Image Button-->
+                <div class="profileimageblock">
+                    <a data-role="none" href="#"><img src="images/icons/profile_dp.png"/></a>
+                </div>
+                <!--Profile Name-->
+                <div class="profilenameblock">
+                    <a data-role="none" href="#"><p>Test</p></a>
+                </div>
+                <!--Newsletter Block-->
+                <div>
+                    <!--Newsletter Image Button-->
+                    <a data-role="none" href="#"><img src="images/buttons/icon-buttons/newsletter_button.png" class="newsletterimg"/></a>
+                </div>
+            </div>
+
+            <!--Menu Items List-->
+            <div id="menubuttonlist">
+                <div data-role="main">
+                    <div class="menulistbuttonblock">
+                        <a href="www.google.com"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_home_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <a href="#"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_favorites_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <a href="#"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_achievements_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <a href="#"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_mytrips_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <a href="#"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_howto_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <a href="#"><img class="menulistbutton" src="images/buttons/rectangle-buttons/menu_logout_button.png"></a>
+                    </div>
+                    <div class="menulistbuttonblock">
+                        <div id="aboutus"><a href="http://dilee.me/railhunt/#team">About Us</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div data-role="main" class="ui-content" id="favPlacesContent">
+            <div class="container" id="tabbedContainer">
+                  <div class="list-group">
+                      <!--row 1-->
+                      
+                            <div class="row">
+                            <a href="#" class="list-group-item" style="height: 30%;padding-bottom: 9%;">
+                                                              <div class="col-md-1">
+
+                            <img src="images/places/independence_square/independencesquare_thumbnail_01.png" class="place-image">
+                                                              </div>
+                                <div class="col-md-10" id="trip_description">
+                                          <h2 class="list-group-item-heading">Independance Square</h2>
+                                         <p class="list-group-item-text place-description">Independence Memorial Hall (also Independence Commemoration Hall) is a national monument in Sri Lanka built for commemoration of the independence of Sri Lanka from the British rule with the restoration of full governing responsibility
+                                to a Ceylonese-elected legislature on February 4, 1948. It is located at the Independence Square (formerly Torrington Square) in the Cinnamon Gardens, Colombo. It also houses the Independence Memorial Museum.</p>
+
+                                </div>
+                                <div class="col-md-1">
+                            <img src="images/buttons/icon-buttons/delete_button.png" class="deleteBtn" data-role="button" id="btnDelete" data-toggle="modal" data-position-to="window " data-target="#deletePopUp">
+                        </div>
+
+                            </a>
+                            </div>
+                            <!--Row 2-->
+                             <div class="row">
+                            <a href="#" class="list-group-item" style="height: 30%;padding-bottom: 9%;">
+                                                              <div class="col-md-1">
+
+                            <img src="images/places/independence_square/independencesquare_thumbnail_01.png" class="place-image">
+                                                              </div>
+                                <div class="col-md-10" id="trip_description">
+                                          <h2 class="list-group-item-heading">Independance Square</h2>
+                                         <p class="list-group-item-text place-description">Independence Memorial Hall (also Independence Commemoration Hall) is a national monument in Sri Lanka built for commemoration of the independence of Sri Lanka from the British rule with the restoration of full governing responsibility
+                                to a Ceylonese-elected legislature on February 4, 1948. It is located at the Independence Square (formerly Torrington Square) in the Cinnamon Gardens, Colombo. It also houses the Independence Memorial Museum.</p>
+
+                                </div>
+                                <div class="col-md-1">
+                            <img src="images/buttons/icon-buttons/delete_button.png" class="deleteBtn" data-role="button" id="btnDelete" data-toggle="modal" data-position-to="window " data-target="#deletePopUp">
+                        </div>
+
+                            </a>
+                            </div>
+                            <!--row 3-->
+                            <div class="row">
+                            <a href="#" class="list-group-item" style="height: 30%;padding-bottom: 9%;">
+                                                              <div class="col-md-1">
+
+                            <img src="images/places/independence_square/independencesquare_thumbnail_01.png" class="place-image">
+                                                              </div>
+                                <div class="col-md-10" id="trip_description">
+                                          <h2 class="list-group-item-heading">Independance Square</h2>
+                                         <p class="list-group-item-text place-description">Independence Memorial Hall (also Independence Commemoration Hall) is a national monument in Sri Lanka built for commemoration of the independence of Sri Lanka from the British rule with the restoration of full governing responsibility
+                                to a Ceylonese-elected legislature on February 4, 1948. It is located at the Independence Square (formerly Torrington Square) in the Cinnamon Gardens, Colombo. It also houses the Independence Memorial Museum.</p>
+
+                                </div>
+                                <div class="col-md-1">
+                            <img src="images/buttons/icon-buttons/delete_button.png" class="deleteBtn" data-role="button" id="btnDelete" data-toggle="modal" data-position-to="window " data-target="#deletePopUp">
+                        </div>
+
+                            </a>
+                            </div>
+                            <!--row 4-->
+                               <div class="row">
+                            <a href="#" class="list-group-item" style="height: 30%;padding-bottom: 9%;">
+
+                            <img src="images/places/independence_square/independencesquare_thumbnail_01.png" class="place-image">
+                            
+                                <div class="col-md-10" id="trip_description">
+                                          <h2 class="list-group-item-heading">Independance Square</h2>
+                                         <p class="list-group-item-text place-description">Independence Memorial Hall (also Independence Commemoration Hall) is a national monument in Sri Lanka built for commemoration of the independence of Sri Lanka from the British rule with the restoration of full governing responsibility
+                                to a Ceylonese-elected legislature on February 4, 1948. It is located at the Independence Square (formerly Torrington Square) in the Cinnamon Gardens, Colombo. It also houses the Independence Memorial Museum.</p>
+
+                                </div>
+                                <div class="col-md-1">
+                            <img src="images/buttons/icon-buttons/delete_button.png" class="deleteBtn" data-role="button" id="btnDelete" data-toggle="modal" data-position-to="window " data-target="#deletePopUp">
+                        </div>
+
+                            </a>
+                            </div>
+                        </div>
+            </div>
+            </div>
+        </div>
+</body>
+</html>
