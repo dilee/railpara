@@ -4,7 +4,7 @@
 .header {
     width: 100% !important;
     height: 45px !important;
-    background: #424242 !important;
+    background: #ff3d00 !important;
     color: #ffffff !important;
     align-self: center !important;
     position: fixed !important;
@@ -30,10 +30,74 @@
 /*#endregion Logo*/
 /*#endregion Header*/
 
+.ui-content {
+    border-width: 0;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/** Personal Details **/
+.profile {
+    border: 1px solid;
+    background-color: #f9f9f9;
+    border-color: #bbb;
+    padding: 0.5em ;
+    justify-content: center;
+}
+.personal-details {
+    position: relative;
+    display: inline-block;
+}
+.pro-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    border: 3px solid #e2e2e2;
+}
+.user-fname {
+    position: absolute;
+    top: -15px;
+    right: -150px
+}
+.user-fname h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.edit-profile {
+    position: absolute;
+    top: 85px;
+    right: -159px;
+}
+.edit-profile .btn-primary {
+    color: #fff;
+    background-color: #424242;
+    border-color: #333;
+    text-shadow: none
+}
+.coins {
+    position: absolute;
+    top: 105px;
+    right: -66px;
+}
+.trips {
+    position: absolute;
+    top: 105px;
+    right: -155px;
+}
+
 /*#region Footer*/
 .footer {
     height: 45px;
-    background: #424242 !important;
+    background: #ff3d00 !important;
     color: #ffffff !important;
     align-self: center;
     bottom: 0;
@@ -54,78 +118,6 @@
 body {
     background-color: #f6f6f6 !important;
     font-family: 'avenir-roman' !important;
-}
-
-/** Personal **/
-.personal-details {}
-.edit-icon-wrapper {
-    position: relative;
-    top: -14px;
-    cursor: pointer;
-}
-
-/** Main content **/
-.ui-content {
-    border-width: 0;
-    overflow: visible;
-    overflow-x: hidden;
-    padding: 0em; !important;
-}
-
-.form-section {
-    /* max-height: calc(100% - 140px);*/
-        position: fixed;
-        top: 70px;
-        width: 100%;
-        overflow-y: auto;
-        height: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
-}
-
-.edit-icon-wrapper > i {
-    font-size: 12px;
-}
-
-/** Gravatar **/
-.grav-wrapper {
-    position: relative;
-    display: inline-block;
-}
-.pro-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display: inline-block;
-    overflow: hidden;
-    border: 3px solid #e2e2e2;
-}
-.camera-icon {
-    position: absolute;
-    top: 110px;
-    right: 10px;
-}
-.camera-icon > i {
-    font-size: 24px;
-    z-index: 999;
-}
-/** Form section **/
-.form-section {
-    text-align: center;
-}
-.form-wrapper > div {
-    margin-bottom: 20px;
-}
-.form-wrapper > div:first-of-type {
-    margin-top: 20px;
-    text-align: center;
-}
-.form-wrapper > div > input {
-    width: 80%;
-    display: inline-block;
-    border: none;
-    /*border-bottom: 1px solid #e2e2e2;
-    outline: none;*/
 }
 
 /*-------------------------- iPhone /*--------------------------*/
@@ -157,7 +149,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     #logoblock {
         margin-right: 18em;
-        margin-top: 2%;
+        margin-top: 0.5%;
     }
 
     .ui-controlgroup-horizontal .ui-controlgroup-controls {
@@ -166,6 +158,13 @@ and (-webkit-min-device-pixel-ratio: 1) {
         margin-right: 22em !important;
     }
 
+    .ui-content {
+        padding: 3em;
+    }
+    .container {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 /* iPad - Portrait */
