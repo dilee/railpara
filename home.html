@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
@@ -10,55 +9,85 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/templatepage.css">
     <link rel="stylesheet" href="css/slider-menu.css">
     <link rel="stylesheet" href="css/font-face.css">
-</head>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBU3AMoPc-GDFXZvZyN78-QM6-YJ11h91M"></script>
+    <style>
+        #content {
+            padding: 0 !important;
+        }
+        #map_canvas {
+            height:100%;
+            position: inherit !important;
+        }
+    </style>
+    <script>
+        $(document).on('pageshow', '#homepage',function(e,data){
 
+            $('#content').height(getRealContentHeight());
+
+            // This is the minimum zoom level that we'll allow
+            var minZoomLevel = 12;
+
+            var map = new google.maps.Map(document.getElementById('map_canvas'), {
+                zoom: minZoomLevel,
+                center: new google.maps.LatLng(38.50, -90.50),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+        });
+
+        function getRealContentHeight() {
+            var header = $.mobile.activePage.find("div[data-role='header']:visible");
+            var footer = $.mobile.activePage.find("div[data-role='footer']:visible");
+            var content = $.mobile.activePage.find("div[data-role='content']:visible:visible");
+            var viewport_height = $(window).height();
+
+            var content_height = viewport_height - header.outerHeight() - footer.outerHeight();
+            if((content.outerHeight() - header.outerHeight() - footer.outerHeight()) <= viewport_height) {
+                content_height -= (content.outerHeight() - content.height());
+            }
+            return content_height;
+        }
+    </script>
+</head>
 <body>
 
-    <!-- Start of home page -->
-    <div data-role="page" id="homepage" class="ui-responsive-panel">
-        <!--Header-->
-        <div data-role="header" class="header" data-position="fixed">
-            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
-                <div id="menubuttonblock">
-                    <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
-                </div>
-            </div>
-            <div id="logoblock">
-                <img src="images/logos/header/home_header_logo.png"/>
-            </div>
-            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
-                <div id="backbuttonblock">
-                    <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
-                </div>
+<div data-role="page" id="homepage" class="ui-responsive-panel">
+
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
             </div>
         </div>
-
-        <!-- Slide Menu Panel -->
-        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
-             class="menupanel">
-            <script>$(function(){$("#menu").load("menu.html");});</script>
+        <div id="logoblock">
+            <img src="images/logos/header/home_header_logo.png"/>
         </div>
-
-        <!--Map content-->
-        <div data-role="main" class="ui-content" id="content">
-            <div id="map-canvas"></div>
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+            <div id="backbuttonblock">
+                <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
+            </div>
         </div>
-        <script src="js/map.js"></script>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU3AMoPc-GDFXZvZyN78-QM6-YJ11h91M&callback=initMap">
-        </script>
-
-        <!--Footer-->
-        <div data-role="footer" data-position="fixed" class="footer">
-            <h1>©Railපාර 2016</h1>
-        </div>
-
     </div>
-    <!-- End of home page -->
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+         class="menupanel">
+        <script>$(function(){$("#menu").load("menu.html");});</script>
+    </div>
+
+    <div data-role="content" id="content">
+        <div id="map_canvas"></div>
+    </div>
+
+    <!--Footer-->
+    <div data-role="footer" data-position="fixed" class="footer">
+        <h1>©Railපාර 2016</h1>
+    </div>
+
+</div>
+
 </body>
-
 </html>
-
