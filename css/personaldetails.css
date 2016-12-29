@@ -56,12 +56,6 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
-.ui-content {
-    padding: 0 0 0 0 !important;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
 /** Personal **/
 .personal-details {}
 .edit-icon-wrapper {
@@ -71,6 +65,13 @@ body {
 }
 
 /** Main content **/
+.ui-content {
+    border-width: 0;
+    overflow: visible;
+    overflow-x: hidden;
+    padding: 0em; !important;
+}
+
 .form-section {
     /* max-height: calc(100% - 140px);*/
         position: fixed;
@@ -163,10 +164,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
         display: inline-block;
         vertical-align: middle;
         margin-right: 22em !important;
-    }
-
-    .ui-header-fixed .ui-btn-left, .ui-header-fixed .ui-btn-right {
-        margin-top: 3px;
     }
 
 }
