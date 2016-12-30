@@ -56,9 +56,23 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
-wrapper {
-    padding: 20em;
+.wrapper {
+    padding: 2em;
+    box-shadow: 5px 5px 5px #888888;
+    margin: 0 auto;
+    display: table;
 }
+
+.gly-style {
+    margin-left: -1em;
+}
+
+.instructions {
+    display: table;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+    
 
 /*-------------------------- iPhone /*--------------------------*/
 
