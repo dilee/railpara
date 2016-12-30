@@ -43,13 +43,25 @@
 }
 
 /** Personal Details **/
-.profile {
+.profile-wrapper {
     border: 1px solid;
     background-color: #f9f9f9;
     border-color: #bbb;
-    padding: 0.5em ;
-    justify-content: center;
+    padding: 1em ;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2em;
 }
+
+.profile {
+    display: inline-flex;
+}
+
+
+#profile-name {
+    margin-top: 0;
+}
+
 .personal-details {
     position: relative;
     display: inline-block;
@@ -61,7 +73,10 @@
     display: inline-block;
     overflow: hidden;
     border: 3px solid #e2e2e2;
+    padding: 0;
+    margin-left: -2.2em;
 }
+
 .user-fname {
     position: absolute;
     top: -15px;
@@ -83,16 +98,57 @@
     border-color: #333;
     text-shadow: none
 }
-.coins {
-    position: absolute;
-    top: 105px;
-    right: -66px;
+
+
+.url-button {
+    background-color: #757575;
+    border-color: #555555;
+    color: #fafafa !important;
+    text-shadow: none;
 }
-.trips {
-    position: absolute;
-    top: 105px;
-    right: -155px;
+
+a:visited {
+    color: #fafafa;
+    background-color: #757575 !important;
 }
+
+.achievement {
+    box-shadow: 3px 5px 10px #888888;
+    background-color: #f9f9f9;
+    border-color: #bbb;
+    padding: 1em ;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    color: #757575; 
+}
+
+.achievement-header {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.achievement-type {
+    font-size: 17px;
+}
+
+.achievement-meta{
+        font-size: 15px;
+        margin-top: 1em;
+}
+
+.icon-coin {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-tick {
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-top: -1.5em;
+}
+
 
 /*#region Footer*/
 .footer {
@@ -128,6 +184,15 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: portrait) {
 
+    .achievement-meta{
+        display: inline-flex;
+        width: 100%;
+    }
+
+    .icon-tick {
+    margin-top: -0.7em;
+    margin-right: -2em;
+}
 }
 
 /* iPhone 6 - Landscape */

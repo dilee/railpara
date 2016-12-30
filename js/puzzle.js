@@ -25,9 +25,9 @@
         return _this.changeImage(event.target.src);
       });
       for (i = _j = 0; _j <= 7; i = ++_j) {
-        x = Math.floor(i % 3) * 110;
-        y = Math.floor(i / 3) * 110;
-        t = new Tile(i, 110, 110, x, y, this.image);
+        x = Math.floor(i % 3) * 150;
+        y = Math.floor(i / 3) * 150;
+        t = new Tile(i, 150, 150, x, y, this.image);
         this.places.push(t);
       }
       this.places.push(new Blank(8));

@@ -9,18 +9,19 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
     <script src="js/puzzle.js"></script>
-
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/challenge.css">
     <link rel="stylesheet" href="css/slider-menu.css">
     <link rel="stylesheet" href="css/font-face.css">
     <link rel="stylesheet" href="css/puzzle.css">
+
 </head>
 
 <body>
 
-    <!-- Start of home page -->
-    <div data-role="page" id="ChallengePage" class="ui-responsive-panel">
+    <div data-role="page" id="templatepage" class="ui-responsive-panel">
+
         <!--Header-->
         <div data-role="header" class="header" data-position="fixed">
             <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
@@ -29,7 +30,7 @@
                 </div>
             </div>
             <div id="logoblock">
-                <img src="images/logos/header/puzzle_header_logo.png" />
+                <img src="images/logos/header/letsplay_header_logo.png" />
             </div>
             <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
                 <div id="backbuttonblock">
@@ -43,12 +44,12 @@
             <script>$(function () { $("#menu").load("menu.html"); });</script>
 </div>
 
-<!--Map content-->
 <div data-role="main" class="ui-content" id="content">
-    <div id="canvas"></div>
-    
+    <!--Challenge page content-->
+    <div class="wrapper">
+        <div id="canvas"></div>
+    </div>
 </div>
-
 
 <!--Footer-->
 <div data-role="footer" data-position="fixed" class="footer">
@@ -56,7 +57,7 @@
 </div>
 
 </div>
-<!-- End of home page -->
+
 </body>
 
 </html>
