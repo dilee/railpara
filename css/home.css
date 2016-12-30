@@ -18,13 +18,14 @@
 
 /*#region Logo*/
 #logoblock {
-    margin-top: 0.3em;
+    margin-top: 1%;
 }
 
 #logoblock img {
+    margin-top: 10%;
     display: block;
     margin: auto;
-    height: 2.2em;
+    height: 2.4em;
 }
 /*#endregion Logo*/
 /*#endregion Header*/
@@ -55,19 +56,6 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
-/*#region Map*/
-#content {
-    padding: 0;
-    position : absolute !important;
-    right : 0;
-    left : 0 !important;
-    height: 100%;
-}
-
-#map-canvas {
-    height: 100%;
-}
-
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
@@ -91,10 +79,20 @@ and (orientation: landscape) {
 /* iPad - Landscape */
 @media only screen
 and (min-device-width: 768px)
-and (max-device-width: 1600px)
+and (max-device-width: 1024px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 1) {
 
+    #logoblock {
+        margin-right: 18em;
+        margin-top: 0.5%;
+    }
+
+    .ui-controlgroup-horizontal .ui-controlgroup-controls {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 22em !important;
+    }
 }
 
 /* iPad - Portrait */

@@ -9,10 +9,9 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
-    <link rel="stylesheet" href="css/templatepage.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/slider-menu.css">
     <link rel="stylesheet" href="css/font-face.css">
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBU3AMoPc-GDFXZvZyN78-QM6-YJ11h91M"></script>
     <style>
         #content {
             padding: 0 !important;
@@ -24,97 +23,7 @@
     </style>
     <script>
         $(document).on('pageshow', '#homepage',function(e,data){
-
             $('#content').height(getRealContentHeight());
-
-            // This is the minimum zoom level that we'll allow
-            var minZoomLevel = 18;
-
-            var map = new google.maps.Map(document.getElementById('map_canvas'), {
-                zoom: minZoomLevel,
-                center: new google.maps.LatLng(6.9334923, 79.8505064),
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                styles: [
-                    {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-                    {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-                    {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-                    {
-                        featureType: 'administrative.locality',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#d59563'}]
-                    },
-                    {
-                        featureType: 'poi',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#d59563'}]
-                    },
-                    {
-                        featureType: 'poi.park',
-                        elementType: 'geometry',
-                        stylers: [{color: '#263c3f'}]
-                    },
-                    {
-                        featureType: 'poi.park',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#6b9a76'}]
-                    },
-                    {
-                        featureType: 'road',
-                        elementType: 'geometry',
-                        stylers: [{color: '#38414e'}]
-                    },
-                    {
-                        featureType: 'road',
-                        elementType: 'geometry.stroke',
-                        stylers: [{color: '#212a37'}]
-                    },
-                    {
-                        featureType: 'road',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#9ca5b3'}]
-                    },
-                    {
-                        featureType: 'road.highway',
-                        elementType: 'geometry',
-                        stylers: [{color: '#746855'}]
-                    },
-                    {
-                        featureType: 'road.highway',
-                        elementType: 'geometry.stroke',
-                        stylers: [{color: '#1f2835'}]
-                    },
-                    {
-                        featureType: 'road.highway',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#f3d19c'}]
-                    },
-                    {
-                        featureType: 'transit',
-                        elementType: 'geometry',
-                        stylers: [{color: '#2f3948'}]
-                    },
-                    {
-                        featureType: 'transit.station',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#d59563'}]
-                    },
-                    {
-                        featureType: 'water',
-                        elementType: 'geometry',
-                        stylers: [{color: '#17263c'}]
-                    },
-                    {
-                        featureType: 'water',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#515c6d'}]
-                    },
-                    {
-                        featureType: 'water',
-                        elementType: 'labels.text.stroke',
-                        stylers: [{color: '#17263c'}]
-                    }
-                ]
-            });
         });
 
         function getRealContentHeight() {
@@ -129,45 +38,121 @@
             }
             return content_height;
         }
+
+        function initMap() {
+            //Stations
+            var fortLatlng = {lat: 6.9334923, lng: 79.8505064};
+            var maradanaLatlng = {lat: 6.9294665, lng: 79.8651053};
+            var slaveislandLatlng = {lat: 6.9230118, lng: 79.8489035};
+            var bambaLatlng = {lat: 6.8830177, lng: 79.8807119};
+            var kpLatlng = {lat: 6.8831291, lng: 79.8813752};
+
+            var map = new google.maps.Map(document.getElementById('map_canvas'), {
+                zoom: 13,
+                center: fortLatlng
+            });
+
+            var markerFort = new google.maps.Marker({
+                position: fortLatlng,
+                map: map,
+                title: 'Fort Railway Station',
+                url: '#'
+            });
+
+            var markerMaradana = new google.maps.Marker({
+                position: maradanaLatlng,
+                map: map,
+                title: 'Maradana Railway Station',
+                url: '#'
+            });
+
+            var markerSlaveisland = new google.maps.Marker({
+                position: slaveislandLatlng,
+                map: map,
+                title: 'Slave Island Railway Station',
+                url: '#'
+            });
+
+            var markerBamba = new google.maps.Marker({
+                position: bambaLatlng,
+                map: map,
+                title: 'Bambalapitiya Railway Station',
+                url: '#'
+            });
+
+            var markerKp = new google.maps.Marker({
+                position: kpLatlng,
+                map: map,
+                title: 'Kirillapone Railway Station',
+                url: '#'
+            });
+
+            //Places
+            var gangaramayaLatlng = {lat: 6.916596, lng: 79.856522};
+
+            var markerGangaramaya = new google.maps.Marker({
+                position: kpLatlng,
+                map: map,
+                title: 'Kirillapone Railway Station',
+                url: 'placefacts.html'
+            });
+
+            // Click event listeners
+            markerFort.addListener('click', function() {
+                map.setZoom(13);
+                map.setCenter(markerFort.getPosition());
+            });
+
+            markerSlaveisland.addListener('click', function() {
+                map.setZoom(17);
+                map.setCenter(markerSlaveisland.getPosition());
+            });
+
+            markerGangaramaya.addListener('click', function() {
+                window.location = markerGangaramaya.url;
+            });
+        }
     </script>
 </head>
 <body>
 
-<div data-role="page" id="homepage" class="ui-responsive-panel">
+    <div data-role="page" id="homepage" class="ui-responsive-panel">
 
-    <!--Header-->
-    <div data-role="header" class="header" data-position="fixed">
-        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
-            <div id="menubuttonblock">
-                <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
+        <!--Header-->
+        <div data-role="header" class="header" data-position="fixed">
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+                <div id="menubuttonblock">
+                    <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
+                </div>
+            </div>
+            <div id="logoblock">
+                <img src="images/logos/header/home_header_logo.png"/>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+                <div id="backbuttonblock">
+                    <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
+                </div>
             </div>
         </div>
-        <div id="logoblock">
-            <img src="images/logos/header/home_header_logo.png"/>
+
+        <!-- Slide Menu Panel -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+             class="menupanel">
+            <script>$(function(){$("#menu").load("menu.html");});</script>
         </div>
-        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
-            <div id="backbuttonblock">
-                <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
-            </div>
+
+        <div data-role="content" id="content">
+            <div id="map_canvas"></div>
         </div>
+
+        <!--Footer-->
+        <div data-role="footer" data-position="fixed" class="footer">
+            <h1>©Railපාර 2016</h1>
+        </div>
+
     </div>
-
-    <!-- Slide Menu Panel -->
-    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
-         class="menupanel">
-        <script>$(function(){$("#menu").load("menu.html");});</script>
-    </div>
-
-    <div data-role="content" id="content">
-        <div id="map_canvas"></div>
-    </div>
-
-    <!--Footer-->
-    <div data-role="footer" data-position="fixed" class="footer">
-        <h1>©Railපාර 2016</h1>
-    </div>
-
-</div>
-
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU3AMoPc-GDFXZvZyN78-QM6-YJ11h91M&callback=initMap">
+    </script>
 </body>
 </html>

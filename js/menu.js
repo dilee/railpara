@@ -2,6 +2,20 @@ $(document).on("pagecreate", "div[data-role=page]", function () {
 
     var icon = document.getElementById('menubutton');
     var open = false;
+
+    $(document).on('pageinit', function(){
+        var width = $(window).width();
+        if(width > 768){
+            $("#menu").panel("open"); /* nav-panel is the id of the panel div*/
+            if (open) {
+                icon.className = 'menu-icon';
+            } else {
+                icon.className = 'menu-icon open';
+            }
+            open = !open;
+        }
+    });
+
     $("#menubuttonblock").on("tap", function () {
         if (open) {
             icon.className = 'menu-icon';
@@ -18,19 +32,6 @@ $(document).on("pagecreate", "div[data-role=page]", function () {
             icon.className = 'menu-icon open';
         }
         open = !open;
-    });
-
-    $(document).on('pageinit', function(){
-        var width = $(window).width();
-        if(width > 768){
-            $("#menu").panel("open"); /* nav-panel is the id of the panel div*/
-            if (open) {
-                icon.className = 'menu-icon';
-            } else {
-                icon.className = 'menu-icon open';
-            }
-            open = !open;
-        }
     });
 
     $(window).resize(function () {
