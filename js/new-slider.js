@@ -1,14 +1,16 @@
 /**
  * Created by Dasuni Dissanayake on 28/12/2016.
  */
-$(document).ready (function () {
+$(document).on('pageinit', function() {
     $(".owl-carousel").owlCarousel({
-        navigation : true,
-        slideSpeed : 300,
+        responsive : true ,
+        slideSpeed : 200,
         paginationSpeed : 400,
         singleItem: true,
-        pagination: false,
-        rewindSpeed: 500
+        rewindSpeed: 500,
+        loop:true,
+        autoPlay:true,
+        dots : true
     });
 });
 
