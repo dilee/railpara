@@ -36,9 +36,9 @@ var insertItems = function (db, collectionName, items, callback, error) {
     });
 };
 
-var findItems = function (db, filter, callback, error) {
+var findItems = function (db, collection, filter, callback, error) {
     // Get the documents collection
-    var collection = db.collection('users');
+    var collection = db.collection(collection);
     // Find some documents
     collection.find(filter).toArray(function (err, docs) {
         if (!err) {
@@ -93,24 +93,81 @@ app.post('/login', function (req, res) {
         assert.equal(null, err);
         console.log("Connected correctly to server");
 
-        var filter = {email: req.body.email.toLowerCase()};
+        var filter = { email: req.body.email.toLowerCase() };
 
-        findItems(db, filter, function (docs) {
-            
+        findItems(db, 'users', filter, function (docs) {
+
             db.close();
 
-            if(docs.length == 1) {
-                if(docs[0].password === req.body.password) {
+            if (docs.length == 1) {
+                if (docs[0].password === req.body.password) {
                     docs[0].password = undefined;
                     res.json(docs[0]);
                 }
                 else {
-                    res.json({error: true, message: 'Invalid Password'});
+                    res.json({ error: true, message: 'Invalid Password' });
                 }
             }
             else {
-                res.json({error: true, message: 'Invalid Email'});
+                res.json({ error: true, message: 'Invalid Email' });
             }
+
+        }, function (err) {
+            res.json(err);
+        });
+    });
+
+})
+
+app.post('/getFavorites', function (req, res) {
+
+    MongoClient.connect(url, function (err, db) {
+        assert.equal(null, err);
+
+        var filter = { email: { $in: req.body} };
+
+        findItems(db, 'users', filter, function (docs) {
+
+            db.close();
+            res.json(docs);
+
+        }, function (err) {
+            res.json(err);
+        });
+    });
+
+})
+
+app.get('/getAllLocations', function (req, res) {
+
+    MongoClient.connect(url, function (err, db) {
+        assert.equal(null, err);
+
+        var filter = {};
+
+        findItems(db, 'location', filter, function (docs) {
+
+            db.close();
+            res.json(docs);
+
+        }, function (err) {
+            res.json(err);
+        });
+    });
+
+})
+
+app.get('/location/:id', function (req, res) {
+
+    MongoClient.connect(url, function (err, db) {
+        assert.equal(null, err);
+
+        var filter = {_id: req.params.id};
+
+        findItems(db, 'location', filter, function (docs) {
+
+            db.close();
+            res.json(docs);
 
         }, function (err) {
             res.json(err);
