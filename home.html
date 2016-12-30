@@ -46,10 +46,12 @@
             var slaveislandLatlng = {lat: 6.9230118, lng: 79.8489035};
             var bambaLatlng = {lat: 6.8830177, lng: 79.8807119};
             var kpLatlng = {lat: 6.8831291, lng: 79.8813752};
+            //Places
+            var gangaramayaLatlng = {lat: 6.916596, lng: 79.856522};
 
             var map = new google.maps.Map(document.getElementById('map_canvas'), {
-                zoom: 13,
-                center: fortLatlng
+                zoom: 15,
+                center: gangaramayaLatlng
             });
 
             var markerFort = new google.maps.Marker({
@@ -87,11 +89,8 @@
                 url: '#'
             });
 
-            //Places
-            var gangaramayaLatlng = {lat: 6.916596, lng: 79.856522};
-
             var markerGangaramaya = new google.maps.Marker({
-                position: kpLatlng,
+                position: gangaramayaLatlng,
                 map: map,
                 title: 'Kirillapone Railway Station',
                 url: 'placefacts.html'
