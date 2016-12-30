@@ -57,6 +57,10 @@
     display: inline-flex;
 }
 
+#profile-img {
+    width: 144px;
+}
+
 
 #profile-name {
     margin-top: 0;
