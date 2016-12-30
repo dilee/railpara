@@ -42,41 +42,15 @@
 
         <div data-role="main" class="ui-content" id="myTripsContent">
             <div class="container" id="tabbedContainer">
-                <ul class="nav nav-pills green">
-                    <li class="active"><a href="#tab_Upcoming" data-toggle="tab">Upcoming</a></li>
-                    <li><a href="#tab_Past" data-toggle="tab">Past</a></li>
-                </ul>
-                <div class="tab-content">
+                <div id="tabbuttons">
+                    <ul class="nav nav-pills green">
+                        <li class="active"><a href="#tab_Upcoming" data-toggle="tab">Upcoming</a></li>
+                        <li><a href="#tab_Past" data-toggle="tab">Past</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="tabcontent">
                     <div class="tab-pane active" id="tab_Upcoming">
                         <div class="list-group">
-                            <div class="row">
-                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                              
-                                    <img src="images/icons/train_black.png" class="trip-image">
-                                <div class="col-md-10" id="trip_description">
-                                    <p class="list-group-item-text">Destination</p>
-                                    <h4 class="list-group-item-heading">AAA</h4>
-                                    <p class="list-group-item-text">Date and Time</p>
-                                    <h4 class="list-group-item-heading">12/27/2016 12.31 AM</h4>
-
-                                </div>
-
-                            </a>
-                            </div>
-                            <div class="row">
-                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                              
-                                    <img src="images/icons/train_black.png" class="trip-image">
-                                <div class="col-md-10" id="trip_description">
-                                    <p class="list-group-item-text">Destination</p>
-                                    <h4 class="list-group-item-heading">AAA</h4>
-                                    <p class="list-group-item-text">Date and Time</p>
-                                    <h4 class="list-group-item-heading">12/27/2016 12.31 AM</h4>
-
-                                </div>
-
-                            </a>
-                            </div>
                             <div class="row">
                             <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
                               
@@ -183,10 +157,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-        <div data-role="footer "data-position="fixed" class="footer ">
+        <div data-role="footer" data-position="fixed" class="footer">
             <h1>©Railපාර 2016</h1>
         </div>
     </div>
