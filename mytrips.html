@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,14 +10,17 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
-    <link rel="stylesheet" href="css/slider-menu.css">
     <link rel="stylesheet" href="css/mytrips.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
     <link rel="stylesheet" href="css/font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
 
 <body>
-    <div data-role="page" id="myTrips" class="ui-responsive-panel">
-         <!--Header-->
+
+    <div data-role="page" id="mytripsPage" class="ui-responsive-panel">
+
+        <!--Header-->
         <div data-role="header" class="header" data-position="fixed">
             <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
                 <div id="menubuttonblock">
@@ -37,132 +40,109 @@
         <!-- Slide Menu Panel -->
         <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
              class="menupanel">
-            <script>$(function(){$("#menu").load("menu.html");});</script>
+            <script>$(function () {
+                $("#menu").load("menu.html");
+            });</script>
         </div>
 
-        <div data-role="main" class="ui-content" id="myTripsContent">
-            <div class="container" id="tabbedContainer">
-                <div id="tabbuttons">
-                    <ul class="nav nav-pills green">
-                        <li class="active"><a href="#tab_Upcoming" data-toggle="tab">Upcoming</a></li>
-                        <li><a href="#tab_Past" data-toggle="tab">Past</a></li>
-                    </ul>
+        <div data-role="main" class="ui-content" id="content">
+
+            <div class="container">
+                <!--Tab Toggle Buttons-->
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div id="tabtoggle" class="col-xs-8">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="#upcomingtripstab" data-toggle="tab">Upcoming</a></li>
+                            <li><a href="#pasttripstab" data-toggle="tab">Past</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-2"></div>
                 </div>
+
+                <!--Tab Panes-->
                 <div class="tab-content" id="tabcontent">
-                    <div class="tab-pane active" id="tab_Upcoming">
+                    <!--Tab Pane for Upcoming Trips-->
+                    <div class="tab-pane active" id="upcomingtripstab">
                         <div class="list-group">
                             <div class="row">
-                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                              
-                                    <img src="images/icons/train_black.png" class="trip-image">
-                                <div class="col-md-10" id="trip_description">
-                                    <p class="list-group-item-text">Destination</p>
-                                    <h4 class="list-group-item-heading">AAA</h4>
-                                    <p class="list-group-item-text">Date and Time</p>
-                                    <h4 class="list-group-item-heading">12/27/2016 12.31 AM</h4>
-
+                                <div class="trip row list-group-item">
+                                    <div class="col-xs-4">
+                                        <img src="images/icons/train_black.png" class="tripthumbnail">
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p class="listitemtitle">Destination</p>
+                                        <p class="listitemcontent">Dutch Museum</p>
+                                        <p class="listitemtitle">Date & Time</p>
+                                        <p class="listitemcontent">09-02-2017 10:00am</p>
+                                    </div>
                                 </div>
-
-                            </a>
-                            </div>
-                            <div class="row">
-                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                              
-                                    <img src="images/icons/train_black.png" class="trip-image">
-                                <div class="col-md-10" id="trip_description">
-                                    <p class="list-group-item-text">Destination</p>
-                                    <h4 class="list-group-item-heading">AAA</h4>
-                                    <p class="list-group-item-text">Date and Time</p>
-                                    <h4 class="list-group-item-heading">12/27/2016 12.31 AM</h4>
-
+                                <div class="trip row list-group-item">
+                                    <div class="col-xs-4">
+                                        <img src="images/icons/train_black.png" class="tripthumbnail">
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p class="listitemtitle">Destination</p>
+                                        <p class="listitemcontent">Dutch Museum</p>
+                                        <p class="listitemtitle">Date & Time</p>
+                                        <p class="listitemcontent">09-02-2017 10:00am</p>
+                                    </div>
                                 </div>
-
-                            </a>
-                            </div>
-                            <div class="row">
-                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                              
-                                    <img src="images/icons/train_black.png" class="trip-image">
-                                <div class="col-md-10" id="trip_description">
-                                    <p class="list-group-item-text">Destination</p>
-                                    <h4 class="list-group-item-heading">AAA</h4>
-                                    <p class="list-group-item-text">Date and Time</p>
-                                    <h4 class="list-group-item-heading">12/27/2016 12.31 AM</h4>
-
+                                <div class="trip row list-group-item">
+                                    <div class="col-xs-4">
+                                        <img src="images/icons/train_black.png" class="tripthumbnail">
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p class="listitemtitle">Destination</p>
+                                        <p class="listitemcontent">Dutch Museum</p>
+                                        <p class="listitemtitle">Date & Time</p>
+                                        <p class="listitemcontent">09-02-2017 10:00am</p>
+                                    </div>
                                 </div>
-
-                            </a>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="tab_Past">
-                      <div class="list-group">
+                    <!--Tab Pane for Past Trips-->
+                    <div class="tab-pane" id="pasttripstab">
+                        <div class="list-group">
                             <div class="row">
-                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                              
-                                    <img src="images/icons/train_black.png" class="trip-image">
-                                <div class="col-md-10" id="trip_description">
-                                    <p class="list-group-item-text">Destination</p>
-                                    <h4 class="list-group-item-heading">AAA</h4>
-                                    <p class="list-group-item-text">Date and Time</p>
-                                    <h4 class="list-group-item-heading">12/27/2016 12.31 AM</h4>
-
+                                <div class="trip row list-group-item">
+                                    <div class="col-xs-4">
+                                        <img src="images/icons/train_black.png" class="tripthumbnail">
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p class="listitemtitle">Destination</p>
+                                        <p class="listitemcontent">Dutch Museum</p>
+                                        <p class="listitemtitle">Date & Time</p>
+                                        <p class="listitemcontent">09-02-2017 10:00am</p>
+                                    </div>
                                 </div>
-
-                            </a>
-                            </div>
-                            <div class="row">
-                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                              
-                                    <img src="images/icons/train_black.png" class="trip-image">
-                                <div class="col-md-10" id="trip_description">
-                                    <p class="list-group-item-text">Destination</p>
-                                    <h4 class="list-group-item-heading">AAA</h4>
-                                    <p class="list-group-item-text">Date and Time</p>
-                                    <h4 class="list-group-item-heading">12/27/2016 12.31 AM</h4>
-
+                                <div class="trip row list-group-item">
+                                    <div class="col-xs-4">
+                                        <img src="images/icons/train_black.png" class="tripthumbnail">
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p class="listitemtitle">Destination</p>
+                                        <p class="listitemcontent">Dutch Museum</p>
+                                        <p class="listitemtitle">Date & Time</p>
+                                        <p class="listitemcontent">09-02-2017 10:00am</p>
+                                    </div>
                                 </div>
-
-                            </a>
                             </div>
-                            <div class="row">
-                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                              
-                                    <img src="images/icons/train_black.png" class="trip-image">
-                                <div class="col-md-10" id="trip_description">
-                                    <p class="list-group-item-text">Destination</p>
-                                    <h4 class="list-group-item-heading">AAA</h4>
-                                    <p class="list-group-item-text">Date and Time</p>
-                                    <h4 class="list-group-item-heading">12/27/2016 12.31 AM</h4>
-
-                                </div>
-
-                            </a>
-                            </div>
-                            <div class="row">
-                            <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                              
-                                    <img src="images/icons/train_black.png" class="trip-image">
-                                <div class="col-md-10" id="trip_description">
-                                    <p class="list-group-item-text">Destination</p>
-                                    <h4 class="list-group-item-heading">AAA</h4>
-                                    <p class="list-group-item-text">Date and Time</p>
-                                    <h4 class="list-group-item-heading">12/27/2016 12.31 AM</h4>
-
-                                </div>
-
-                            </a>
-                            </div>
-                          
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
+        <!--Footer-->
         <div data-role="footer" data-position="fixed" class="footer">
             <h1>©Railපාර 2016</h1>
         </div>
+
     </div>
+
 </body>
 
 </html>

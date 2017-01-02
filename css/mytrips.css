@@ -30,6 +30,68 @@
 /*#endregion Logo*/
 /*#endregion Header*/
 
+.ui-content {
+    border-width: 0;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 0%;
+}
+
+/*region tab toggle buttons */
+#tabtoggle {
+    margin-bottom: 1em;
+    margin-left: 3em;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #2e7d32 !important;
+}
+
+.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+    color: #3c763d;
+}
+/*endregion tab toggle buttons
+
+/*#region list content */
+.trip {
+    box-shadow: 3px 5px 10px #888888;
+    background-color: #f9f9f9;
+    border-color: #bbb;
+    padding: 1em ;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    color: #757575; 
+}
+
+.trip-header {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.trip-type {
+    font-size: 17px;
+}
+
+.tripthumbnail {
+    width: 6em;
+}
+
+.listitemtitle {
+    margin: 0em;
+}
+
+.listitemcontent {
+    margin: 0em;
+    font-weight: bold;
+    font-size: 18px;
+}
+/*#endregion list content */
+
 /*#region Footer*/
 .footer {
     height: 45px;
@@ -55,30 +117,7 @@ body {
     background-color: #f6f6f6 !important;
     font-family: 'avenir-roman' !important;
 }
-.trip-image{
-width: 25%;
-}
-#trip_description{
-    float: right;
-}
-.nav-pills > .active > a, .nav-pills > .active > a:hover {
-    background-color: #2e7d32  !important;
-      color:#ffffff!important;
-    
-}
-.green .active a,
-.green .active a:hover {
-   background-color: #2e7d32  !important;
-}
-.ui-link .active{
-    color:#ffffff!important;
-}
-.ui-link{
-    color: #2e7d32  !important;
-}
-.list-group-item-text{
-color: black;
-}
+
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
@@ -94,6 +133,22 @@ and (orientation: portrait) {
 and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: landscape) {
+
+    #tabtoggle {
+        margin-bottom: 1em;
+        margin-left: 17em;
+    }
+
+    .trip {
+        box-shadow: 3px 5px 10px #888888;
+        background-color: #f9f9f9;
+        border-color: #bbb;
+        padding: 1em;
+        margin-left: 5em;
+        margin-right: 5em;
+        margin-bottom: 0.5em;
+        color: #757575;
+    }
 
 }
 
@@ -116,6 +171,31 @@ and (-webkit-min-device-pixel-ratio: 1) {
         vertical-align: middle;
         margin-right: 22em !important;
     }
+
+    .ui-content {
+        padding: 3em;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    #tabtoggle {
+        margin-bottom: 1em;
+        margin-left: 19em;
+    }
+
+    .trip {
+        box-shadow: 3px 5px 10px #888888;
+        background-color: #f9f9f9;
+        border-color: #bbb;
+        padding: 1em;
+        margin-left: 11em;
+        margin-right: 11em;
+        margin-bottom: 0.5em;
+        color: #757575;
+    }
 }
 
 /* iPad - Portrait */
@@ -123,5 +203,21 @@ and (-webkit-min-device-pixel-ratio: 1) {
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
+
+    #tabtoggle {
+        margin-bottom: 1em;
+        margin-left: 21em;
+    }
+
+    .trip {
+        box-shadow: 3px 5px 10px #888888;
+        background-color: #f9f9f9;
+        border-color: #bbb;
+        padding: 1em;
+        margin-left: 11em;
+        margin-right: 11em;
+        margin-bottom: 0.5em;
+        color: #757575;
+    }
 
 }
