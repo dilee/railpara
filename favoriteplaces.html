@@ -2,183 +2,86 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/slider-menu.css">
-    <!-- Slider Menu Stylesheet -->
+    <script src="js/menu.js"></script>
+    <script src="js/puzzle.js"></script>
     <link rel="stylesheet" href="css/favoriteplaces.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
     <link rel="stylesheet" href="css/font-face.css">
+
 </head>
 
 <body>
-    <div data-role="page" id="favPlaces">
-        <div data-role="header" class="header">
-            <a id="backbutton" href="#loginPage" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback" data-iconpos="notext"></a>
-            <img src="images/logos/header/favplaces_header_logo.png" class="headerlogo" />
-            <a id="menubutton" href="#menu" class="ui-nodisc-icon" data-theme="none" data-role="button" data-icon="custommenu" data-iconpos="notext"></a>
+
+    <div data-role="page" id="templatepage" class="ui-responsive-panel">
+
+        <!--Header-->
+        <div data-role="header" class="header" data-position="fixed">
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+                <div id="menubuttonblock">
+                    <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png" /></a>
+                </div>
+            </div>
+            <div id="logoblock">
+                <img src="images/logos/header/favplaces_header_logo.png" />
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+                <div id="backbuttonblock">
+                    <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png" /></a>
+                </div>
+            </div>
         </div>
 
         <!-- Slide Menu Panel -->
-        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
-             class="menupanel">
-            <script>$(function(){$("#menu").load("menu.html");});</script>
-        </div>
+        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true" class="menupanel">
+            <script>$(function () { $("#menu").load("menu.html"); });</script>
+</div>
 
-        <div data-role="main" class="ui-content" id="favPlacesContent">
+<div data-role="main" class="ui-content" id="favPlacesContent">
 
-            <!--<div data-role="popup" id="deleteFavListPopUp" data-theme="b" class="ui-content" data-overlay-theme="b" data-dismissible="false">
-
-                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">close</a>
-                <h3 style="text-align: center;">Are you sure?</h3>
-                <p style="text-align: center;">This place will be removed from your favorite list</p>
-
-                <div id="btnEmailFavListDiv">
-                    <a href="#" class="sure-do" data-role="button" data-theme="b" data-rel="back" style="float: left;">Yes</a>
-                    <a href="#" data-role="button" data-theme="c" data-rel="back" style="float:right;">No</a>
-                </div>
-            </div>-->
-
-            <!--Favorite place List-->
-            <div class="container">
-                <div class="list-group">
-                    <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                        <div class="col-md-1">
-                            <img src="images/places/independence_square/independencesquare_thumbnail_01.png" class="place-image">
-                        </div>
-                        <div class="col-md-9">
-                            <h2 class="list-group-item-heading">Independance Square</h2>
-                            <p class="list-group-item-text place-description">Independence Memorial Hall (also Independence Commemoration Hall) is a national monument in Sri Lanka built for commemoration of the independence of Sri Lanka from the British rule with the restoration of full governing responsibility
-                                to a Ceylonese-elected legislature on February 4, 1948. It is located at the Independence Square (formerly Torrington Square) in the Cinnamon Gardens, Colombo. It also houses the Independence Memorial Museum.</p>
-                        </div>
-                        <div class="col-md-1">
-                            <img src="images/buttons/icon-buttons/delete_button.png" class="deleteBtn" data-role="button" id="btnDelete" data-toggle="modal" data-position-to="window " data-target="#deletePopUp">
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                        <div class="col-md-1">
-                            <img src="images/places/colombo_museum/colombomuseum_thumbnail_01.png" class="place-image">
-                        </div>
-                        <div class="col-md-9">
-                            <h2 class="list-group-item-heading">Colombo Museum</h2>
-                            <p class="list-group-item-text place-description">National Museum of Colombo, also known as the Sri Lanka National Museum is one of two museums in Colombo. It is the largest museum in Sri Lanka. It is maintained by the Department of National Museum of the central government.
-                                The museum holds contains a collections of much importance to Sri Lanka such as the regalia of the country, including the throne and crown of the Kandyan monarchs as well as many other exhibits telling the story of ancient
-                                Sri Lanka.
-                            </p>
-                        </div>
-                        <div class="col-md-1">
-                            <img src="images/buttons/icon-buttons/delete_button.png" class="deleteBtn" data-role="button" id="btnDelete2">
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                        <div class="col-md-1">
-                            <img src="images/places/gangaramaya/gangaramaya_thumbnail_01.png" class="place-image">
-                        </div>
-                        <div class="col-md-9">
-                            <h2 class="list-group-item-heading">Gangaramaya</h2>
-                            <p class="list-group-item-text place-description">IThe Gangaramaya Buddhist temple is a beautiful and vibrant temple with a history that dates back over 2,000 years. This temple was said to have been built in the 19th century by a trader and ship owner named Don Bastion, who
-                                had played a leading role in reviving Buddhism.</p>
-                        </div>
-                        <div class="col-md-1">
-                            <img src="images/buttons/icon-buttons/delete_button.png" class="deleteBtn" data-role="button" id="btnDelete">
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                        <div class="col-md-1">
-                            <img src="images/places/gallefacegreen/gallefacegreen_thumbnail_01.png" class="place-image">
-                        </div>
-                        <div class="col-md-9">
-                            <h2 class="list-group-item-heading">Galle face Green</h2>
-                            <p class="list-group-item-text place-description">The Galle Face is a five hectare ocean-side urban park, which stretches for a half kilometre along the coast, in the heart of the financial and business district of Colombo. The promenade was initially laid out in 1859 by Governor
-                                Sir Henry George Ward, although the original Galle Face Green extended over a much larger area than is seen today. The Galle Face Green was initially used for horse racing and as a golf course, but was also used for cricket,
-                                tennis and rugby.</p>
-                        </div>
-                        <div class="col-md-1">
-                            <img src="images/buttons/icon-buttons/delete_button.png" class="deleteBtn" data-role="button" id="btnDelete">
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                        <div class="col-md-1">
-                            <img src="images/places/attidiya_sanc/attidiyasanc_thumbnail_01.png" class=" place-image ">
-                        </div>
-                        <div class="col-md-9 ">
-                            <h2 class="list-group-item-heading ">Attidiya Sanctuary</h2>
-                            <p class="list-group-item-text place-description ">ILocated in the outskirts of Colombo, Attidiya Bird Sanctuary is a small land (may be the only place near Colombo) for the birds and other animals to take refuge in. I was surprised at the biodiversity which I encountered for
-                                a place that is right in the backyard of Colombo city.</p>
-                        </div>
-                        <div class="col-md-1 ">
-                            <img src="images/buttons/icon-buttons/delete_button.png " class="deleteBtn " data-role="button " id="btnDelete ">
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item" style="height: 20%;padding-bottom: 9%;">
-                        <div class="col-md-1">
-                            <img src="images/places/dutch_museum/dutchmuseum_thumbnail_01.png" class="place-image">
-                        </div>
-                        <div class="col-md-9">
-                            <h2 class="list-group-item-heading">Dutch Museum</h2>
-                            <p class="list-group-item-text place-description">IThe Colombo Dutch Museum is a museum that covers the history of the Dutch colonial rule in Sri Lanka. The two storey colonnaded building on Prince Street, Pettah (Colombo 11) which houses this museum was constructed during
-                                the Dutch occupation of Colombo (1656 - 1796) and was the formal residence of the Governor of Dutch Ceylon Thomas van Rhee (1634 - 1701) during his term of office in 1692 to 1697.</p>
-                        </div>
-                        <div class="col-md-1">
-                            <img src="images/buttons/icon-buttons/delete_button.png" class="deleteBtn" data-role="button" id="btnDelete">
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-
-
-            <a data-target="#emailFavListPopUp" data-toggle="modal" data-position-to="window " id="btnEmail "><img src="images/buttons/icon-buttons/email_button_unselected.png " class="emailBtn " data-role="button "></a>
-
-            <!-- popup - email Fav List -->
-            <div class="modal fade" id="emailFavListPopUp" role="dialog">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content ">
-                        <div class="modal-header " data-dismiss="modal">
-                            <button type="button" class="close" data-dismiss="modal" style="float:right;width: 15px;">&times;</button>
-                        </div>
-                        <div class="modal-body ">
-                            <h3 style="text-align: center; ">Email your favorite List</h3>
-                            <p style="text-align: center; ">Recieve a detailed List of your favourite places via Email</p>
-                            <div id="favlistEmailDiv ">
-                                <input type="email " id="favlistEmail " placeholder="Email address " class="form-control ">
-                                <input type="submit " class="btn btn-default " id="btnEmailFavList " value="Send " style="margin-left:18%; ">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- popup - Delete from Fav List -->
-            <div class="modal fade" id="deletePopUp" role="dialog">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content ">
-                        <div class="modal-header " data-dismiss="modal">
-                            <button type="button" class="close" data-dismiss="modal" style="float:right;width: 15px;">&times;</button>
-                        </div>
-                        <div class="modal-body ">
-                            <h3 style="text-align: center; ">Are you sure? </h3>
-                            <p style="text-align: center; ">This place will be removed from your favorite list</p>
-                            <div id="favlistEmailDiv ">
-                                <input type="submit " class="btn btn-default " id="btnYesConfirmYesNo" value="Yes" style="width: 33%">
-                                <input type="submit " class="btn btn-default " id="btnNoConfirmYesNo" value="No" style="float: right;width: 33%">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+    <div class="row">
+        <div class="favplace row list-group-item">
+            <h4 class="favplace-header list-group-item-heading">Independance Square</h4>
+            <p class="favplace-desc list-group-item-text">Independence Memorial Hall (also Independence Commemoration Hall) is a national monument in Sri Lanka built for
+                commemoration of the independence of Sri Lanka from the British rule with the restoration of full governing
+                responsibility to a Ceylonese-elected legislature on February 4, 1948. It is located at the Independence
+                Square (formerly Torrington Square) in the Cinnamon Gardens, Colombo. It also houses the Independence Memorial
+                Museum.
+            </p>
 
         </div>
-        <div data-role="footer " class="footer ">
-            <h1>©Railපාර 2016</h1>
+        <div class="favplace row list-group-item">
+            <h4 class="favplace-header list-group-item-heading">Colombo Museum</h4>
+            <p class="favplace-desc list-group-item-text">National Museum of Colombo, also known as the Sri Lanka National Museum is one of two museums in Colombo. It
+                is the largest museum in Sri Lanka. It is maintained by the Department of National Museum of the central
+                government. The museum holds contains a collections of much importance to Sri Lanka such as the regalia of
+                the country, including the throne and crown of the Kandyan monarchs as well as many other exhibits telling
+                the story of ancient Sri Lanka.</p>
+
+        </div>
+        <div class="favplace row list-group-item">
+            <h4 class="favplace-header list-group-item-heading">Independence Square</h4>
+            <p class="favplace-desc list-group-item-text">IThe Gangaramaya Buddhist temple is a beautiful and vibrant temple with a history that dates back over 2,000
+                years. This temple was said to have been built in the 19th century by a trader and ship owner named Don Bastion,
+                who had played a leading role in reviving Buddhism.</p>
+
         </div>
     </div>
 
+</div>
+
+<!--Footer-->
+<div data-role="footer" data-position="fixed" class="footer">
+    <h1>©Railපාර 2016</h1>
+</div>
+
+</div>
 
 </body>
 
