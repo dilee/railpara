@@ -176,6 +176,25 @@ app.get('/location/:id', function (req, res) {
 
 })
 
+app.get('/test', function (req, res) {
+
+    MongoClient.connect(url, function (err, db) {
+        assert.equal(null, err);
+
+        var filter = {_id: req.params.id};
+
+        findItems(db, 'location', filter, function (docs) {
+
+            db.close();
+            res.json(docs);
+
+        }, function (err) {
+            res.json(err);
+        });
+    });
+
+})
+
 var server = app.listen(80, function () {
 
     var host = server.address().address
