@@ -4,7 +4,7 @@
 .header {
     width: 100% !important;
     height: 45px !important;
-    background: #212121 !important;
+    background: #ffb300 !important;
     color: #ffffff !important;
     align-self: center !important;
     position: fixed !important;
@@ -68,22 +68,27 @@
     width: 30px !important;
 }
 
-.email-button {
-    z-index: 5;
-    position: fixed;
-    margin-top: -3em;
-    margin-left: 300px;
-    bottom: 50px;
-}
-
 .content-wrapper {
     overflow: scroll;    
 }
 
-
-#email-button-image {
-    width: 50px;
+.email-button-wrapper {
+    position:fixed;
+    z-index: 2500;
+    width:100%;
+    bottom: 0;
 }
+
+.email-button-wrapper img {
+    width: 5em;
+    box-shadow: 3px 5px 10px #888888;
+    border-radius: 10em;
+    margin-right: 1em;
+    display: block;
+    margin-bottom: 4em;
+    float: right;
+}
+
 .popupDeleteBtn{
     background-color:transparent !important;
     border: none;
@@ -104,7 +109,7 @@
 /*#region Footer*/
 .footer {
     height: 45px;
-    background: #212121 !important;
+    background: #ffb300 !important;
     color: #ffffff !important;
     align-self: center;
     bottom: 0;
@@ -113,13 +118,12 @@
     width: 100%;
 }
 
-
 /*Footer Text*/
 .ui-footer h1 {
     font-family: 'avenir-roman' !important;
     font-weight: 100;
     font-size: 11pt !important;
-    color: #bcbcbc;
+    color: #ffffff;
 }
 /*#endregion Footer*/
 
@@ -132,11 +136,28 @@ body {
 /*-------------------------- PC/Mac /*--------------------------*/
 
 @media only screen
-and (min-device-width: 1024px) {
+and (min-device-width: 1025px) {
 
     .favplace {
         margin-left: 15em;
         margin-right: 15em;
+    }
+
+    .email-button-wrapper {
+        position:fixed;
+        z-index: 2500;
+        width:100%;
+        bottom: 0;
+    }
+
+    .email-button-wrapper img {
+        width: 5em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-right: 1em;
+        display: block;
+        margin-bottom: 4em;
+        float: right;
     }
 }
 
@@ -172,7 +193,23 @@ and (orientation: portrait) {
         margin-left: 0em;
         margin-right: 0em;
     }
-    
+
+    .email-button-wrapper {
+        position:fixed;
+        z-index: 2500;
+        width:100%;
+        bottom: 0;
+    }
+
+    .email-button-wrapper img {
+        width: 4.7em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-right: 1em;
+        display: block;
+        margin-bottom: 4em;
+    }
+
 }
 
 /* iPhone 6 - Landscape */
@@ -180,6 +217,22 @@ and (orientation: portrait) {
 and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: landscape) {
+
+    .email-button-wrapper {
+        position:fixed;
+        z-index: 2500;
+        width:100%;
+        bottom: 0;
+    }
+
+    .email-button-wrapper img {
+        width: 4.7em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-left: auto;
+        margin-right: 1em;
+        display: block;
+    }
 
 }
 
@@ -207,6 +260,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
         vertical-align: middle;
         margin-right: 22em !important;
     }
+
 }
 
 /* iPad - Portrait */
@@ -214,5 +268,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
+
 
 }

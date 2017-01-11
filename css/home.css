@@ -89,14 +89,14 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: portrait) {
 
-    .search-button-wrapper {
+    .email-button-wrapper {
         position:absolute;
         z-index: 500;
         width:100%;
         bottom: 0;
     }
 
-    .search-button-wrapper img {
+    .email-button-wrapper img {
         width: 20%;
         box-shadow: 3px 5px 10px #888888;
         border-radius: 10em;
@@ -114,14 +114,14 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: landscape) {
 
-    .search-button-wrapper {
+    .email-button-wrapper {
         position:absolute;
         z-index: 500;
         width:100%;
         bottom: 0;
     }
 
-    .search-button-wrapper img {
+    .email-button-wrapper img {
         width: 5em;
         box-shadow: 3px 5px 10px #888888;
         border-radius: 10em;
@@ -153,14 +153,14 @@ and (-webkit-min-device-pixel-ratio: 1) {
         margin-right: 22em !important;
     }
 
-    .search-button-wrapper {
+    .email-button-wrapper {
         position:absolute;
         z-index: 500;
         width:100%;
         bottom: 0;
     }
 
-    .search-button-wrapper img {
+    .email-button-wrapper img {
         width: 7em;
         box-shadow: 3px 5px 10px #888888;
         border-radius: 10em;
@@ -177,14 +177,14 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
 
-    .search-button-wrapper {
+    .email-button-wrapper {
         position:absolute;
         z-index: 500;
         width:100%;
         bottom: 0;
     }
 
-    .search-button-wrapper img {
+    .email-button-wrapper img {
         width: 7em;
         box-shadow: 3px 5px 10px #888888;
         border-radius: 10em;
@@ -201,14 +201,14 @@ and (orientation: portrait) {
 @media only screen
 and (min-device-width: 1024px) {
 
-    .search-button-wrapper {
+    .email-button-wrapper {
         position:absolute;
         z-index: 500;
         width:100%;
         bottom: 0;
     }
 
-    .search-button-wrapper img {
+    .email-button-wrapper img {
         width: 7em;
         box-shadow: 3px 5px 10px #888888;
         border-radius: 10em;
