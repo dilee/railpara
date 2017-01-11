@@ -65,7 +65,7 @@
 }
 
 .del-button {
-    width: 30px;
+    width: 30px !important;
 }
 
 .email-button {
@@ -84,7 +84,23 @@
 #email-button-image {
     width: 50px;
 }
+.popupDeleteBtn{
+    background-color:transparent !important;
+    border: none;
+    margin-right: -1em !important;
+    margin-bottom: -1em !important;
 
+}
+#myPopup{
+    background-color: #333 !important;
+    color: #ffffff !important;
+    opacity: 0.9;
+    border: none !important;
+
+}
+.btnDiv{
+    margin-left: 6em;
+}
 /*#region Footer*/
 .footer {
     height: 45px;
@@ -149,7 +165,7 @@ and (orientation: portrait) {
     }
 
     .del-button {
-        width: 20px;
+        width: 20px !important;
     }
 
     .favplace {
