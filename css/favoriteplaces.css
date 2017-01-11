@@ -101,10 +101,27 @@
     color: #ffffff !important;
     opacity: 0.9;
     border: none !important;
-
+}
+#emailPopup{
+    background-color: #333 !important;
+    color: #ffffff !important;
+    opacity: 0.9;
+    border: none !important;
+}
+#favListEmail{
+    background-color: #333 !important;
+    opacity: 0.9;
+    border-color: #333330; !important;
 }
 .btnDiv{
     margin-left: 6em;
+}
+.sendBtnDiv{
+    margin-left: 10em;
+}
+#btnSend{
+margin: 0 auto;
+
 }
 /*#region Footer*/
 .footer {
