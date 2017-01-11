@@ -56,6 +56,31 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
+#map-canvas {
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    z-index: 200;
+}
+
+.search-button-wrapper {
+    position:absolute;
+    z-index: 500;
+    width:100%;
+    height: 100%;
+    margin-top: 5em;
+}
+
+.search-button-wrapper img {
+    width: 25%;
+    box-shadow: 3px 5px 10px #888888;
+    border-radius: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
@@ -64,6 +89,7 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: portrait) {
 
+
 }
 
 /* iPhone 6 - Landscape */
@@ -71,6 +97,7 @@ and (orientation: portrait) {
 and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: landscape) {
+
 
 }
 
@@ -100,5 +127,30 @@ and (-webkit-min-device-pixel-ratio: 1) {
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
+
+
+}
+
+/*-------------------------- PC/Mac /*--------------------------*/
+
+@media only screen
+and (min-device-width: 1024px) {
+
+    .search-button-wrapper {
+        position:absolute;
+        z-index: 500;
+        width:100%;
+        height: 100%;
+        margin-top: 5em;
+    }
+
+    .search-button-wrapper img {
+        width: 6em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 3em;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
 
 }

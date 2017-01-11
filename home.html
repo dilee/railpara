@@ -16,7 +16,7 @@
         #content {
             padding: 0 !important;
         }
-        #map_canvas {
+        #map-canvas {
             height:100%;
             position: inherit !important;
         }
@@ -49,7 +49,7 @@
             //Places
             var gangaramayaLatlng = {lat: 6.916596, lng: 79.856522};
 
-            var map = new google.maps.Map(document.getElementById('map_canvas'), {
+            var map = new google.maps.Map(document.getElementById('map-canvas'), {
                 zoom: 15,
                 center: gangaramayaLatlng
             });
@@ -141,7 +141,10 @@
         </div>
 
         <div data-role="content" id="content">
-            <div id="map_canvas"></div>
+            <div class="search-button-wrapper">
+                <a href=""><img src="images/buttons/icon-buttons/search_button_small.png"/></a>
+            </div>
+            <div id="map-canvas"></div>
         </div>
 
         <!--Footer-->
