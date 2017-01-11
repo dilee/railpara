@@ -1,5 +1,6 @@
 var bodyParser = require('body-parser');
 var express = require('express');
+var cors = require('cors');
 var app = express();
 
 app.use(bodyParser.json());
@@ -59,13 +60,16 @@ var findItems = function (db, collection, filter, callback, error) {
 // })
 
 // This responds a POST request for the homepage
-app.post('/', function (req, res) {
+
+app.options('*', cors())
+
+app.post('/', cors(), function (req, res) {
     console.log("Got a POST request for the homepage");
     res.send('Hello POST');
 
 })
 
-app.post('/signup', function (req, res) {
+app.post('/signup', cors(), function (req, res) {
 
     console.log("Got a POST request for signup");
 
@@ -86,7 +90,7 @@ app.post('/signup', function (req, res) {
     });
 })
 
-app.post('/login', function (req, res) {
+app.post('/login', cors(), function (req, res) {
     console.log("Got a POST request for the homepage");
 
     MongoClient.connect(url, function (err, db) {
@@ -119,7 +123,7 @@ app.post('/login', function (req, res) {
 
 })
 
-app.post('/getFavorites', function (req, res) {
+app.post('/getFavorites', cors(), function (req, res) {
 
     MongoClient.connect(url, function (err, db) {
         assert.equal(null, err);
@@ -138,7 +142,7 @@ app.post('/getFavorites', function (req, res) {
 
 })
 
-app.get('/getAllLocations', function (req, res) {
+app.get('/getAllLocations', cors(), function (req, res) {
 
     MongoClient.connect(url, function (err, db) {
         assert.equal(null, err);
@@ -157,7 +161,7 @@ app.get('/getAllLocations', function (req, res) {
 
 })
 
-app.get('/location/:id', function (req, res) {
+app.get('/location/:id', cors(), function (req, res) {
 
     MongoClient.connect(url, function (err, db) {
         assert.equal(null, err);
@@ -176,7 +180,7 @@ app.get('/location/:id', function (req, res) {
 
 })
 
-app.get('/test', function (req, res) {
+app.get('/test', cors(), function (req, res) {
 
     MongoClient.connect(url, function (err, db) {
         assert.equal(null, err);
