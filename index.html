@@ -44,7 +44,7 @@
     <!-- End of first page -->
 
     <!-- Start of second page -->
-    <div data-role="page" id="SignUpPage">
+    <div data-role="page" id="SignUpPage" ng-controller="registerController">
         <div data-role="header" class="header">
             <a href="#loginPage" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback"
                data-iconpos="notext"></a>
@@ -54,11 +54,11 @@
                 <div class="ui-block-a" style="text-align: left;"></div>
                 <div class="ui-block-b" style="text-align: center;">
                     <img id="logo" src="images/logos/main_logo.png"/>
-                    <input type="email" name="email" id="email" placeholder="Email">
-                    <input type="text" name="username" id="username" placeholder="Username">
-                    <input type="password" name="password" id="pwrd" placeholder="Password">
-                    <input type="password" name="confirmPassword" id="confirmPwd" placeholder="Re-enter Password">
-                    <input type="image" data-role="button" src="images/buttons/rectangle-buttons/signup_button.png"
+                    <input type="email" name="email" id="email" placeholder="Email" ng-model="email">
+                    <input type="text" name="username" id="username" placeholder="Full Name" ng-model="name">
+                    <input type="password" name="password" id="pwrd" placeholder="Password" ng-model="password">
+                    <input type="password" name="confirmPassword" id="confirmPwd" placeholder="Re-enter Password" ng-model="confPassword">
+                    <input type="image" data-role="button" ng-click="register(email, name, password, confPassword)" src="images/buttons/rectangle-buttons/signup_button.png"
                            alt="Submit" data-role="submit" style="height: 4em; margin-top: 1em;"></div>
                 <div class="ui-block-c" style="text-align: right;"></div>
             </div>
