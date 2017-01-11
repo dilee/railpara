@@ -1,5 +1,6 @@
 var bodyParser = require('body-parser');
 var express = require('express');
+var cors = require('cors');
 var app = express();
 
 app.use(bodyParser.json());
@@ -59,6 +60,9 @@ var findItems = function (db, collection, filter, callback, error) {
 // })
 
 // This responds a POST request for the homepage
+
+app.options('*', cors())
+
 app.post('/', function (req, res) {
     console.log("Got a POST request for the homepage");
     res.send('Hello POST');
