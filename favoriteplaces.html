@@ -47,117 +47,129 @@
     </div>
 
     <div data-role="main" class="ui-content" id="favPlacesContent">
-        <div class="favplace row list-group-item">
-            <div class="col-md-3 col-lg-2 col-xs-4">
-                <img src="images/places/independence_square/independencesquare_thumbnail_01.png" class="place-image">
+        <div>
+            <div class="favplace row list-group-item">
+                <div class="col-md-3 col-lg-2 col-xs-4">
+                    <img src="images/places/independence_square/independencesquare_thumbnail_01.png" class="place-image">
+                </div>
+                <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                    <h4 class="favplace-header list-group-item-heading">Independance Square</h4>
+                    <p class="favplace-desc list-group-item-text">Independence Memorial Hall (also Independence
+                        Commemoration Hall) is a national monument in Sri Lanka built for
+                        commemoration of the independence of Sri Lanka from the British rule with the restoration of full
+                        governing
+                        responsibility to a Ceylonese-elected legislature on February 4, 1948. It is located at the
+                        Independence
+                        Square (formerly Torrington Square) in the Cinnamon Gardens, Colombo. It also houses the
+                        Independence Memorial
+                        Museum.
+                    </p>
+                </div>
+                <div class="del-div">
+                    <a href="#myPopup" data-rel="popup" class="ui-btn popupDeleteBtn" data-position-to="window"><img
+                            class="del-button" src="images/buttons/icon-buttons/delete_button.png"/></a>
+                </div>
             </div>
-            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
-                <h4 class="favplace-header list-group-item-heading">Independance Square</h4>
-                <p class="favplace-desc list-group-item-text">Independence Memorial Hall (also Independence
-                    Commemoration Hall) is a national monument in Sri Lanka built for
-                    commemoration of the independence of Sri Lanka from the British rule with the restoration of full
-                    governing
-                    responsibility to a Ceylonese-elected legislature on February 4, 1948. It is located at the
-                    Independence
-                    Square (formerly Torrington Square) in the Cinnamon Gardens, Colombo. It also houses the
-                    Independence Memorial
-                    Museum.
-                </p>
+            <div class="favplace row list-group-item">
+                <div class="col-md-3 col-lg-2 col-xs-4">
+                    <img src="images/places/colombo_museum/colombomuseum_thumbnail_01.png" class="place-image">
+                </div>
+                <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                    <h4 class="favplace-header list-group-item-heading">Colombo Museum</h4>
+                    <p class="favplace-desc list-group-item-text">National Museum of Colombo, also known as the Sri Lanka
+                        National Museum is one of two museums in Colombo. It
+                        is the largest museum in Sri Lanka. It is maintained by the Department of National Museum of the
+                        central
+                        government. The museum holds contains a collections of much importance to Sri Lanka such as the
+                        regalia of
+                        the country, including the throne and crown of the Kandyan monarchs as well as many other exhibits
+                        telling
+                        the story of ancient Sri Lanka.</p>
+                </div>
+                <div class="del-div">
+                    <a href="#myPopup" data-rel="popup" class="ui-btn popupDeleteBtn" data-position-to="window"><img
+                            class="del-button" src="images/buttons/icon-buttons/delete_button.png"/></a>
+                </div>
             </div>
-            <div class="del-div">
-                <a href="#myPopup" data-rel="popup" class="ui-btn popupDeleteBtn" data-position-to="window"><img
-                        class="del-button" src="images/buttons/icon-buttons/delete_button.png"/></a>
+            <div class="favplace row list-group-item">
+                <div class="col-md-3 col-lg-2 col-xs-4">
+                    <img src="images/places/gangaramaya/gangaramaya_thumbnail_01.png" class="place-image">
+                </div>
+                <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                    <h4 class="favplace-header list-group-item-heading">Gangaramaya Temple</h4>
+                    <p class="favplace-desc list-group-item-text">The Gangaramaya Buddhist temple is a beautiful and vibrant
+                        temple with a history that dates back over 2,000 years.
+                        This temple was said to have been built in the 19th century by a trader and ship owner named Don
+                        Bastion,
+                        who had played a leading role in reviving Buddhism.</p>
+                </div>
+                <div class="del-div">
+                    <a href="#myPopup" data-rel="popup" class="ui-btn popupDeleteBtn" data-position-to="window"><img
+                            class="del-button" src="images/buttons/icon-buttons/delete_button.png"/></a>
+                </div>
+            </div>
+            <div class="favplace row list-group-item">
+                <div class="col-md-3 col-lg-2 col-xs-4">
+                    <img src="images/places/dutch_museum/dutchmuseum_thumbnail_01.png" class="place-image">
+                </div>
+                <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                    <h4 class="favplace-header list-group-item-heading">Dutch Museum</h4>
+                    <p class="favplace-desc list-group-item-text">The Colombo Dutch Museum is a museum that covers the
+                        history of the Dutch colonial rule in Sri Lanka. The two
+                        storey colonnaded building on Prince Street, Pettah (Colombo 11) which houses this museum was
+                        constructed
+                        during the Dutch occupation of Colombo (1656 - 1796) and was the formal residence of the Governor of
+                        Dutch
+                        Ceylon Thomas van Rhee (1634 - 1701) during his term of office in 1692 to 1697.</p>
+                </div>
+                <div class="del-div">
+                    <a href="#myPopup" data-rel="popup" class="ui-btn popupDeleteBtn" data-position-to="window"><img
+                            class="del-button" src="images/buttons/icon-buttons/delete_button.png"/></a>
+                </div>
+            </div>
+            <!--Delete PopUp-->
+            <div data-role="popup" id="myPopup" class="ui-content" data-overlay-theme="b">
+                <a href="#" data-rel="back"
+                   class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                <h3 style="text-align: center"> Are You Sure?</h3>
+                <p style="text-align: center">This Place will be removed from you Favorite list</p>
+                <div class="btnDiv"><a href="#"
+                                       class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back left"
+                                       data-rel="back">Yes</a>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back right"
+                       data-rel="back">No</a>
+                </div>
             </div>
         </div>
-        <div class="favplace row list-group-item">
-            <div class="col-md-3 col-lg-2 col-xs-4">
-                <img src="images/places/colombo_museum/colombomuseum_thumbnail_01.png" class="place-image">
-            </div>
-            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
-                <h4 class="favplace-header list-group-item-heading">Colombo Museum</h4>
-                <p class="favplace-desc list-group-item-text">National Museum of Colombo, also known as the Sri Lanka
-                    National Museum is one of two museums in Colombo. It
-                    is the largest museum in Sri Lanka. It is maintained by the Department of National Museum of the
-                    central
-                    government. The museum holds contains a collections of much importance to Sri Lanka such as the
-                    regalia of
-                    the country, including the throne and crown of the Kandyan monarchs as well as many other exhibits
-                    telling
-                    the story of ancient Sri Lanka.</p>
-            </div>
-            <div class="del-div">
-                <a href="#myPopup" data-rel="popup" class="ui-btn popupDeleteBtn" data-position-to="window"><img
-                        class="del-button" src="images/buttons/icon-buttons/delete_button.png"/></a>
-            </div>
-        </div>
-        <div class="favplace row list-group-item">
-            <div class="col-md-3 col-lg-2 col-xs-4">
-                <img src="images/places/gangaramaya/gangaramaya_thumbnail_01.png" class="place-image">
-            </div>
-            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
-                <h4 class="favplace-header list-group-item-heading">Gangaramaya Temple</h4>
-                <p class="favplace-desc list-group-item-text">The Gangaramaya Buddhist temple is a beautiful and vibrant
-                    temple with a history that dates back over 2,000 years.
-                    This temple was said to have been built in the 19th century by a trader and ship owner named Don
-                    Bastion,
-                    who had played a leading role in reviving Buddhism.</p>
-            </div>
-            <div class="del-div">
-                <a href="#myPopup" data-rel="popup" class="ui-btn popupDeleteBtn" data-position-to="window"><img
-                        class="del-button" src="images/buttons/icon-buttons/delete_button.png"/></a>
-            </div>
-        </div>
-        <div class="favplace row list-group-item">
-            <div class="col-md-3 col-lg-2 col-xs-4">
-                <img src="images/places/dutch_museum/dutchmuseum_thumbnail_01.png" class="place-image">
-            </div>
-            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
-                <h4 class="favplace-header list-group-item-heading">Dutch Museum</h4>
-                <p class="favplace-desc list-group-item-text">The Colombo Dutch Museum is a museum that covers the
-                    history of the Dutch colonial rule in Sri Lanka. The two
-                    storey colonnaded building on Prince Street, Pettah (Colombo 11) which houses this museum was
-                    constructed
-                    during the Dutch occupation of Colombo (1656 - 1796) and was the formal residence of the Governor of
-                    Dutch
-                    Ceylon Thomas van Rhee (1634 - 1701) during his term of office in 1692 to 1697.</p>
-            </div>
-            <div class="del-div">
-                <a href="#myPopup" data-rel="popup" class="ui-btn popupDeleteBtn" data-position-to="window"><img
-                        class="del-button" src="images/buttons/icon-buttons/delete_button.png"/></a>
-            </div>
-        </div>
-        <div data-role="popup" id="myPopup" class="ui-content" data-overlay-theme="b">
-            <a href="#" data-rel="back"
-               class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-            <h3 style="text-align: center"> Are You Sure?</h3>
-            <p style="text-align: center">This Place will be removed from you Favorite list</p>
-            <div class="btnDiv"><a href="#"
-                                   class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back left"
-                                   data-rel="back">Yes</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back right"
-                   data-rel="back">No</a>
-            </div>
 
+    </div>
+
+    <div class="email-button-wrapper">
+
+        <a href="#emailPopup" data-rel="popup" data-position-to="window">
+            <img src="images/buttons/icon-buttons/email_button_unselected.png"/></a>
+    </div>
+    <div data-role="popup" id="emailPopup" class="ui-content" data-overlay-theme="b">
+        <a href="#" data-rel="back"
+           class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <h3 style="text-align: center"> Email your favorite List</h3>
+        <p style="text-align: center">Receive a detailed list of your favorite places via Email</p>
+        <input type="email" placeholder="Email" id="favListEmail">
+        <div class="sendBtnDiv">
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" id="btnSend">Send</a>
         </div>
     </div>
 
 
-</div>
-</div>
+    <!--Footer-->
+    <div data-role="footer" data-position="fixed" class="footer">
+        <h1>©Railපාර 2016</h1>
+    </div>
+
 </div>
 
-
-
-<img id="email-button-image" class="email-button" src="images/buttons/icon-buttons/email_button_unselected.png ">
 <!--<a data-target="#emailFavListPopUp" data-toggle="modal" data-position-to="window">-->
 <!--</div>-->
-
-<!--Footer-->
-<div data-role="footer" data-position="fixed" class="footer">
-    <h1>©Railපාර 2016</h1>
-</div>
-
-</div>
 
 </body>
 
