@@ -127,6 +127,7 @@
                             class="del-button" src="images/buttons/icon-buttons/delete_button.png"/></a>
                 </div>
             </div>
+            <!--Delete PopUp-->
             <div data-role="popup" id="myPopup" class="ui-content" data-overlay-theme="b">
                 <a href="#" data-rel="back"
                    class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
@@ -144,14 +145,21 @@
     </div>
 
     <div class="email-button-wrapper">
-        <a href="#"><img src="images/buttons/icon-buttons/email_button_unselected.png"/></a>
+
+        <a href="#emailPopup" data-rel="popup" data-position-to="window">
+            <img src="images/buttons/icon-buttons/email_button_unselected.png"/></a>
+    </div>
+    <div data-role="popup" id="emailPopup" class="ui-content" data-overlay-theme="b">
+        <a href="#" data-rel="back"
+           class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <h3 style="text-align: center"> Email your favorite List</h3>
+        <p style="text-align: center">Receive a detailed list of your favorite places via Email</p>
+        <input type="email" placeholder="Email" id="favListEmail">
+        <div class="sendBtnDiv">
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" id="btnSend">Send</a>
+        </div>
     </div>
 
-    <!--<div style="width: 100%; z-index: 9000">-->
-        <!--<dev style="float: right">-->
-            <!--<a href="#"><img id="email-button-image" class="email-button" src="images/buttons/icon-buttons/email_button_unselected.png"></a>-->
-        <!--</dev>-->
-    <!--</div>-->
 
     <!--Footer-->
     <div data-role="footer" data-position="fixed" class="footer">
