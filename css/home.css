@@ -80,7 +80,33 @@ body {
     display: block;
     margin-bottom: 0.6em;
 }
-
+#searchPopup{
+    width: 40em;
+    border: 1em #f5d404 solid;
+    background: #cd0b0e;
+}
+#favPlacesLView{
+    border: 1em #cd0b0e solid;
+}
+.button-wrap{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#btnNearby{
+background-color: #424242;
+    color: #ffffff !important;
+    border: 0.2em #424242 solid ;
+}
+#btnRecent{
+background: transparent;
+border: 0.2em #424242 solid ;
+color: #ffffff !important;
+}
+#btnPopular{
+    background: transparent;
+    border: 0.2em #424242 solid ;
+    color: #ffffff !important;
+}
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
@@ -104,6 +130,11 @@ and (orientation: portrait) {
         margin-right: auto;
         display: block;
         margin-bottom: 0.6em;
+    }
+    #searchPopup{
+        width: 25em;
+        border: 1em #f5d404 solid;
+        background: #cd0b0e;
     }
 
 }
