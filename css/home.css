@@ -72,13 +72,13 @@ body {
 }
 
 .search-button-wrapper img {
-    width: 20%;
+    width: 7em;
     box-shadow: 3px 5px 10px #888888;
     border-radius: 10em;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-bottom: 0.6em;
+    margin-bottom: 1em;
 }
 #searchPopup{
     width: 40em;
@@ -115,21 +115,21 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: portrait) {
 
-    .email-button-wrapper {
+    .search-button-wrapper {
         position:absolute;
         z-index: 500;
         width:100%;
         bottom: 0;
     }
 
-    .email-button-wrapper img {
-        width: 20%;
+    .search-button-wrapper img {
+        width: 5em;
         box-shadow: 3px 5px 10px #888888;
         border-radius: 10em;
         margin-left: auto;
         margin-right: auto;
         display: block;
-        margin-bottom: 0.6em;
+        margin-bottom: 1em;
     }
     #searchPopup{
         width: 25em;
@@ -145,14 +145,14 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: landscape) {
 
-    .email-button-wrapper {
+    .search-button-wrapper {
         position:absolute;
         z-index: 500;
         width:100%;
         bottom: 0;
     }
 
-    .email-button-wrapper img {
+    .search-button-wrapper img {
         width: 5em;
         box-shadow: 3px 5px 10px #888888;
         border-radius: 10em;
@@ -184,14 +184,14 @@ and (-webkit-min-device-pixel-ratio: 1) {
         margin-right: 22em !important;
     }
 
-    .email-button-wrapper {
+    .search-button-wrapper {
         position:absolute;
         z-index: 500;
         width:100%;
         bottom: 0;
     }
 
-    .email-button-wrapper img {
+    .search-button-wrapper img {
         width: 7em;
         box-shadow: 3px 5px 10px #888888;
         border-radius: 10em;
@@ -208,14 +208,14 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
 
-    .email-button-wrapper {
+    .search-button-wrapper {
         position:absolute;
         z-index: 500;
         width:100%;
         bottom: 0;
     }
 
-    .email-button-wrapper img {
+    .search-button-wrapper img {
         width: 7em;
         box-shadow: 3px 5px 10px #888888;
         border-radius: 10em;

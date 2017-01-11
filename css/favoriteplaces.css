@@ -73,10 +73,10 @@
 }
 
 .email-button-wrapper {
-    position:fixed;
+    position: fixed;
     z-index: 2500;
-    width:100%;
     bottom: 0;
+    right: 0;
 }
 
 .email-button-wrapper img {
@@ -143,22 +143,6 @@ and (min-device-width: 1025px) {
         margin-right: 15em;
     }
 
-    .email-button-wrapper {
-        position:fixed;
-        z-index: 2500;
-        width:100%;
-        bottom: 0;
-    }
-
-    .email-button-wrapper img {
-        width: 5em;
-        box-shadow: 3px 5px 10px #888888;
-        border-radius: 10em;
-        margin-right: 1em;
-        display: block;
-        margin-bottom: 4em;
-        float: right;
-    }
 }
 
 
@@ -195,10 +179,10 @@ and (orientation: portrait) {
     }
 
     .email-button-wrapper {
-        position:fixed;
+        position: fixed;
         z-index: 2500;
-        width:100%;
         bottom: 0;
+        right: 0;
     }
 
     .email-button-wrapper img {
@@ -219,10 +203,10 @@ and (max-device-width: 667px)
 and (orientation: landscape) {
 
     .email-button-wrapper {
-        position:fixed;
+        position: fixed;
         z-index: 2500;
-        width:100%;
         bottom: 0;
+        right: 0;
     }
 
     .email-button-wrapper img {
