@@ -5,7 +5,9 @@ var app = express();
 
 app.use(bodyParser.json());
 
-var MongoClient = require('mongodb').MongoClient,
+var Mongo = require('mongodb');
+
+var MongoClient = Mongo.MongoClient,
     assert = require('assert');
 
 // Connection URL
@@ -142,14 +144,14 @@ app.post('/getFavorites', cors(), function (req, res) {
 
 })
 
-app.get('/getAllLocations', cors(), function (req, res) {
+app.get('/getAllPlaces', cors(), function (req, res) {
 
     MongoClient.connect(url, function (err, db) {
         assert.equal(null, err);
 
         var filter = {};
 
-        findItems(db, 'location', filter, function (docs) {
+        findItems(db, 'place', filter, function (docs) {
 
             db.close();
             res.json(docs);
@@ -161,17 +163,26 @@ app.get('/getAllLocations', cors(), function (req, res) {
 
 })
 
-app.get('/location/:id', cors(), function (req, res) {
+app.get('/place/:id', cors(), function (req, res) {
 
     MongoClient.connect(url, function (err, db) {
         assert.equal(null, err);
 
-        var filter = {_id: req.params.id};
+        console.log(req.params.id);
 
-        findItems(db, 'location', filter, function (docs) {
+        var filter = {_id: new Mongo.ObjectID(req.params.id)};
+        // var filter = {};
+
+        findItems(db, 'place', filter, function (docs) {
 
             db.close();
-            res.json(docs);
+            if(docs.length > 0) {
+                res.json(docs[0]);
+            }
+            else {
+                res.json({ error: true, message: 'Invalid place_Id' });
+            }
+            
 
         }, function (err) {
             res.json(err);

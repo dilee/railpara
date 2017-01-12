@@ -29,6 +29,19 @@
     margin: 0;
     width: 100%;
 }
+.message {
+    height: 45px;
+    background: #333 !important;
+    color: #ff0000 !important;
+    text-shadow: none !important;
+    align-self: center;
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 1em !important;
+}
 /*#endregion Footer*/
 /*#endregion ChromeElements*/
 
@@ -37,7 +50,7 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
-#logo {
+.logo {
     height: 15em;
     display:block;
     margin-left:auto;
@@ -59,7 +72,9 @@ body {
     overflow: auto !important;
     margin-top: 4pt  !important;
 }
-
+.error {
+    color:red;
+}
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
@@ -98,7 +113,7 @@ and (max-device-width : 1600px)
 and (orientation : landscape)
 and (-webkit-min-device-pixel-ratio: 1)  {
 
-    #logo {
+    .logo {
         height: 21em;
         margin-left:auto;
         margin-right: auto;
