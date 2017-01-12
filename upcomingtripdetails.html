@@ -172,7 +172,7 @@
             <div class="btnDiv">
                 <div style="display: table; margin: 0 auto;">
                     <a href="#"
-                       class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back left" data-rel="back">Yes</a>
+                       class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back left" id="btnYes">Yes</a>
                     <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back right"
                        data-rel="back">No</a>
                 </div>
@@ -185,8 +185,24 @@
         <h1>©Railපාර 2016</h1>
     </div>
 
+    <div data-role="footer" data-position="fixed" class="message" id="message" hidden="hidden"></div>
+
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU3AMoPc-GDFXZvZyN78-QM6-YJ11h91M&callback=initMap">
+    </script>
+    <script>
+
+        $("#btnYes").on("click", function(){
+            $("#myPopup").popup("close");
+            $("#footer").hide();
+            $("#message").html(" Requested To Cancel <img class='tickImg' src='images/icons/check_green_icon.png'>");
+            $("#message").show();
+
+            setTimeout(function(){
+                $("#message").hide();
+                $("#footer").show();
+            }, 2000);
+        });
     </script>
 
 </div>
