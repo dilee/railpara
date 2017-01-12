@@ -4,12 +4,32 @@
 		<title>Rail Paara | News Letter</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 		<style type="text/css">
 			* {
 				-ms-text-size-adjust:100%;
 				-webkit-text-size-adjust:none;
 				-webkit-text-resize:100%;
 				text-resize:100%;
+			}
+			#emailPopup{
+				background-color: #333 !important;
+				color: #ffffff !important;
+				opacity: 0.9;
+				border: none !important;
+			}
+			#favListEmail{
+				background-color: #333 !important;
+				opacity: 0.9;
+				border-color: #333330; !important;
+				color: #ffffff !important;
+			}
+			.sendBtnDiv{
+				width: 3em;
+				margin: 0 auto;
 			}
 			a{
 				outline:none;
@@ -377,5 +397,28 @@
 				<td style="line-height:0;"><div style="display:none; white-space:nowrap; font:15px/1px courier;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></td>
 			</tr>
 		</table>
+
+	<!--Subscribe to newsletter-->
+		<div data-role="popup" id="emailPopup" class="ui-content" data-overlay-theme="b">
+			<a href="#" data-rel="back"
+			   class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			<h3 style="text-align: center">Subscribe to our newsletter NOW!</h3>
+			<p style="text-align: center">Receive details of the discounts and offers via Email</p>
+			<input type="email" placeholder="Email" id="favListEmail">
+			<div class="sendBtnDiv">
+				<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" id="btnSend">Send</a>
+			</div>
+		</div>
+		<!--End Subscribe to newsletter-->
+
 	</body>
+<script>
+	debugger;
+    $(document).on('pageinit', '.ui-page',function(event){
+        setTimeout(function () {
+            $('#emailPopup').popup('open');
+        }, 0);
+    });
+
+</script>
 </html>
