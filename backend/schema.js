@@ -19,6 +19,27 @@ var url = 'mongodb://localhost:27017/railpaara';
     }
     ];
 
+    var places2 = [{
+        name: "Galle Face Green",
+        place_description: "The Galle Face is a five hectare ocean-side urban park, which stretches for a half kilometre along the coast, in the heart of the financial and business district of Colombo, Sri Lanka. The promenade was initially laid out in 1859 by Governor Sir Henry George Ward, although the original Galle Face Green extended over a much larger area than is seen today. The Galle Face Green was initially used for horse racing and as a golf course, but was also used for cricket, polo, football, tennis and rugby.",
+        is_liked: false,
+        images: ["images/places/gallefacegreen/gallefacegreen_slider_01.jpg", "images/places/gallefacegreen/gallefacegreen_slider_02.jpg"]
+
+    },
+    {
+        name: "Dutch Museum",
+        place_description: "The Colombo Dutch Museum is a museum that covers the history of the Dutch colonial rule in Sri Lanka. The two storey colonnaded building on Prince Street, Pettah (Colombo 11) which houses this museum was constructed during the Dutch occupation of Colombo (1656 - 1796) and was the formal residence of the Governor of Dutch Ceylon Thomas van Rhee (1634 - 1701) during his term of office in 1692 to 1697.",
+        is_liked: false,
+        images: ["images/places/dutch_museum/dutch_museum_slider_01.jpg", "images/places/dutch_museum/dutch_museum_slider_02.jpg"]
+    },
+    {
+        name: "National Museum",
+        place_description: "National Museum of Colombo, also known as the Sri Lanka  National Museum is one of two museums in Colombo. It  is the largest museum in Sri Lanka. It is maintained by the Department of National Museum of the Central government. The museum holds contains a collections of much importance to Sri Lanka such as the regalia of the country, including the throne and crown of the Kandyan monarchs as well as many other exhibits telling the story of ancient Sri Lanka.",
+        is_liked: false,
+        images: ["images/places/colombo_museum/colombo_museum_slider_01.jpg", "images/places/colombo_museum/colombo_museum_slider_02.jpg"]
+    }
+    ];
+
 // Use connect method to connect to the server
 MongoClient.connect(url, function (err, db) {
     assert.equal(null, err);
@@ -27,7 +48,7 @@ MongoClient.connect(url, function (err, db) {
     // createCollection(db, 'location');
     // dropCollection(db, 'users');
 
-    insertItems(db, 'place', places, function(result) {
+    insertItems(db, 'place', places2, function(result) {
         
         console.log(result);
         db.close();
