@@ -4,7 +4,7 @@
 .header {
     width: 100% !important;
     height: 45px !important;
-    background: #b71c1c !important;
+    background: #2e7d32 !important;
     color: #ffffff !important;
     align-self: center !important;
     position: fixed !important;
@@ -30,10 +30,16 @@
 /*#endregion Logo*/
 /*#endregion Header*/
 
+.ui-content {
+    border-width: 0;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
 /*#region Footer*/
 .footer {
     height: 45px;
-    background: #b71c1c !important;
+    background: #2e7d32 !important;
     color: #ffffff !important;
     align-self: center;
     bottom: 0;
@@ -51,50 +57,46 @@
 }
 /*#endregion Footer*/
 
+#tripdetails {
+    width: 100%;
+}
+
 body {
     background-color: #f6f6f6 !important;
     font-family: 'avenir-roman' !important;
 }
 
+.row {
+    margin-top: 0.5em;
+}
 
-select, input[type=text] {
+.container {
     width: 100%;
-    outline: none;
-    border: 1px solid #e2e2e2;
-    height: 40px;
-}
-.train-booking-panel label {
-    margin-top: 10px;
 }
 
-input[type=checkbox], input[type=radio] {
-    display: none;
+body .h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 0.3em;
+    margin-bottom: 0em;
 }
 
-#editBtn{
-    float: left;
-    width: 22%;
-    background-color: #333;
-    color: #ffffff;
-    text-shadow: none;
+/*region Rating*/
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    font-size: 3.5em;
+    text-align: center;
 }
-
-#nextBtn{
-    float: right;
-    width: 22%;
-    background-color: #333;
-    color: #ffffff;
-    text-shadow: none;
+.rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
 }
-
-/*----------------PC---------------------------------*/
-@media only screen
-and (min-width: 1200px) {
-    .container {
-        width: 900px;
-    }
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
 }
-
+/*endregion Rating*/
 
 /*-------------------------- iPhone /*--------------------------*/
 
@@ -104,19 +106,8 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: portrait) {
 
-    #editBtn{
-        float: left;
-        width: 40%;
-        background-color: #333;
-        color: #ffffff;
-
-    }
-    #nextBtn{
-        float: right;
-        width: 36%;
-        background-color: #333;
-        color: #ffffff;
-
+    .row {
+        margin-top: 0em;
     }
 
 }
@@ -126,6 +117,17 @@ and (orientation: portrait) {
 and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: landscape) {
+
+    .trip {
+        box-shadow: 3px 5px 10px #888888;
+        background-color: #f9f9f9;
+        border-color: #bbb;
+        padding: 1em;
+        margin-left: 5em;
+        margin-right: 5em;
+        margin-bottom: 0.5em;
+        color: #757575;
+    }
 
 }
 
@@ -149,8 +151,19 @@ and (-webkit-min-device-pixel-ratio: 1) {
         margin-right: 22em !important;
     }
 
-    .container {
-        width: 100%;
+    .ui-content {
+        padding: 3em;
+    }
+
+    .trip {
+        box-shadow: 3px 5px 10px #888888;
+        background-color: #f9f9f9;
+        border-color: #bbb;
+        padding: 1em;
+        margin-left: 11em;
+        margin-right: 11em;
+        margin-bottom: 0.5em;
+        color: #757575;
     }
 }
 
@@ -159,5 +172,16 @@ and (-webkit-min-device-pixel-ratio: 1) {
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
+
+    .trip {
+        box-shadow: 3px 5px 10px #888888;
+        background-color: #f9f9f9;
+        border-color: #bbb;
+        padding: 1em;
+        margin-left: 11em;
+        margin-right: 11em;
+        margin-bottom: 0.5em;
+        color: #757575;
+    }
 
 }

@@ -36,16 +36,6 @@
     overflow-x: hidden;
 }
 
-.container {
-    padding: 0%;
-}
-
-/*region tab toggle buttons */
-#tabtoggle {
-    margin-bottom: 1em;
-    margin-left: 3em;
-}
-
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
     color: #fff;
     background-color: #2e7d32 !important;
@@ -54,7 +44,16 @@
 .ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
     color: #3c763d;
 }
-/*endregion tab toggle buttons
+
+.tripdetailblock {
+    width: 100%;
+}
+
+#tabtoggle {
+    display: table;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
 
 /*#region list content */
 .trip {
@@ -64,7 +63,7 @@
     padding: 1em ;
     margin-left: 1em;
     margin-right: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5em !important;
     color: #757575; 
 }
 
@@ -134,11 +133,6 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: landscape) {
 
-    #tabtoggle {
-        margin-bottom: 1em;
-        margin-left: 17em;
-    }
-
     .trip {
         box-shadow: 3px 5px 10px #888888;
         background-color: #f9f9f9;
@@ -176,16 +170,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
         padding: 3em;
     }
 
-    .container {
-        width: 100%;
-        padding: 0;
-    }
-
-    #tabtoggle {
-        margin-bottom: 1em;
-        margin-left: 19em;
-    }
-
     .trip {
         box-shadow: 3px 5px 10px #888888;
         background-color: #f9f9f9;
@@ -203,11 +187,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
-
-    #tabtoggle {
-        margin-bottom: 1em;
-        margin-left: 21em;
-    }
 
     .trip {
         box-shadow: 3px 5px 10px #888888;

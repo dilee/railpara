@@ -47,7 +47,7 @@
 
             <div class="grav-wrapper">
                 <div class="pro-pic">
-                    <img src="http://placehold.it/150x150" >
+                    <img id="profile-img" src="images/test_data/profile_dp.png">
                 </div>
                 <span class="camera-icon"><i class="fa fa-camera" aria-hidden="true"></i></span>
             </div>
@@ -70,7 +70,7 @@
                     <input type="email" placeholder="email">
                 </div>
                 <div class="save-btn-wrapper">
-                    <input type="image" data-role="button" src="images/buttons/rectangle-buttons/save_button.png"
+                    <input id="btnSave" type="image" data-role="button" src="images/buttons/rectangle-buttons/save_button.png"
                            alt="Submit" data-role="submit" style="height: 80px; width: 172px;">
                 </div>
             </div>
@@ -82,6 +82,24 @@
     <div data-role="footer" data-position="fixed" class="footer">
         <h1>©Railපාර 2016</h1>
     </div>
+
+    <div data-role="footer" data-position="fixed" class="message" id="message" hidden="hidden"></div>
+
+</div>
+
+<script>
+    $("#btnSave").on("click", function(){
+        $("#footer").hide();
+        $("#message").html(" Password Changed <img class='tickImg' src='images/icons/check_green_icon.png'>");
+        $("#message").show();
+
+        setTimeout(function(){
+            $("#message").hide();
+            $("#footer").show();
+        }, 2000);
+    });
+
+</script>
 
 </div>
 

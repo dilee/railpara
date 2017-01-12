@@ -74,6 +74,15 @@ body {
 }
 #paymentblockb{
     width: 50% !important;}
+
+/*----------------PC---------------------------------*/
+@media only screen
+and (min-width: 1200px) {
+    #paymentDetails {
+        margin-left: 15em;
+        margin-right: 15em;
+    }
+}
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
@@ -131,10 +140,14 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
 
 #editbookingwrapper{
-    margin-left: 24em;
+    margin-left: 19em;
     margin-bottom: 1em;
     margin-top: 5em;
 
+}
+
+#paymentDetails {
+    margin: 0 5em 0 5em;
 }
 
 }
