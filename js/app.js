@@ -94,8 +94,8 @@ railPaaraApp.controller('placeController', function ($scope, $http) {
             if (!res.data.error) {
                 console.log(res.data);
                 $scope.place = res.data;
-                
-                if($scope.place.name == "Gangaramaya Temple") {
+
+                if ($scope.place.name == "Gangaramaya Temple") {
                     $scope.isGangaramaya = true;
                 }
                 else {
@@ -112,19 +112,17 @@ railPaaraApp.controller('placeController', function ($scope, $http) {
     $scope.toggleLike = function () {
 
         $scope.place.is_liked = true;
-        
+
         var body = {
-            user: "test"
+            user: sessionStorage.getItem(user)._id,
+            place_id: sessionStorage.getItem('place-Id')
         }
 
-        $http.post($scope.baseURL + 'addFavPlace/', body)
+        $http.post($scope.baseURL + 'addFavPlace', body)
             .then(function (res) {
                 if (!res.data.error) {
                     console.log(res.data);
-                    $scope.place = res.data;
-                    $("#owl-aiyaah").data('owlCarousel').reinit();
-                    // console.log(owl);
-                    // .data('owlCarousel').reinit();
+
                 }
                 else {
                     console.log(res.data);
@@ -137,3 +135,35 @@ railPaaraApp.controller('placeController', function ($scope, $http) {
     }
 
 });
+
+railPaaraApp.controller('favPlacesController', function ($scope, $http) {
+
+    $scope.baseURL = "http://35.163.10.213/";
+
+    $scope.isDeleted = false;
+
+    $scope.deleteFavPlace = function (placeID) {
+
+        $scope.isDeleted = true;
+
+        var body = {
+            user: sessionStorage.getItem(user)._id,
+            place: placeID
+        }
+
+        $http.post($scope.baseURL + 'removeFavPlace', body)
+            .then(function (res) {
+                if (!res.data.error) {
+                    console.log(res.data);
+
+                }
+                else {
+                    console.log(res.data);
+                }
+            }, function (res) {
+                console.log(res);
+            });
+    }
+
+});
+
