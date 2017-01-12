@@ -18,54 +18,51 @@
 
 <body>
 
-    <div data-role="page" id="mytripsPage" class="ui-responsive-panel">
+<div data-role="page" id="my-trips-page" class="ui-responsive-panel">
 
-        <!--Header-->
-        <div data-role="header" class="header" data-position="fixed">
-            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
-                <div id="menubuttonblock">
-                    <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
-                </div>
-            </div>
-            <div id="logoblock">
-                <img src="images/logos/header/mytrips_header_logo.png"/>
-            </div>
-            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
-                <div id="backbuttonblock">
-                    <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
-                </div>
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
             </div>
         </div>
-
-        <!-- Slide Menu Panel -->
-        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
-             class="menupanel">
-            <script>$(function () {
-                $("#menu").load("menu.html");
-            });</script>
+        <div id="logoblock">
+            <img src="images/logos/header/mytrips_header_logo.png"/>
         </div>
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+            <div id="backbuttonblock">
+                <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
+            </div>
+        </div>
+    </div>
 
-        <div data-role="main" class="ui-content" id="content">
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+         class="menupanel">
+        <script>$(function () {
+            $("#menu").load("menu.html");
+        });</script>
+    </div>
 
-            <div class="container">
-                <!--Tab Toggle Buttons-->
-                <div class="row">
-                    <div class="col-xs-2"></div>
-                    <div id="tabtoggle" class="col-xs-8">
-                        <ul class="nav nav-pills">
-                            <li class="active"><a href="#upcomingtripstab" data-toggle="tab">Upcoming</a></li>
-                            <li><a href="#pasttripstab" data-toggle="tab">Past</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-2"></div>
-                </div>
+    <div data-role="main" class="ui-content" id="content">
 
-                <!--Tab Panes-->
-                <div class="tab-content" id="tabcontent">
-                    <!--Tab Pane for Upcoming Trips-->
-                    <div class="tab-pane active" id="upcomingtripstab">
-                        <div class="list-group">
-                            <div class="row">
+        <div class="tripdetailblock">
+            <!--Tab Toggle Buttons-->
+            <div id="tabtoggle">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#upcomingtripstab" data-toggle="tab">Upcoming</a></li>
+                    <li><a href="#pasttripstab" data-toggle="tab">Past</a></li>
+                </ul>
+            </div>
+
+            <!--Tab Panes-->
+            <div class="tab-content" id="tabcontent">
+                <!--Tab Pane for Upcoming Trips-->
+                <div class="tab-pane active" id="upcomingtripstab">
+                    <div class="list-group">
+                        <div class="row">
+                            <a href="#">
                                 <div class="trip row list-group-item">
                                     <div class="col-xs-4">
                                         <img src="images/icons/train_black.png" class="tripthumbnail">
@@ -77,6 +74,8 @@
                                         <p class="listitemcontent">09-02-2017 10:00am</p>
                                     </div>
                                 </div>
+                            </a>
+                            <a href="#">
                                 <div class="trip row list-group-item">
                                     <div class="col-xs-4">
                                         <img src="images/icons/train_black.png" class="tripthumbnail">
@@ -88,6 +87,8 @@
                                         <p class="listitemcontent">09-02-2017 10:00am</p>
                                     </div>
                                 </div>
+                            </a>
+                            <a href="#">
                                 <div class="trip row list-group-item">
                                     <div class="col-xs-4">
                                         <img src="images/icons/train_black.png" class="tripthumbnail">
@@ -99,49 +100,54 @@
                                         <p class="listitemcontent">09-02-2017 10:00am</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Tab Pane for Past Trips-->
-                    <div class="tab-pane" id="pasttripstab">
-                        <div class="list-group">
-                            <div class="row">
-                                <div class="trip row list-group-item">
-                                    <div class="col-xs-4">
-                                        <img src="images/icons/train_black.png" class="tripthumbnail">
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <p class="listitemtitle">Destination</p>
-                                        <p class="listitemcontent">Dutch Museum</p>
-                                        <p class="listitemtitle">Date & Time</p>
-                                        <p class="listitemcontent">09-02-2017 10:00am</p>
-                                    </div>
-                                </div>
-                                <div class="trip row list-group-item">
-                                    <div class="col-xs-4">
-                                        <img src="images/icons/train_black.png" class="tripthumbnail">
-                                    </div>
-                                    <div class="col-xs-8">
-                                        <p class="listitemtitle">Destination</p>
-                                        <p class="listitemcontent">Dutch Museum</p>
-                                        <p class="listitemtitle">Date & Time</p>
-                                        <p class="listitemcontent">09-02-2017 10:00am</p>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
+                <!--Tab Pane for Past Trips-->
+                <div class="tab-pane" id="pasttripstab">
+                    <div class="list-group">
+                        <div class="row">
+                            <a href="#">
+                                <div class="trip row list-group-item">
+                                    <div class="col-xs-4">
+                                        <img src="images/icons/train_black.png" class="tripthumbnail">
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p class="listitemtitle">Destination</p>
+                                        <p class="listitemcontent">Dutch Museum</p>
+                                        <p class="listitemtitle">Date & Time</p>
+                                        <p class="listitemcontent">09-02-2017 10:00am</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="trip row list-group-item">
+                                    <div class="col-xs-4">
+                                        <img src="images/icons/train_black.png" class="tripthumbnail">
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <p class="listitemtitle">Destination</p>
+                                        <p class="listitemcontent">Dutch Museum</p>
+                                        <p class="listitemtitle">Date & Time</p>
+                                        <p class="listitemcontent">09-02-2017 10:00am</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-        </div>
-
-        <!--Footer-->
-        <div data-role="footer" data-position="fixed" class="footer">
-            <h1>©Railපාර 2016</h1>
         </div>
 
     </div>
+
+    <!--Footer-->
+    <div data-role="footer" data-position="fixed" class="footer">
+        <h1>©Railපාර 2016</h1>
+    </div>
+
+</div>
 
 </body>
 
