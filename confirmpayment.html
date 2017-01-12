@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/confirmpayment.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+</head>
+<body>
+
+<div data-role="page" id="confirmpayment" class="ui-responsive-panel">
+
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
+            </div>
+        </div>
+        <div id="logoblock">
+            <img src="images/logos/header/booktrip_header_logo.png"/>
+        </div>
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+            <div id="backbuttonblock">
+                <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+         class="menupanel">
+        <script>$(function(){$("#menu").load("menu.html");});</script>
+    </div>
+
+    <div data-role="main" class="ui-content" id="content">
+        <div id="paymentDetails">
+            <h1>
+                <b>Confirm Payment</b>
+            </h1>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" id="paymentblocka">
+                    <!--<label for="select-native-2">Currency:</label>-->
+                    <h3 >Currency : </h3>
+                    <h3 style="padding-top: 0.2em;">Ticket Charges : </h3>
+                    <h3  style="padding-top: 0.2em;">Tax(VAT + Tr.Levy) : </h3>
+                    <h2>Grand Total : </h2>
+                </div>
+                <div class="ui-block-b" id="paymentblockb">
+                    <h3>
+                        <select name="select-native-2" id="select-native-2" data-mini="true">
+                            <option value="1">Sri Lankan Rupees (LKR)</option>
+                            <option value="2">US Dollars (USD)</option>
+                            <option value="2">Pound Sterling (GBP)</option>
+                            <option value="3">Euro (EU)</option>
+                        </select>
+                    </h3>
+                    <!--<label data-type="currency">3300</label>-->
+                    <!--<input type="text" id="number" pattern="[0-9]*">-->
+                    <h3 style="text-align: right">3300.00</h3>
+                    <h3  style="text-align: right">330.00</h3>
+                    <h2  style="text-align: right">3630.00</h2>
+
+                </div>
+            </div>
+            <hr>
+            <div id="editbookingwrapper">
+                <a href="#" class="url-button btn btn-primary btn-xs ui-link" id="editBooking">Edit Booking</a>
+
+            </div>
+            <!-- PayPal Logo --><table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center"></td></tr><tr><td align="center">
+            <a href="https://www.paypal.com/ph/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/ph/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" /></a>
+
+        </td></tr>
+            <tr>
+                <td align="center">
+                    <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png" alt="Buy now with PayPal" style="margin-top: 1em" />
+                </td>
+            </tr>
+        </table><!-- PayPal Logo -->
+
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div data-role="footer" data-position="fixed" class="footer">
+        <h1>©Railපාර 2016</h1>
+    </div>
+
+</div>
+
+</body>
+</html>
