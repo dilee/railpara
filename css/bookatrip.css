@@ -71,6 +71,30 @@ input[type=checkbox], input[type=radio] {
     display: none;
 }
 
+#editBtn{
+    float: left;
+    width: 22%;
+    background-color: #333;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+#nextBtn{
+    float: right;
+    width: 22%;
+    background-color: #333;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+/*----------------PC---------------------------------*/
+@media only screen
+and (min-width: 1200px) {
+    .container {
+        width: 900px;
+    }
+}
+
 
 /*-------------------------- iPhone /*--------------------------*/
 
@@ -80,7 +104,20 @@ and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: portrait) {
 
+    #editBtn{
+        float: left;
+        width: 40%;
+        background-color: #333;
+        color: #ffffff;
 
+    }
+    #nextBtn{
+        float: right;
+        width: 36%;
+        background-color: #333;
+        color: #ffffff;
+
+    }
 
 }
 
