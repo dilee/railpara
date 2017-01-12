@@ -42,76 +42,82 @@
         }
 
         function initMap() {
-            //Stations
-            var fortLatlng = {lat: 6.9334923, lng: 79.8505064};
-            var maradanaLatlng = {lat: 6.9294665, lng: 79.8651053};
-            var slaveislandLatlng = {lat: 6.9230118, lng: 79.8489035};
-            var bambaLatlng = {lat: 6.8830177, lng: 79.8807119};
-            var kpLatlng = {lat: 6.8831291, lng: 79.8813752};
+            
             //Places
             var gangaramayaLatlng = {lat: 6.916596, lng: 79.856522};
+            var independenceSQLatlng = {lat: 6.9025913, lng: 79.8689593};
+            var dutchMuseumLatlng = {lat: 6.9360393, lng: 79.8494117};
+            var galleFaceLatlng = {lat: 6.9245787, lng: 79.8424376};
+            var colomboMuseumLatlng = {lat: 6.9105611, lng: 79.8587545};
 
             var map = new google.maps.Map(document.getElementById('map-canvas'), {
-                zoom: 15,
+                zoom: 14,
                 center: gangaramayaLatlng
             });
 
-            var markerFort = new google.maps.Marker({
-                position: fortLatlng,
-                map: map,
-                title: 'Fort Railway Station',
-                url: '#'
-            });
-
-            var markerMaradana = new google.maps.Marker({
-                position: maradanaLatlng,
-                map: map,
-                title: 'Maradana Railway Station',
-                url: '#'
-            });
-
-            var markerSlaveisland = new google.maps.Marker({
-                position: slaveislandLatlng,
-                map: map,
-                title: 'Slave Island Railway Station',
-                url: '#'
-            });
-
-            var markerBamba = new google.maps.Marker({
-                position: bambaLatlng,
-                map: map,
-                title: 'Bambalapitiya Railway Station',
-                url: '#'
-            });
-
-            var markerKp = new google.maps.Marker({
-                position: kpLatlng,
-                map: map,
-                title: 'Kirillapone Railway Station',
-                url: '#'
-            });
 
             var markerGangaramaya = new google.maps.Marker({
                 position: gangaramayaLatlng,
                 map: map,
-                title: 'Kirillapone Railway Station',
-                url: 'placefacts-gangaramaya.html'
+                title: 'Gangaramaya Temple',
+                url: 'placefacts.html'
+            });
+
+            var markerIndependenceSQ = new google.maps.Marker({
+                position: independenceSQLatlng,
+                map: map,
+                title: 'Independence Square',
+                url: 'placefacts.html'
+            });
+
+            var markerDutchMuseum = new google.maps.Marker({
+                position: dutchMuseumLatlng,
+                map: map,
+                title: 'Dutch Museum',
+                url: 'placefacts.html'
+            });
+
+            var markerGalleFace = new google.maps.Marker({
+                position: galleFaceLatlng,
+                map: map,
+                title: 'Galle Face',
+                url: 'placefacts.html'
+            });
+
+            var markerColomboMuseum = new google.maps.Marker({
+                position: colomboMuseumLatlng,
+                map: map,
+                title: 'National Museum',
+                url: 'placefacts.html'
             });
 
             // Click event listeners
-            markerFort.addListener('click', function() {
-                map.setZoom(13);
-                map.setCenter(markerFort.getPosition());
-            });
-
-            markerSlaveisland.addListener('click', function() {
-                map.setZoom(17);
-                map.setCenter(markerSlaveisland.getPosition());
-            });
 
             markerGangaramaya.addListener('click', function() {
+                sessionStorage.setItem('place-Id', "5877a2580f7fea028cf16c21");
                 window.location = markerGangaramaya.url;
             });
+
+            markerIndependenceSQ.addListener('click', function() {
+                sessionStorage.setItem('place-Id', "5877a2580f7fea028cf16c22");
+                window.location = markerIndependenceSQ.url;
+            });
+
+            markerDutchMuseum.addListener('click', function() {
+                sessionStorage.setItem('place-Id', "5877e28233604b0d8455377a");
+                window.location = markerDutchMuseum.url;
+            });
+
+            markerColomboMuseum.addListener('click', function() {
+                sessionStorage.setItem('place-Id', "5877e28233604b0d8455377b");
+                window.location = markerColomboMuseum.url;
+            });
+
+            markerGalleFace.addListener('click', function() {
+                sessionStorage.setItem('place-Id', "5877e28233604b0d84553779");
+                window.location = markerGalleFace.url;
+            });
+
         }
     </script>
 </head>
