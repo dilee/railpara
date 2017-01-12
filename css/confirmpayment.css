@@ -27,6 +27,7 @@
     margin: auto;
     height: 2.4em;
 }
+
 /*#endregion Logo*/
 /*#endregion Header*/
 
@@ -55,47 +56,33 @@ body {
     background-color: #f6f6f6 !important;
     font-family: 'avenir-roman' !important;
 }
-
-
-select, input[type=text] {
-    width: 100%;
-    outline: none;
-    border: 1px solid #e2e2e2;
-    height: 40px;
-}
-.train-booking-panel label {
-    margin-top: 10px;
-}
-
-input[type=checkbox], input[type=radio] {
-    display: none;
-}
-
-#editBtn{
-    float: left;
-    width: 22%;
-    background-color: #333;
-    color: #ffffff;
+#editBooking{
+    background-color: #757575;
+    border-color: #555555;
+    color: #fafafa !important;
     text-shadow: none;
+    margin: 0 auto;
 }
-
-#nextBtn{
-    float: right;
-    width: 22%;
-    background-color: #333;
-    color: #ffffff;
-    text-shadow: none;
+#editbookingwrapper{
+/*width: 140px !important;*/
+    margin-left: 36em;
+    margin-bottom: 1em;
+    margin-top: 3em;
 }
+#paymentblocka{
+    width: 40% !important;
+}
+#paymentblockb{
+    width: 50% !important;}
 
 /*----------------PC---------------------------------*/
 @media only screen
 and (min-width: 1200px) {
-    .container {
-        width: 900px;
+    #paymentDetails {
+        margin-left: 15em;
+        margin-right: 15em;
     }
 }
-
-
 /*-------------------------- iPhone /*--------------------------*/
 
 /* iPhone 6 - Portrait */
@@ -103,21 +90,18 @@ and (min-width: 1200px) {
 and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: portrait) {
-
-    #editBtn{
-        float: left;
-        width: 40%;
-        background-color: #333;
-        color: #ffffff;
-
+    #paymentblocka{
+        width: 60% !important;
     }
-    #nextBtn{
-        float: right;
-        width: 36%;
-        background-color: #333;
-        color: #ffffff;
-
+    #paymentblockb{
+        width: 40% !important;}
+    #editbookingwrapper{
+        /*width: 140px !important;*/
+        margin-left: 10em;
+        margin-bottom: 1em;
+        margin-top: 5em;
     }
+
 
 }
 
@@ -126,6 +110,12 @@ and (orientation: portrait) {
 and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (orientation: landscape) {
+    #editbookingwrapper{
+        /*width: 140px !important;*/
+        margin-left: 20em;
+        margin-bottom: 1em;
+        margin-top: 5em;
+    }
 
 }
 
@@ -149,9 +139,17 @@ and (-webkit-min-device-pixel-ratio: 1) {
         margin-right: 22em !important;
     }
 
-    .container {
-        width: 100%;
-    }
+#editbookingwrapper{
+    margin-left: 19em;
+    margin-bottom: 1em;
+    margin-top: 5em;
+
+}
+
+#paymentDetails {
+    margin: 0 5em 0 5em;
+}
+
 }
 
 /* iPad - Portrait */
@@ -160,4 +158,10 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
 
+    #editbookingwrapper{
+    /*width: 140px !important;*/
+    margin-left: 24em;
+    margin-bottom: 1em;
+
+}
 }
