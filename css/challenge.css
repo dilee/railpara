@@ -57,10 +57,14 @@ body {
 }
 
 .wrapper {
-    padding: 2em;
+    padding: 1em;
     box-shadow: 5px 5px 5px #888888;
     margin: 0 auto;
     display: table;
+}
+
+#movesHeader {
+    float: right;
 }
 
 .gly-style {
@@ -71,6 +75,29 @@ body {
     display: table;
     margin: 0 auto;
     margin-top: 1em;
+}
+
+#play-button-image {
+  width: 7em;
+}
+
+.puzzle-desc {
+    margin-top: 2em;
+
+}
+
+.puzzle-desc-image {
+    width: 9em;
+}
+
+.start-popup-image{
+    width: 150px;
+    margin: 0 auto;
+}
+
+#play-button-div {
+    width: 250px;
+    margin: 0 auto;
 }
     
 
@@ -111,6 +138,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
         vertical-align: middle;
         margin-right: 22em !important;
     }
+
 }
 
 /* iPad - Portrait */
@@ -118,5 +146,20 @@ and (-webkit-min-device-pixel-ratio: 1) {
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
+
+}
+
+/*-------------------------- Mac / PC /*--------------------------*/
+
+/* iPad - Landscape */
+@media only screen
+and (min-device-width: 1024px) {
+
+    .wrapper {
+        width: 500px;
+    }
+    .puzzle-desc-image {
+        width: 14em;
+    }
 
 }
