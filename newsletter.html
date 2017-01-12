@@ -413,11 +413,16 @@
 
 	</body>
 <script>
-	debugger;
     $(document).on('pageinit', '.ui-page',function(event){
         setTimeout(function () {
             $('#emailPopup').popup('open');
         }, 0);
+        $('#btnSend').click(function() {
+            $.get('newsletter.html', function(){
+                var data = $('#favListEmail').val();
+//                alert("Data: " + data);
+            });
+        });
     });
 
 </script>
