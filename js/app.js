@@ -25,7 +25,8 @@ railPaaraApp.controller('loginController', function ($scope, $http) {
                     window.location = 'home.html';
                 }
                 else {
-
+                    console.log(res.data);
+                    $scope.login_error = res.data.error;
                 }
             }, function (res) {
                 console.log(res);
@@ -61,7 +62,7 @@ railPaaraApp.controller('registerController', function ($scope, $http) {
 
                     }
                     else {
-
+                        console.log(res.data);
                     }
                 }, function (res) {
                     console.log(res);
