@@ -116,8 +116,26 @@
 
 #btnSend{
 margin: 0 auto;
-
 }
+
+.message {
+    height: 45px;
+    background: #333 !important;
+    color: #ffffff !important;
+    align-self: center;
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 1em !important;
+    text-shadow: none !important;
+}
+
+.tickImg {
+    height: 2em;
+}
+
 /*#region Footer*/
 .footer {
     height: 45px;
@@ -151,8 +169,8 @@ body {
 and (min-device-width: 1025px) {
 
     .favplace {
-        margin-left: 15em;
-        margin-right: 15em;
+        width:1200px;
+        margin: 0 auto;
     }
 
 }

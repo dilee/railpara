@@ -4,7 +4,7 @@
 .header {
     width: 100% !important;
     height: 45px !important;
-    background: #424242 !important;
+    background: #212121 !important;
     color: #ffffff !important;
     align-self: center !important;
     position: fixed !important;
@@ -29,32 +29,11 @@
 }
 /*#endregion Logo*/
 /*#endregion Header*/
-#profile-img {
-    width: 144px;
-}
-
-.message {
-    height: 45px;
-    background: #333 !important;
-    color: #ffffff !important;
-    align-self: center;
-    bottom: 0;
-    position: fixed;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-    padding-top: 1em !important;
-    text-shadow: none !important;
-}
-
-.tickImg {
-    height: 2em;
-}
 
 /*#region Footer*/
 .footer {
     height: 45px;
-    background: #424242 !important;
+    background: #212121 !important;
     color: #ffffff !important;
     align-self: center;
     bottom: 0;
@@ -77,76 +56,121 @@ body {
     font-family: 'avenir-roman' !important;
 }
 
-/** Personal **/
-.personal-details {}
-.edit-icon-wrapper {
-    position: relative;
-    top: -14px;
-    cursor: pointer;
+.wrapper {
+    padding: 1em;
+    box-shadow: 5px 5px 5px #888888;
+    margin: 0 auto;
+    display: table;
 }
 
-/** Main content **/
-.ui-content {
-    border-width: 0;
-    overflow: visible;
-    overflow-x: hidden;
-    padding: 0em; !important;
+#movesHeader {
+    float: right;
 }
 
-.form-section {
-    /* max-height: calc(100% - 140px);*/
-        position: fixed;
-        top: 70px;
-        width: 100%;
-        overflow-y: auto;
-        height: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
+.gly-style {
+    margin-left: -1em;
 }
 
-.edit-icon-wrapper > i {
-    font-size: 12px;
+.instructions {
+    display: table;
+    margin: 0 auto;
+    margin-top: 1em;
 }
 
-/** Gravatar **/
-.grav-wrapper {
-    position: relative;
-    display: inline-block;
+#play-button-image {
+    width: 7em;
 }
-.pro-pic {
+
+.puzzle-desc {
+    margin-top: 2em;
+
+}
+
+.puzzle-desc-image {
+    width: 9em;
+}
+
+.start-popup-image{
     width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display: inline-block;
-    overflow: hidden;
-    border: 3px solid #e2e2e2;
+    margin: 0 auto;
 }
-.camera-icon {
+
+#play-button-div {
+    width: 250px;
+    margin: 0 auto;
+}
+
+#puzzle {
+    margin: 0;
+    padding: 10px;
+    border: 0.5em solid #212121;
+    background-image: url("../images/places/gallefacegreen/gallefacegreen_thumbnail_01.png");
+}
+
+.square{
+    width:30px;
+    height:30px;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    position: relative;
+}
+
+.empty{
+    /*background-color: #001c38;*/
+    background-color: transparent;
+}
+
+.letter{
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+}
+
+#puzzle_container{
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+}
+
+#hints_container{
+    float: left;
+    width:100%;
+    /*height: 50%;*/
+    margin-left: 25px;
+}
+
+#buttons_container{
+    clear: both;
+}
+
+.active{
+    border-color: red;
+}
+
+.question_number{
     position: absolute;
-    top: 110px;
-    right: 10px;
+    font-size: 12px;
+    color: grey;
+    left: 3px;
+    top: 3px;
+    color: black;
+    z-index: 1500;
 }
-.camera-icon > i {
-    font-size: 24px;
-    z-index: 999;
+
+td{
+    position:relative;
 }
-/** Form section **/
-.form-section {
-    text-align: center;
+
+#challenge-title h3 {
+    display: table;
+    margin: 0 auto;
 }
-.form-wrapper > div {
-    margin-bottom: 20px;
-}
-.form-wrapper > div:first-of-type {
-    margin-top: 20px;
-    text-align: center;
-}
-.form-wrapper > div > input {
-    width: 80%;
-    display: inline-block;
-    border: none;
-    /*border-bottom: 1px solid #e2e2e2;
-    outline: none;*/
+
+#challenge-content {
+    display: table;
+    margin: 0 auto;
 }
 
 /*-------------------------- iPhone /*--------------------------*/
@@ -178,7 +202,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     #logoblock {
         margin-right: 18em;
-        margin-top: 2%;
+        margin-top: 0.5%;
     }
 
     .ui-controlgroup-horizontal .ui-controlgroup-controls {
@@ -194,5 +218,20 @@ and (-webkit-min-device-pixel-ratio: 1) {
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
+
+}
+
+/*-------------------------- Mac / PC /*--------------------------*/
+
+/* iPad - Landscape */
+@media only screen
+and (min-device-width: 1024px) {
+
+    .wrapper {
+        width: 500px;
+    }
+    .puzzle-desc-image {
+        width: 14em;
+    }
 
 }
