@@ -87,14 +87,19 @@ railPaaraApp.controller('logoutController', function ($scope) {
 railPaaraApp.controller('placeController', function ($scope, $http) {
 
     $scope.baseURL = "http://35.163.10.213/";
-    
-    sessionStorage.setItem("place-Id", "5877a2580f7fea028cf16c21");
 
-    $http.get($scope.baseURL +'place/' +sessionStorage.getItem('place-Id'))
+    $http.get($scope.baseURL + 'place/' + sessionStorage.getItem('place-Id'))
         .then(function (res) {
             if (!res.data.error) {
                 console.log(res.data);
                 $scope.place = res.data;
+                
+                if($scope.place.name == "Gangaramaya Temple") {
+                    $scope.isGangaramaya = true;
+                }
+                else {
+                    $scope.isGangaramaya = false;
+                }
             }
             else {
                 console.log(res.data);
@@ -102,5 +107,32 @@ railPaaraApp.controller('placeController', function ($scope, $http) {
         }, function (res) {
             console.log(res);
         });
+
+    $scope.toggleLike = function () {
+
+        $scope.place.is_liked = true;
+        
+        var body = {
+            user: "test"
+        }
+
+        $http.post($scope.baseURL + 'addFavPlace/', body)
+            .then(function (res) {
+                if (!res.data.error) {
+                    console.log(res.data);
+                    $scope.place = res.data;
+                    $("#owl-aiyaah").data('owlCarousel').reinit();
+                    // console.log(owl);
+                    // .data('owlCarousel').reinit();
+                }
+                else {
+                    console.log(res.data);
+                }
+            }, function (res) {
+                console.log(res);
+            });
+
+
+    }
 
 });
