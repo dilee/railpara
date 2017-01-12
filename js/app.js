@@ -116,7 +116,7 @@ railPaaraApp.controller('placeController', function ($scope, $http) {
         var body = {
             user: sessionStorage.getItem(user)._id,
             place_id: sessionStorage.getItem('place-Id')
-        }
+        };
 
         $http.post($scope.baseURL + 'addFavPlace', body)
             .then(function (res) {
@@ -149,9 +149,40 @@ railPaaraApp.controller('favPlacesController', function ($scope, $http) {
         var body = {
             user: sessionStorage.getItem(user)._id,
             place: placeID
-        }
+        };
 
         $http.post($scope.baseURL + 'removeFavPlace', body)
+            .then(function (res) {
+                if (!res.data.error) {
+                    console.log(res.data);
+
+                }
+                else {
+                    console.log(res.data);
+                }
+            }, function (res) {
+                console.log(res);
+            });
+    }
+
+});
+
+railPaaraApp.controller('upcomingTripController', function ($scope, $http) {
+
+    $scope.baseURL = "http://35.163.10.213/";
+
+    $scope.isTripCancelled = false;
+
+    $scope.cancelTrip = function (tripID) {
+
+        $scope.isTripCancelled = true;
+
+        var body = {
+            user: sessionStorage.getItem(user)._id,
+            trip: tripID
+        };
+
+        $http.post($scope.baseURL + 'cancelTrip', body)
             .then(function (res) {
                 if (!res.data.error) {
                     console.log(res.data);
