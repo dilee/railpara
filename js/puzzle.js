@@ -186,7 +186,7 @@
 
   $(document).ready(function () {
     var imgs, puzzle;
-    imgs = ['/images/places/gangaramaya/gangaramaya_thumbnail_01.png'];
+    imgs = ['images/places/gangaramaya/gangaramaya_thumbnail_01.png'];
     return puzzle = new Puzzle(imgs);
   });
 
