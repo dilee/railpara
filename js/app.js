@@ -97,9 +97,11 @@ railPaaraApp.controller('placeController', function ($scope, $http) {
 
                 if ($scope.place.name == "Gangaramaya Temple") {
                     $scope.isGangaramaya = true;
+                    $scope.challengeLink = "challenge.html";
                 }
                 else {
                     $scope.isGangaramaya = false;
+                    $scope.challengeLink = "challenge-galleface.html";
                 }
             }
             else {

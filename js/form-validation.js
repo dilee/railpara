@@ -37,7 +37,7 @@ function validateEmailAdd() {
     }
     else {
         if (isMail(email) == false) {
-            debugger;
+            
             $("#footer").hide();
             $("#message").html("Email address isn't valid!");
             $("#message").show();
