@@ -176,7 +176,13 @@ app.get('/place/:id', cors(), function (req, res) {
         findItems(db, 'place', filter, function (docs) {
 
             db.close();
-            res.json(docs);
+            if(docs.length > 0) {
+                res.json(docs[0]);
+            }
+            else {
+                res.json({ error: true, message: 'Invalid place_Id' });
+            }
+            
 
         }, function (err) {
             res.json(err);

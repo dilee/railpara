@@ -76,9 +76,31 @@ railPaaraApp.controller('logoutController', function ($scope) {
     $scope.logout = function () {
         sessionStorage.removeItem('user');
         console.log("Hit!");
-        window.location='index.html';
+        window.location = 'index.html';
     };
 
 
+
+});
+
+
+railPaaraApp.controller('placeController', function ($scope, $http) {
+
+    $scope.baseURL = "http://35.163.10.213/";
+    
+    sessionStorage.setItem("place-Id", "5877a2580f7fea028cf16c21");
+
+    $http.get($scope.baseURL +'place/' +sessionStorage.getItem('place-Id'))
+        .then(function (res) {
+            if (!res.data.error) {
+                console.log(res.data);
+                $scope.place = res.data;
+            }
+            else {
+                console.log(res.data);
+            }
+        }, function (res) {
+            console.log(res);
+        });
 
 });
