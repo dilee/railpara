@@ -83,7 +83,7 @@ body .h1, .h2, .h3, h1, h2, h3 {
     margin-top: 2em;
 }
 
-#cancelbutton {
+.cancelbutton {
     width: 12em;
     display: table;
     margin: 0 auto;
