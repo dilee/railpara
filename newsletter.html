@@ -420,7 +420,7 @@
         $('#btnSend').click(function() {
             $.get('newsletter.html', function(){
                 var data = $('#favListEmail').val();
-//                alert("Data: " + data);
+                $('#emailPopup').popup('close');
             });
         });
     });
