@@ -84,7 +84,6 @@ function validatePassword() {
 }
 
 function validateConfirmPassword() {
-    debugger;
 
     var password = $('#signuppwrd').val();
     var confirmpassword = $('#confirmPwd').val();
