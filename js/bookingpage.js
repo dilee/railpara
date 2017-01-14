@@ -7,3 +7,5 @@ $(document).on('pageinit', function() {
         $(this).prop('checked')===true?$('.return-trip').stop().fadeIn():$('.return-trip').stop().fadeOut();
     })
 });
+
+

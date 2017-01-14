@@ -7,6 +7,9 @@
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+		<script type="text/javascript" src="js/sendmail.js"></script>
+
 
 		<style type="text/css">
 			* {
@@ -404,9 +407,9 @@
 			   class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
 			<h3 style="text-align: center">Subscribe to our newsletter NOW!</h3>
 			<p style="text-align: center">Receive details of the discounts and offers via Email</p>
-			<input type="email" placeholder="Email" id="favListEmail">
+			<input type="email" placeholder="Email" id="newsletterEmail">
 			<div class="sendBtnDiv">
-				<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" id="btnSend">Send</a>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" id="btnSend" onclick="sendNewsletter()">Send</a>
 			</div>
 		</div>
 		<!--End Subscribe to newsletter-->
@@ -417,12 +420,17 @@
         setTimeout(function () {
             $('#emailPopup').popup('open');
         }, 0);
-        $('#btnSend').click(function() {
-            $.get('newsletter.html', function(){
-                var data = $('#favListEmail').val();
-                $('#emailPopup').popup('close');
-            });
-        });
+
+        (function(){
+            emailjs.init("user_IvSKf9IeDXvy3bnbnEfVg");
+        })();
+
+//        $('#btnSend').click(function() {
+//            $.get('newsletter.html', function(){
+//                var data = $('#newsletterEmail').val();
+//                $('#emailPopup').popup('close');
+//            });
+//        });
     });
 
 </script>

@@ -13,10 +13,16 @@
     <script src="js/menu.js"></script>
     <script src="js/puzzle.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/sendmail.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="stylesheet" href="css/favoriteplaces.css">
     <link rel="stylesheet" href="css/slider-menu.css">
     <link rel="stylesheet" href="css/font-face.css">
-
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_IvSKf9IeDXvy3bnbnEfVg");
+        })();
+    </script>
 </head>
 
 <body ng-app="railPaaraApp">
@@ -159,7 +165,7 @@
         <input type="email" placeholder="Email" id="favListEmail">
         <div class="sendBtnDiv">
             <div style="display: table; margin: 0 auto;">
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" id="btnSend">Send</a>
+                <a class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" id="btnSend" onclick="sendEmail()">Send</a>
             </div>
         </div>
     </div>
